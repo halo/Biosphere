@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8352281D0310078FFF7 /* Cocoa.framework */; };
+		C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8372281D0340078FFF7 /* PreferencePanes.framework */; };
+		C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8572281F3270078FFF7 /* Biosphere.swift */; };
+		C234E8662281F5B20078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8642281F5B20078FFF7 /* Biosphere.xib */; };
+		C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8672281F5C80078FFF7 /* Biosphere.icns */; };
+		C234E86C2281F8860078FFF7 /* Biosphere-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C234E86B2281F8860078FFF7 /* Biosphere-Bridging-Header.h */; };
+		C234E872228202CD0078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E871228202CD0078FFF7 /* Log.swift */; };
+		C234E874228207DF0078FFF7 /* MissingGitWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E873228207DF0078FFF7 /* MissingGitWindowController.swift */; };
+		C234E876228208680078FFF7 /* MissingGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E875228208680078FFF7 /* MissingGit.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C234E8222281CC260078FFF7 /* Biosphere.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Biosphere.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		C234E8352281D0310078FFF7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C234E8372281D0340078FFF7 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		C234E8572281F3270078FFF7 /* Biosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biosphere.swift; sourceTree = "<group>"; };
+		C234E85B2281F3E40078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Biosphere/Info.plist; sourceTree = "<group>"; };
+		C234E8652281F5B20078FFF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Biosphere/Views/Base.lproj/Biosphere.xib; sourceTree = SOURCE_ROOT; };
+		C234E8672281F5C80078FFF7 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Biosphere.icns; path = Biosphere/Images/Biosphere.icns; sourceTree = SOURCE_ROOT; };
+		C234E86B2281F8860078FFF7 /* Biosphere-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Biosphere-Bridging-Header.h"; sourceTree = "<group>"; };
+		C234E871228202CD0078FFF7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		C234E873228207DF0078FFF7 /* MissingGitWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MissingGitWindowController.swift; path = Biosphere/Classes/MissingGitWindowController.swift; sourceTree = SOURCE_ROOT; };
+		C234E875228208680078FFF7 /* MissingGit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MissingGit.xib; path = Biosphere/Views/MissingGit.xib; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C234E81F2281CC260078FFF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */,
+				C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C234E8182281CC250078FFF7 = {
+			isa = PBXGroup;
+			children = (
+				C234E8562281F3270078FFF7 /* Classes */,
+				C234E83F2281F0B40078FFF7 /* Views */,
+				C234E8512281F2B80078FFF7 /* Config */,
+				C234E8492281F2860078FFF7 /* Images */,
+				C234E8232281CC260078FFF7 /* Products */,
+				C234E8342281D0310078FFF7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C234E8232281CC260078FFF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8222281CC260078FFF7 /* Biosphere.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C234E8342281D0310078FFF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8372281D0340078FFF7 /* PreferencePanes.framework */,
+				C234E8352281D0310078FFF7 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C234E83F2281F0B40078FFF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8642281F5B20078FFF7 /* Biosphere.xib */,
+				C234E875228208680078FFF7 /* MissingGit.xib */,
+				C234E873228207DF0078FFF7 /* MissingGitWindowController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C234E8492281F2860078FFF7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8672281F5C80078FFF7 /* Biosphere.icns */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C234E8512281F2B80078FFF7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C234E86B2281F8860078FFF7 /* Biosphere-Bridging-Header.h */,
+				C234E85B2281F3E40078FFF7 /* Info.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		C234E8562281F3270078FFF7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8572281F3270078FFF7 /* Biosphere.swift */,
+				C234E871228202CD0078FFF7 /* Log.swift */,
+			);
+			name = Classes;
+			path = Biosphere/Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C234E81D2281CC260078FFF7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C234E86C2281F8860078FFF7 /* Biosphere-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C234E8212281CC260078FFF7 /* Biosphere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C234E8312281CC260078FFF7 /* Build configuration list for PBXNativeTarget "Biosphere" */;
+			buildPhases = (
+				C234E81D2281CC260078FFF7 /* Headers */,
+				C234E81E2281CC260078FFF7 /* Sources */,
+				C234E81F2281CC260078FFF7 /* Frameworks */,
+				C234E8202281CC260078FFF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Biosphere;
+			productName = Biosphere;
+			productReference = C234E8222281CC260078FFF7 /* Biosphere.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C234E8192281CC250078FFF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = halo;
+				TargetAttributes = {
+					C234E8212281CC260078FFF7 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = C234E81C2281CC250078FFF7 /* Build configuration list for PBXProject "Biosphere" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C234E8182281CC250078FFF7;
+			productRefGroup = C234E8232281CC260078FFF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C234E8212281CC260078FFF7 /* Biosphere */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C234E8202281CC260078FFF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */,
+				C234E8662281F5B20078FFF7 /* Biosphere.xib in Resources */,
+				C234E876228208680078FFF7 /* MissingGit.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C234E81E2281CC260078FFF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C234E872228202CD0078FFF7 /* Log.swift in Sources */,
+				C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */,
+				C234E874228207DF0078FFF7 /* MissingGitWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C234E8642281F5B20078FFF7 /* Biosphere.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C234E8652281F5B20078FFF7 /* Base */,
+			);
+			name = Biosphere.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C234E82F2281CC260078FFF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Debug;
+		};
+		C234E8302281CC260078FFF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+		C234E8322281CC260078FFF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B9J4QR64LK;
+				INFOPLIST_FILE = Biosphere/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.halo.Biosphere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Biosphere-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		C234E8332281CC260078FFF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B9J4QR64LK;
+				INFOPLIST_FILE = Biosphere/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.halo.Biosphere;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Biosphere-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C234E81C2281CC250078FFF7 /* Build configuration list for PBXProject "Biosphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C234E82F2281CC260078FFF7 /* Debug */,
+				C234E8302281CC260078FFF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C234E8312281CC260078FFF7 /* Build configuration list for PBXNativeTarget "Biosphere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C234E8322281CC260078FFF7 /* Debug */,
+				C234E8332281CC260078FFF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C234E8192281CC250078FFF7 /* Project object */;
+}
