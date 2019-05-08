@@ -11,8 +11,7 @@ class Biosphere: NSPreferencePane {
     Log.debug("what is this \(String(describing: mainView))")
     //self.mainView = missingGitView;
     let con = MissingGitWindowController.init()
-    self.mainView = con.window!.initialFirstResponder!
-    con.window?.orderOut(self)
+    self.mainView = con.view
 
     Log.debug("con \(String(describing: con))")
   }
