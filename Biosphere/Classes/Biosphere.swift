@@ -2,7 +2,7 @@ import Cocoa
 import PreferencePanes
 
 class Biosphere: NSPreferencePane {
-  @IBOutlet var missingGitView: NSView?
+  @IBOutlet var container: NSView?
   
   
   override func mainViewDidLoad() {
@@ -10,11 +10,18 @@ class Biosphere: NSPreferencePane {
     //self.mainView = loadFromNib("MissingGit")!;
     Log.debug("what is this \(String(describing: mainView))")
     //self.mainView = missingGitView;
-    let con = MissingGitWindowController.init()
-    self.mainView = con.view
+    //let con = MissingChefViewController.init(nibName: "MissingChef", bundle: bundle)
+    self.mainView = missingGitWindowController.view
+    
+    //self.container?.replaceSubview((self.mainView.subviews.first)!, with: con.view)
 
-    Log.debug("con \(String(describing: con))")
+    //Log.debug("con \(String(describing: con))")
   }
+  
+  private lazy var missingGitWindowController: GitController = {
+    return GitController.init()
+  }()
+  
   
   //mainnibna
   

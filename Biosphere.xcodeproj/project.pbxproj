@@ -10,12 +10,12 @@
 		C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8352281D0310078FFF7 /* Cocoa.framework */; };
 		C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8372281D0340078FFF7 /* PreferencePanes.framework */; };
 		C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8572281F3270078FFF7 /* Biosphere.swift */; };
-		C234E8662281F5B20078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8642281F5B20078FFF7 /* Biosphere.xib */; };
 		C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8672281F5C80078FFF7 /* Biosphere.icns */; };
 		C234E86C2281F8860078FFF7 /* Biosphere-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = C234E86B2281F8860078FFF7 /* Biosphere-Bridging-Header.h */; };
 		C234E872228202CD0078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E871228202CD0078FFF7 /* Log.swift */; };
-		C234E874228207DF0078FFF7 /* MissingGitWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E873228207DF0078FFF7 /* MissingGitWindowController.swift */; };
-		C234E876228208680078FFF7 /* MissingGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E875228208680078FFF7 /* MissingGit.xib */; };
+		C234E874228207DF0078FFF7 /* GitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E873228207DF0078FFF7 /* GitController.swift */; };
+		C234E876228208680078FFF7 /* InstallGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E875228208680078FFF7 /* InstallGit.xib */; };
+		C234E87A2282EA280078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8792282EA280078FFF7 /* Biosphere.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +24,12 @@
 		C234E8372281D0340078FFF7 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
 		C234E8572281F3270078FFF7 /* Biosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biosphere.swift; sourceTree = "<group>"; };
 		C234E85B2281F3E40078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Biosphere/Info.plist; sourceTree = "<group>"; };
-		C234E8652281F5B20078FFF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Biosphere/Views/Base.lproj/Biosphere.xib; sourceTree = SOURCE_ROOT; };
 		C234E8672281F5C80078FFF7 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Biosphere.icns; path = Biosphere/Images/Biosphere.icns; sourceTree = SOURCE_ROOT; };
 		C234E86B2281F8860078FFF7 /* Biosphere-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Biosphere-Bridging-Header.h"; sourceTree = "<group>"; };
 		C234E871228202CD0078FFF7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		C234E873228207DF0078FFF7 /* MissingGitWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MissingGitWindowController.swift; path = Biosphere/Classes/MissingGitWindowController.swift; sourceTree = SOURCE_ROOT; };
-		C234E875228208680078FFF7 /* MissingGit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MissingGit.xib; path = Biosphere/Views/MissingGit.xib; sourceTree = SOURCE_ROOT; };
+		C234E873228207DF0078FFF7 /* GitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GitController.swift; path = Biosphere/Classes/GitController.swift; sourceTree = SOURCE_ROOT; };
+		C234E875228208680078FFF7 /* InstallGit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InstallGit.xib; path = Biosphere/Views/InstallGit.xib; sourceTree = SOURCE_ROOT; };
+		C234E8792282EA280078FFF7 /* Biosphere.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Biosphere.xib; path = Biosphere/Views/Biosphere.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +77,8 @@
 		C234E83F2281F0B40078FFF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8642281F5B20078FFF7 /* Biosphere.xib */,
-				C234E875228208680078FFF7 /* MissingGit.xib */,
-				C234E873228207DF0078FFF7 /* MissingGitWindowController.swift */,
+				C234E8792282EA280078FFF7 /* Biosphere.xib */,
+				C234E875228208680078FFF7 /* InstallGit.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C234E8572281F3270078FFF7 /* Biosphere.swift */,
+				C234E873228207DF0078FFF7 /* GitController.swift */,
 				C234E871228202CD0078FFF7 /* Log.swift */,
 			);
 			name = Classes;
@@ -182,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */,
-				C234E8662281F5B20078FFF7 /* Biosphere.xib in Resources */,
-				C234E876228208680078FFF7 /* MissingGit.xib in Resources */,
+				C234E876228208680078FFF7 /* InstallGit.xib in Resources */,
+				C234E87A2282EA280078FFF7 /* Biosphere.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,22 +196,11 @@
 			files = (
 				C234E872228202CD0078FFF7 /* Log.swift in Sources */,
 				C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */,
-				C234E874228207DF0078FFF7 /* MissingGitWindowController.swift in Sources */,
+				C234E874228207DF0078FFF7 /* GitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C234E8642281F5B20078FFF7 /* Biosphere.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C234E8652281F5B20078FFF7 /* Base */,
-			);
-			name = Biosphere.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C234E82F2281CC260078FFF7 /* Debug */ = {
