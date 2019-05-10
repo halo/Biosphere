@@ -13,6 +13,10 @@ class BiospherePane: NSPreferencePane {
   
   private lazy var omnibusController: OmnibusController = {
     Log.debug("Initializing OmnibusController...")
-    return OmnibusController()
+    let controller = OmnibusController()
+    controller.bundle = bundle
+    return controller
   }()
+
+   
 }

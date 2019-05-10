@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="OmnibusController" customModule="Biosphere" customModuleProvider="target">
             <connections>
+                <outlet property="authorizeHelperButton" destination="cGy-9T-qwj" id="1PX-QA-azt"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="1nC-gz-OpL"/>
             </connections>
         </customObject>
@@ -51,6 +52,17 @@
                         </buttonCell>
                         <connections>
                             <action selector="authorizeWithSender:" target="-2" id="rgH-Yg-lTX"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Sz-SX-sSx">
+                        <rect key="frame" x="265" y="144" width="100" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Satisfied?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="74O-9t-MoA">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkSatisfactionWithSender:" target="-2" id="5lM-DZ-MvQ"/>
                         </connections>
                     </button>
                 </subviews>

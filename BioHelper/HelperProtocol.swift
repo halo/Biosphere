@@ -3,8 +3,8 @@ import Foundation
 @objc(HelperProtocol)
 
 protocol HelperProtocol {
-  func version(reply: (String) -> Void)
+  func version(reply: @escaping (String) -> Void)
 
-  func installChef(reply: (Bool) -> Void)
-  func uninstallHelper(reply: (Bool) -> Void)
+  func installChef(reply: @escaping (Bool) -> Void)
+  func uninstallHelper(reply: @escaping (Bool) -> Void)
 }
