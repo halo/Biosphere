@@ -12,7 +12,7 @@ class BioHelper: NSObject {
   // MARK Private Properties
 
   lazy var listener: NSXPCListener = {
-    let listener = NSXPCListener(machServiceName:Identifiers.helper.rawValue)
+    let listener = NSXPCListener(machServiceName:"io.halo.github.biohelper")
     listener.delegate = self
     return listener
   }()
@@ -40,7 +40,7 @@ extension BioHelper: HelperProtocol {
     reply(BioHelper.version.formatted)
   }
 
-  func install(reply: (Bool) -> Void) {
+  func installChef(reply: (Bool) -> Void) {
     
     
     reply(true) // <- Famous last words

@@ -6,4 +6,5 @@ protocol HelperProtocol {
   func version(reply: (String) -> Void)
 
   func installChef(reply: (Bool) -> Void)
+  func uninstallHelper(reply: (Bool) -> Void)
 }

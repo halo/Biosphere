@@ -61,6 +61,24 @@
             </ActionContent>
          </ExecutionAction>
       </PreActions>
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# System Preferences appears to strongly cache this.&#10;# Removing it ensures that it is properly picked up on the next run.&#10;# rm &quot;$USER_LIBRARY_DIR/PreferencePanes/Biosphere.prefPane&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "C234E8212281CC260078FFF7"
+                     BuildableName = "Biosphere.prefPane"
+                     BlueprintName = "Biosphere"
+                     ReferencedContainer = "container:Biosphere.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <PathRunnable
          runnableDebuggingMode = "0"
          BundleIdentifier = "com.apple.systempreferences"

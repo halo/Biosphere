@@ -22,6 +22,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="668" height="246"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-uV-Fhj">
+                        <rect key="frame" x="186" y="188" width="50" height="17"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="no chef" id="9re-nU-EZA">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3re-fT-D04">
                         <rect key="frame" x="140" y="106" width="109" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -33,15 +42,17 @@
                             <action selector="installOmnibusWithSender:" target="-2" id="MCC-9k-cEO"/>
                         </connections>
                     </button>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-uV-Fhj">
-                        <rect key="frame" x="186" y="188" width="50" height="17"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="no chef" id="9re-nU-EZA">
-                            <font key="font" usesAppearanceFont="YES"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-9T-qwj">
+                        <rect key="frame" x="140" y="59" width="97" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="authorize" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XN8-sm-QQG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="authorizeWithSender:" target="-2" id="rgH-Yg-lTX"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>

@@ -5,6 +5,11 @@ class OmnibusController: NSWindowController {
     return false
   }
   
+  @IBAction func authorize(sender: NSButton) {
+    Log.debug("Elevating Helper...")
+    Elevator().install()
+  }
+  
   @IBAction func installOmnibus(sender: NSButton) {
     let task = Process()
     task.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")

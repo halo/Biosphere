@@ -17,13 +17,27 @@
 		C234E87A2282EA280078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8792282EA280078FFF7 /* Biosphere.xib */; };
 		C234E88022849ED50078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E87F22849ED50078FFF7 /* OmnibusController.swift */; };
 		C234E8852284A7DE0078FFF7 /* InstallChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8832284A6410078FFF7 /* InstallChef.xib */; };
-		C234E88E2284B11F0078FFF7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E88D2284B11F0078FFF7 /* main.swift */; };
-		C234E89E2284B1C00078FFF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C234E89D2284B1C00078FFF7 /* Info.plist */; };
 		C234E8AC2284B2D50078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
 		C234E8AE2284B2D50078FFF7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AA2284B2D50078FFF7 /* main.swift */; };
 		C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AF2284B3280078FFF7 /* BioHelper.swift */; };
 		C234E8B12284B3570078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E871228202CD0078FFF7 /* Log.swift */; };
+		C234E8B722858D4C0078FFF7 /* io.github.halo.biohelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C234E8BB22858E360078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8BA22858E360078FFF7 /* Version.swift */; };
+		C234E8BC22858E5C0078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8BA22858E360078FFF7 /* Version.swift */; };
+		C234E8BE22858FEB0078FFF7 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */; };
+		C234E8C02285A84B0078FFF7 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8BF2285A84B0078FFF7 /* Elevator.swift */; };
+		C234E8C22285A8F50078FFF7 /* Intercom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8C12285A8F50078FFF7 /* Intercom.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C234E8B822858D5D0078FFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C234E8192281CC250078FFF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C234E88A2284B11F0078FFF7;
+			remoteInfo = io.github.halo.biohelper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C234E8892284B11F0078FFF7 /* CopyFiles */ = {
@@ -34,6 +48,16 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C234E8B622858D350078FFF7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				C234E8B722858D4C0078FFF7 /* io.github.halo.biohelper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -49,14 +73,17 @@
 		C234E8792282EA280078FFF7 /* Biosphere.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Biosphere.xib; path = Biosphere/Views/Biosphere.xib; sourceTree = SOURCE_ROOT; };
 		C234E87F22849ED50078FFF7 /* OmnibusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmnibusController.swift; sourceTree = "<group>"; };
 		C234E8832284A6410078FFF7 /* InstallChef.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstallChef.xib; path = Biosphere/Views/InstallChef.xib; sourceTree = SOURCE_ROOT; };
-		C234E88B2284B11F0078FFF7 /* biohelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = biohelper; sourceTree = BUILT_PRODUCTS_DIR; };
-		C234E88D2284B11F0078FFF7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = io.github.halo.biohelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		C234E89D2284B1C00078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Biosphere/Info.plist; sourceTree = "<group>"; };
 		C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
 		C234E8A92284B2D50078FFF7 /* BioHelper-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BioHelper-Launchd.plist"; sourceTree = "<group>"; };
 		C234E8AA2284B2D50078FFF7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C234E8AB2284B2D50078FFF7 /* BioHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BioHelper-Info.plist"; sourceTree = "<group>"; };
 		C234E8AF2284B3280078FFF7 /* BioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioHelper.swift; sourceTree = "<group>"; };
+		C234E8BA22858E360078FFF7 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		C234E8BF2285A84B0078FFF7 /* Elevator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
+		C234E8C12285A8F50078FFF7 /* Intercom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intercom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C234E8BE22858FEB0078FFF7 /* ServiceManagement.framework in Frameworks */,
 				C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */,
 				C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */,
 			);
@@ -87,7 +115,6 @@
 				C234E8A52284B2D50078FFF7 /* BioHelper */,
 				C234E8512281F2B80078FFF7 /* Config */,
 				C234E8492281F2860078FFF7 /* Images */,
-				C234E88C2284B11F0078FFF7 /* biohelper */,
 				C234E8232281CC260078FFF7 /* Products */,
 				C234E8342281D0310078FFF7 /* Frameworks */,
 			);
@@ -97,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				C234E8222281CC260078FFF7 /* Biosphere.prefPane */,
-				C234E88B2284B11F0078FFF7 /* biohelper */,
+				C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +132,7 @@
 		C234E8342281D0310078FFF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */,
 				C234E8372281D0340078FFF7 /* PreferencePanes.framework */,
 				C234E8352281D0310078FFF7 /* Cocoa.framework */,
 			);
@@ -140,6 +168,9 @@
 		C234E8562281F3270078FFF7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C234E8BA22858E360078FFF7 /* Version.swift */,
+				C234E8C12285A8F50078FFF7 /* Intercom.swift */,
+				C234E8BF2285A84B0078FFF7 /* Elevator.swift */,
 				C234E8572281F3270078FFF7 /* Biosphere.swift */,
 				C234E873228207DF0078FFF7 /* GitController.swift */,
 				C234E87F22849ED50078FFF7 /* OmnibusController.swift */,
@@ -147,14 +178,6 @@
 			);
 			name = Classes;
 			path = Biosphere/Classes;
-			sourceTree = "<group>";
-		};
-		C234E88C2284B11F0078FFF7 /* biohelper */ = {
-			isa = PBXGroup;
-			children = (
-				C234E88D2284B11F0078FFF7 /* main.swift */,
-			);
-			path = biohelper;
 			sourceTree = "<group>";
 		};
 		C234E8A52284B2D50078FFF7 /* BioHelper */ = {
@@ -198,19 +221,21 @@
 				C234E81E2281CC260078FFF7 /* Sources */,
 				C234E81F2281CC260078FFF7 /* Frameworks */,
 				C234E8202281CC260078FFF7 /* Resources */,
+				C234E8B622858D350078FFF7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C234E8B922858D5D0078FFF7 /* PBXTargetDependency */,
 			);
 			name = Biosphere;
 			productName = Biosphere;
 			productReference = C234E8222281CC260078FFF7 /* Biosphere.prefPane */;
 			productType = "com.apple.product-type.bundle";
 		};
-		C234E88A2284B11F0078FFF7 /* biohelper */ = {
+		C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C234E88F2284B11F0078FFF7 /* Build configuration list for PBXNativeTarget "biohelper" */;
+			buildConfigurationList = C234E88F2284B11F0078FFF7 /* Build configuration list for PBXNativeTarget "io.github.halo.biohelper" */;
 			buildPhases = (
 				C234E8872284B11F0078FFF7 /* Sources */,
 				C234E8882284B11F0078FFF7 /* Frameworks */,
@@ -220,9 +245,9 @@
 			);
 			dependencies = (
 			);
-			name = biohelper;
+			name = io.github.halo.biohelper;
 			productName = biohelper;
-			productReference = C234E88B2284B11F0078FFF7 /* biohelper */;
+			productReference = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -258,7 +283,7 @@
 			projectRoot = "";
 			targets = (
 				C234E8212281CC260078FFF7 /* Biosphere */,
-				C234E88A2284B11F0078FFF7 /* biohelper */,
+				C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */,
 			);
 		};
 /* End PBXProject section */
@@ -272,7 +297,6 @@
 				C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */,
 				C234E876228208680078FFF7 /* InstallGit.xib in Resources */,
 				C234E87A2282EA280078FFF7 /* Biosphere.xib in Resources */,
-				C234E89E2284B1C00078FFF7 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +309,11 @@
 			files = (
 				C234E872228202CD0078FFF7 /* Log.swift in Sources */,
 				C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */,
+				C234E8C22285A8F50078FFF7 /* Intercom.swift in Sources */,
 				C234E874228207DF0078FFF7 /* GitController.swift in Sources */,
+				C234E8BB22858E360078FFF7 /* Version.swift in Sources */,
 				C234E88022849ED50078FFF7 /* OmnibusController.swift in Sources */,
+				C234E8C02285A84B0078FFF7 /* Elevator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,15 +321,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C234E8BC22858E5C0078FFF7 /* Version.swift in Sources */,
 				C234E8B12284B3570078FFF7 /* Log.swift in Sources */,
 				C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */,
-				C234E88E2284B11F0078FFF7 /* main.swift in Sources */,
 				C234E8AE2284B2D50078FFF7 /* main.swift in Sources */,
 				C234E8AC2284B2D50078FFF7 /* HelperProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C234E8B922858D5D0078FFF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */;
+			targetProxy = C234E8B822858D5D0078FFF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C234E82F2281CC260078FFF7 /* Debug */ = {
@@ -474,7 +509,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9J4QR64LK;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				INFOPLIST_FILE = "$(SRCROOT)/BioHelper/BioHelper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -487,7 +523,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9J4QR64LK;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				INFOPLIST_FILE = "$(SRCROOT)/BioHelper/BioHelper-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -516,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C234E88F2284B11F0078FFF7 /* Build configuration list for PBXNativeTarget "biohelper" */ = {
+		C234E88F2284B11F0078FFF7 /* Build configuration list for PBXNativeTarget "io.github.halo.biohelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C234E8902284B11F0078FFF7 /* Debug */,
