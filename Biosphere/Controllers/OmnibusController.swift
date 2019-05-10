@@ -1,9 +1,8 @@
 import Cocoa
 
 class OmnibusController: NSWindowController {
-  public var bundle: Bundle?
   
-  public var isSatisfied: Bool {
+  public var satisfied: Bool {
     let fileManager = FileManager.default
     
     if fileManager.fileExists(atPath: Paths.chefExecutable) {
@@ -42,8 +41,8 @@ class OmnibusController: NSWindowController {
       }
       
       if output.contains("1743") {
-        Log.debug("The user denied Automation access to Terminal for System Preferences")
-        
+        Log.debug("As of now, the user denied Automation access to Terminal for System Preferences")
+        NotificationCenter.default.post(name:.missingAutomationPermission, object: nil, userInfo: nil)
         return
       }
         
@@ -60,12 +59,5 @@ class OmnibusController: NSWindowController {
   
   override var windowNibName: String! {
     return "InstallChef"
-  }
-  
-  public var view: NSView {
-    assert((window != nil), "I really expected to have a window. Check the nib name and the window outlet.")
-    assert((window!.contentView != nil), "I really expected the window in the nib to have a contentView.")
-    
-    return window!.contentView!;
   }
 }
