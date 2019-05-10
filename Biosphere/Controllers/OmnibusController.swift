@@ -14,14 +14,7 @@ class OmnibusController: NSWindowController {
       return false
     }
   }
-  
-  @IBOutlet weak var authorizeHelperButton: NSButton!
-  
-  @IBAction func authorize(sender: NSButton) {
-    Log.debug("Elevating Helper...")
-    Elevator().install()
-  }
-  
+    
   @IBAction func installOmnibus(sender: NSButton) {
     let task = Process()
     // Could use `AEDeterminePermissionToAutomateTarget` but it's not available on High Sierra and it's buggy in Mojave.
@@ -36,16 +29,25 @@ class OmnibusController: NSWindowController {
     task.standardError = pipe
     
     task.terminationHandler = { (process) in
-      //guard process.terminationStatus == 0 else {
-      //
-      //}
-      
-      Log.debug("osascript exitet with status: \(process.terminationStatus)")
-      
-      let data = pipe.fileHandleForReading.readDataToEndOfFile()
-      if let output = String(data: data, encoding: String.Encoding.utf8) {
-        Log.debug(output)
+      if process.terminationStatus == 0 {
+        Log.debug("osascript exited successfully")
+        return
       }
+      Log.debug("osascript failed with status \(process.terminationStatus)")
+
+      let data = pipe.fileHandleForReading.readDataToEndOfFile()
+      guard let output = String(data: data, encoding: String.Encoding.utf8) else {
+        Log.debug("osascript had no stdout and no stderr")
+        return
+      }
+      
+      if output.contains("1743") {
+        Log.debug("The user denied Automation access to Terminal for System Preferences")
+        
+        return
+      }
+        
+      Log.debug(output)
     }
     
     do {

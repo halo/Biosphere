@@ -8,7 +8,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="OmnibusController" customModule="Biosphere" customModuleProvider="target">
             <connections>
-                <outlet property="authorizeHelperButton" destination="cGy-9T-qwj" id="1PX-QA-azt"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="1nC-gz-OpL"/>
             </connections>
         </customObject>
@@ -24,16 +23,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-uV-Fhj">
-                        <rect key="frame" x="186" y="188" width="50" height="17"/>
+                        <rect key="frame" x="82" y="190" width="224" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="no chef" id="9re-nU-EZA">
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Chef could not be found in /opt/chef" id="9re-nU-EZA">
                             <font key="font" usesAppearanceFont="YES"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3re-fT-D04">
-                        <rect key="frame" x="140" y="106" width="109" height="32"/>
+                        <rect key="frame" x="84" y="132" width="109" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Install Chef" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lUh-gF-50E">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -41,28 +40,6 @@
                         </buttonCell>
                         <connections>
                             <action selector="installOmnibusWithSender:" target="-2" id="MCC-9k-cEO"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGy-9T-qwj">
-                        <rect key="frame" x="140" y="59" width="97" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="authorize" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XN8-sm-QQG">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="authorizeWithSender:" target="-2" id="rgH-Yg-lTX"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Sz-SX-sSx">
-                        <rect key="frame" x="265" y="144" width="100" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Satisfied?" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="74O-9t-MoA">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="checkSatisfactionWithSender:" target="-2" id="5lM-DZ-MvQ"/>
                         </connections>
                     </button>
                 </subviews>
