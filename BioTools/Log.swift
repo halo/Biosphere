@@ -2,7 +2,7 @@ import os.log
 import Foundation
 
 public struct Log {
-  private static let log = OSLog(subsystem: "io.github.halo.Biosphere", category: "logger")
+  private static let log = OSLog(subsystem: Identifiers.gui.rawValue, category: "logger")
   
   public static func debug(_ message: String, callerPath: String = #file) {
     write(message, level: .debug, callerPath: callerPath)

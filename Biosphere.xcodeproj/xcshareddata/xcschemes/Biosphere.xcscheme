@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C234E9032285D92A0078FFF7"
+               BuildableName = "BiosphereTests.xctest"
+               BlueprintName = "BiosphereTests"
+               ReferencedContainer = "container:Biosphere.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C234E8212281CC260078FFF7"
+            BuildableName = "Biosphere.prefPane"
+            BlueprintName = "Biosphere"
+            ReferencedContainer = "container:Biosphere.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

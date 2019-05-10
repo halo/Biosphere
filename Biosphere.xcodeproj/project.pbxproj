@@ -3,30 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8352281D0310078FFF7 /* Cocoa.framework */; };
 		C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8372281D0340078FFF7 /* PreferencePanes.framework */; };
-		C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8572281F3270078FFF7 /* Biosphere.swift */; };
-		C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8672281F5C80078FFF7 /* Biosphere.icns */; };
-		C234E872228202CD0078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E871228202CD0078FFF7 /* Log.swift */; };
-		C234E874228207DF0078FFF7 /* GitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E873228207DF0078FFF7 /* GitController.swift */; };
-		C234E876228208680078FFF7 /* InstallGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E875228208680078FFF7 /* InstallGit.xib */; };
-		C234E87A2282EA280078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8792282EA280078FFF7 /* Biosphere.xib */; };
-		C234E88022849ED50078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E87F22849ED50078FFF7 /* OmnibusController.swift */; };
-		C234E8852284A7DE0078FFF7 /* InstallChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8832284A6410078FFF7 /* InstallChef.xib */; };
 		C234E8AC2284B2D50078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
 		C234E8AE2284B2D50078FFF7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AA2284B2D50078FFF7 /* main.swift */; };
 		C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AF2284B3280078FFF7 /* BioHelper.swift */; };
-		C234E8B12284B3570078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E871228202CD0078FFF7 /* Log.swift */; };
 		C234E8B722858D4C0078FFF7 /* io.github.halo.biohelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		C234E8BB22858E360078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8BA22858E360078FFF7 /* Version.swift */; };
-		C234E8BC22858E5C0078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8BA22858E360078FFF7 /* Version.swift */; };
 		C234E8BE22858FEB0078FFF7 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */; };
-		C234E8C02285A84B0078FFF7 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8BF2285A84B0078FFF7 /* Elevator.swift */; };
-		C234E8C22285A8F50078FFF7 /* Intercom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8C12285A8F50078FFF7 /* Intercom.swift */; };
+		C234E8DC2285D4AA0078FFF7 /* Intercom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CE2285D4AA0078FFF7 /* Intercom.swift */; };
+		C234E8DD2285D4AA0078FFF7 /* GitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CF2285D4AA0078FFF7 /* GitController.swift */; };
+		C234E8DE2285D4AA0078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */; };
+		C234E8DF2285D4AA0078FFF7 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D12285D4AA0078FFF7 /* Elevator.swift */; };
+		C234E8E02285D4AA0078FFF7 /* Biosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D22285D4AA0078FFF7 /* Biosphere.swift */; };
+		C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D52285D4AA0078FFF7 /* Disk.icns */; };
+		C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D62285D4AA0078FFF7 /* Github.icns */; };
+		C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D72285D4AA0078FFF7 /* Biosphere.icns */; };
+		C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D92285D4AA0078FFF7 /* Biosphere.xib */; };
+		C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */; };
+		C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */; };
+		C234E8F02285D58E0078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
+		C234E8F12285D58E0078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
+		C234E8F22285D58E0078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
+		C234E8F42285D5F80078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
+		C234E8F52285D6380078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
+		C234E8F62285D6380078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
+		C234E8F72285D6380078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
+		C234E8F82285D6380078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
+		C234E90D2285D9E20078FFF7 /* UninstallHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */; };
+		C234E9172285DC2E0078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
+		C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E91F2285DF7C0078FFF7 /* PathsTest.swift */; };
+		C234E9312285E0800078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
+		C234E9322285E0A30078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,25 +76,35 @@
 		C234E8222281CC260078FFF7 /* Biosphere.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Biosphere.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		C234E8352281D0310078FFF7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C234E8372281D0340078FFF7 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
-		C234E8572281F3270078FFF7 /* Biosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biosphere.swift; sourceTree = "<group>"; };
-		C234E8672281F5C80078FFF7 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Biosphere.icns; path = Biosphere/Images/Biosphere.icns; sourceTree = SOURCE_ROOT; };
-		C234E871228202CD0078FFF7 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		C234E873228207DF0078FFF7 /* GitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GitController.swift; path = Biosphere/Classes/GitController.swift; sourceTree = SOURCE_ROOT; };
-		C234E875228208680078FFF7 /* InstallGit.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InstallGit.xib; path = Biosphere/Views/InstallGit.xib; sourceTree = SOURCE_ROOT; };
-		C234E8792282EA280078FFF7 /* Biosphere.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Biosphere.xib; path = Biosphere/Views/Biosphere.xib; sourceTree = SOURCE_ROOT; };
-		C234E87F22849ED50078FFF7 /* OmnibusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmnibusController.swift; sourceTree = "<group>"; };
-		C234E8832284A6410078FFF7 /* InstallChef.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstallChef.xib; path = Biosphere/Views/InstallChef.xib; sourceTree = SOURCE_ROOT; };
 		C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = io.github.halo.biohelper; sourceTree = BUILT_PRODUCTS_DIR; };
-		C234E89D2284B1C00078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Biosphere/Info.plist; sourceTree = "<group>"; };
 		C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
 		C234E8A92284B2D50078FFF7 /* BioHelper-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BioHelper-Launchd.plist"; sourceTree = "<group>"; };
 		C234E8AA2284B2D50078FFF7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C234E8AB2284B2D50078FFF7 /* BioHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BioHelper-Info.plist"; sourceTree = "<group>"; };
 		C234E8AF2284B3280078FFF7 /* BioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioHelper.swift; sourceTree = "<group>"; };
-		C234E8BA22858E360078FFF7 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		C234E8BF2285A84B0078FFF7 /* Elevator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
-		C234E8C12285A8F50078FFF7 /* Intercom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intercom.swift; sourceTree = "<group>"; };
+		C234E8CE2285D4AA0078FFF7 /* Intercom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intercom.swift; sourceTree = "<group>"; };
+		C234E8CF2285D4AA0078FFF7 /* GitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitController.swift; sourceTree = "<group>"; };
+		C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmnibusController.swift; sourceTree = "<group>"; };
+		C234E8D12285D4AA0078FFF7 /* Elevator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
+		C234E8D22285D4AA0078FFF7 /* Biosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biosphere.swift; sourceTree = "<group>"; };
+		C234E8D32285D4AA0078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C234E8D52285D4AA0078FFF7 /* Disk.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Disk.icns; sourceTree = "<group>"; };
+		C234E8D62285D4AA0078FFF7 /* Github.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Github.icns; sourceTree = "<group>"; };
+		C234E8D72285D4AA0078FFF7 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Biosphere.icns; sourceTree = "<group>"; };
+		C234E8D92285D4AA0078FFF7 /* Biosphere.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Biosphere.xib; sourceTree = "<group>"; };
+		C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstallChef.xib; sourceTree = "<group>"; };
+		C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstallGit.xib; sourceTree = "<group>"; };
+		C234E8E92285D5580078FFF7 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		C234E8EA2285D5580078FFF7 /* Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
+		C234E8EB2285D5580078FFF7 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		C234E8F32285D5F80078FFF7 /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UninstallHelper.swift; sourceTree = "<group>"; };
+		C234E9152285DB330078FFF7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C234E91D2285DF7C0078FFF7 /* BiosphereTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BiosphereTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		C234E91F2285DF7C0078FFF7 /* PathsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathsTest.swift; sourceTree = "<group>"; };
+		C234E9262285DFA20078FFF7 /* BiosphereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiosphereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C234E92E2285DFCE0078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,19 +125,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C234E9232285DFA20078FFF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C234E8182281CC250078FFF7 = {
 			isa = PBXGroup;
 			children = (
-				C234E8562281F3270078FFF7 /* Classes */,
-				C234E83F2281F0B40078FFF7 /* Views */,
+				C234E8CB2285D4AA0078FFF7 /* Biosphere */,
+				C234E8E82285D5580078FFF7 /* BioTools */,
 				C234E8A52284B2D50078FFF7 /* BioHelper */,
-				C234E8512281F2B80078FFF7 /* Config */,
-				C234E8492281F2860078FFF7 /* Images */,
-				C234E8232281CC260078FFF7 /* Products */,
+				C234E91A2285DF090078FFF7 /* BiosphereTests */,
 				C234E8342281D0310078FFF7 /* Frameworks */,
+				C234E8232281CC260078FFF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +152,7 @@
 			children = (
 				C234E8222281CC260078FFF7 /* Biosphere.prefPane */,
 				C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */,
+				C234E9262285DFA20078FFF7 /* BiosphereTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +160,7 @@
 		C234E8342281D0310078FFF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C234E9152285DB330078FFF7 /* XCTest.framework */,
 				C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */,
 				C234E8372281D0340078FFF7 /* PreferencePanes.framework */,
 				C234E8352281D0310078FFF7 /* Cocoa.framework */,
@@ -139,65 +168,105 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C234E83F2281F0B40078FFF7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C234E8792282EA280078FFF7 /* Biosphere.xib */,
-				C234E875228208680078FFF7 /* InstallGit.xib */,
-				C234E8832284A6410078FFF7 /* InstallChef.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C234E8492281F2860078FFF7 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				C234E8672281F5C80078FFF7 /* Biosphere.icns */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		C234E8512281F2B80078FFF7 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				C234E89D2284B1C00078FFF7 /* Info.plist */,
-			);
-			name = Config;
-			sourceTree = "<group>";
-		};
-		C234E8562281F3270078FFF7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C234E8BA22858E360078FFF7 /* Version.swift */,
-				C234E8C12285A8F50078FFF7 /* Intercom.swift */,
-				C234E8BF2285A84B0078FFF7 /* Elevator.swift */,
-				C234E8572281F3270078FFF7 /* Biosphere.swift */,
-				C234E873228207DF0078FFF7 /* GitController.swift */,
-				C234E87F22849ED50078FFF7 /* OmnibusController.swift */,
-				C234E871228202CD0078FFF7 /* Log.swift */,
-			);
-			name = Classes;
-			path = Biosphere/Classes;
-			sourceTree = "<group>";
-		};
 		C234E8A52284B2D50078FFF7 /* BioHelper */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8A62284B2D50078FFF7 /* Classes */,
-				C234E8A92284B2D50078FFF7 /* BioHelper-Launchd.plist */,
+				C234E8A62284B2D50078FFF7 /* Actions */,
+				C234E8EF2285D5650078FFF7 /* Config */,
+				C234E8AF2284B3280078FFF7 /* BioHelper.swift */,
+				C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */,
 				C234E8AA2284B2D50078FFF7 /* main.swift */,
-				C234E8AB2284B2D50078FFF7 /* BioHelper-Info.plist */,
 			);
 			path = BioHelper;
 			sourceTree = "<group>";
 		};
-		C234E8A62284B2D50078FFF7 /* Classes */ = {
+		C234E8A62284B2D50078FFF7 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8AF2284B3280078FFF7 /* BioHelper.swift */,
-				C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */,
+				C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */,
 			);
-			path = Classes;
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		C234E8CB2285D4AA0078FFF7 /* Biosphere */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8CD2285D4AA0078FFF7 /* Controllers */,
+				C234E8CC2285D4AA0078FFF7 /* Config */,
+				C234E8D42285D4AA0078FFF7 /* Images */,
+				C234E8D82285D4AA0078FFF7 /* Views */,
+			);
+			path = Biosphere;
+			sourceTree = "<group>";
+		};
+		C234E8CC2285D4AA0078FFF7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8D32285D4AA0078FFF7 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C234E8CD2285D4AA0078FFF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8D22285D4AA0078FFF7 /* Biosphere.swift */,
+				C234E8CE2285D4AA0078FFF7 /* Intercom.swift */,
+				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
+				C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */,
+				C234E8D12285D4AA0078FFF7 /* Elevator.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C234E8D42285D4AA0078FFF7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8D52285D4AA0078FFF7 /* Disk.icns */,
+				C234E8D62285D4AA0078FFF7 /* Github.icns */,
+				C234E8D72285D4AA0078FFF7 /* Biosphere.icns */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C234E8D82285D4AA0078FFF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8D92285D4AA0078FFF7 /* Biosphere.xib */,
+				C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */,
+				C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C234E8E82285D5580078FFF7 /* BioTools */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8F32285D5F80078FFF7 /* Identifiers.swift */,
+				C234E8E92285D5580078FFF7 /* Log.swift */,
+				C234E8EA2285D5580078FFF7 /* Paths.swift */,
+				C234E8EB2285D5580078FFF7 /* Version.swift */,
+			);
+			path = BioTools;
+			sourceTree = "<group>";
+		};
+		C234E8EF2285D5650078FFF7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8A92284B2D50078FFF7 /* BioHelper-Launchd.plist */,
+				C234E8AB2284B2D50078FFF7 /* BioHelper-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C234E91A2285DF090078FFF7 /* BiosphereTests */ = {
+			isa = PBXGroup;
+			children = (
+				C234E91F2285DF7C0078FFF7 /* PathsTest.swift */,
+				C234E91D2285DF7C0078FFF7 /* BiosphereTests-Bridging-Header.h */,
+				C234E92E2285DFCE0078FFF7 /* Info.plist */,
+			);
+			path = BiosphereTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +319,23 @@
 			productReference = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */;
 			productType = "com.apple.product-type.tool";
 		};
+		C234E9252285DFA20078FFF7 /* BiosphereTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C234E92B2285DFA20078FFF7 /* Build configuration list for PBXNativeTarget "BiosphereTests" */;
+			buildPhases = (
+				C234E9222285DFA20078FFF7 /* Sources */,
+				C234E9232285DFA20078FFF7 /* Frameworks */,
+				C234E9242285DFA20078FFF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiosphereTests;
+			productName = BiosphereTests;
+			productReference = C234E9262285DFA20078FFF7 /* BiosphereTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,10 +353,13 @@
 					C234E88A2284B11F0078FFF7 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					C234E9252285DFA20078FFF7 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = C234E81C2281CC250078FFF7 /* Build configuration list for PBXProject "Biosphere" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -284,6 +373,7 @@
 			targets = (
 				C234E8212281CC260078FFF7 /* Biosphere */,
 				C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */,
+				C234E9252285DFA20078FFF7 /* BiosphereTests */,
 			);
 		};
 /* End PBXProject section */
@@ -293,10 +383,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C234E8852284A7DE0078FFF7 /* InstallChef.xib in Resources */,
-				C234E8682281F5C80078FFF7 /* Biosphere.icns in Resources */,
-				C234E876228208680078FFF7 /* InstallGit.xib in Resources */,
-				C234E87A2282EA280078FFF7 /* Biosphere.xib in Resources */,
+				C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */,
+				C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */,
+				C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */,
+				C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */,
+				C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */,
+				C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C234E9242285DFA20078FFF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,13 +406,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C234E872228202CD0078FFF7 /* Log.swift in Sources */,
-				C234E8582281F3270078FFF7 /* Biosphere.swift in Sources */,
-				C234E8C22285A8F50078FFF7 /* Intercom.swift in Sources */,
-				C234E874228207DF0078FFF7 /* GitController.swift in Sources */,
-				C234E8BB22858E360078FFF7 /* Version.swift in Sources */,
-				C234E88022849ED50078FFF7 /* OmnibusController.swift in Sources */,
-				C234E8C02285A84B0078FFF7 /* Elevator.swift in Sources */,
+				C234E9172285DC2E0078FFF7 /* HelperProtocol.swift in Sources */,
+				C234E8F42285D5F80078FFF7 /* Identifiers.swift in Sources */,
+				C234E8F02285D58E0078FFF7 /* Log.swift in Sources */,
+				C234E8F12285D58E0078FFF7 /* Paths.swift in Sources */,
+				C234E8F22285D58E0078FFF7 /* Version.swift in Sources */,
+				C234E8DD2285D4AA0078FFF7 /* GitController.swift in Sources */,
+				C234E8DC2285D4AA0078FFF7 /* Intercom.swift in Sources */,
+				C234E8DE2285D4AA0078FFF7 /* OmnibusController.swift in Sources */,
+				C234E8E02285D4AA0078FFF7 /* Biosphere.swift in Sources */,
+				C234E8DF2285D4AA0078FFF7 /* Elevator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +423,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C234E8BC22858E5C0078FFF7 /* Version.swift in Sources */,
-				C234E8B12284B3570078FFF7 /* Log.swift in Sources */,
+				C234E8F52285D6380078FFF7 /* Identifiers.swift in Sources */,
+				C234E8F62285D6380078FFF7 /* Log.swift in Sources */,
+				C234E90D2285D9E20078FFF7 /* UninstallHelper.swift in Sources */,
+				C234E8F72285D6380078FFF7 /* Paths.swift in Sources */,
+				C234E8F82285D6380078FFF7 /* Version.swift in Sources */,
 				C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */,
 				C234E8AE2284B2D50078FFF7 /* main.swift in Sources */,
 				C234E8AC2284B2D50078FFF7 /* HelperProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C234E9222285DFA20078FFF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C234E9322285E0A30078FFF7 /* Identifiers.swift in Sources */,
+				C234E9312285E0800078FFF7 /* Paths.swift in Sources */,
+				C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +577,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B9J4QR64LK;
-				INFOPLIST_FILE = Biosphere/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Biosphere/Config/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -488,7 +603,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B9J4QR64LK;
-				INFOPLIST_FILE = Biosphere/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Biosphere/Config/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -532,6 +647,48 @@
 			};
 			name = Release;
 		};
+		C234E92C2285DFA20078FFF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B9J4QR64LK;
+				INFOPLIST_FILE = BiosphereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.halo.BiosphereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C234E92D2285DFA20078FFF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B9J4QR64LK;
+				INFOPLIST_FILE = BiosphereTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.halo.BiosphereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -558,6 +715,15 @@
 			buildConfigurations = (
 				C234E8902284B11F0078FFF7 /* Debug */,
 				C234E8912284B11F0078FFF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C234E92B2285DFA20078FFF7 /* Build configuration list for PBXNativeTarget "BiosphereTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C234E92C2285DFA20078FFF7 /* Debug */,
+				C234E92D2285DFA20078FFF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

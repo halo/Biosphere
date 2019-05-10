@@ -22,7 +22,7 @@ class Intercom: NSObject {
 
   static func installChef(reply: @escaping (Bool) -> Void) {
     usingHelper(block: { helper in
-      helper.install(pristineDaemonExecutablePath: Paths.daemonPristineExecutablePath, reply: { success in
+      helper.installChef(reply: { success in
         Log.debug("Helper worked on installation")
         reply(success)
       })
@@ -31,7 +31,7 @@ class Intercom: NSObject {
 
   static func uninstallChef(reply: @escaping (Bool) -> Void) {
     usingHelper(block: { helper in
-      helper.uninstall(reply: { success in
+      helper.uninstallHelper(reply: { success in
         Log.debug("Helper worked on uninstallation")
         reply(success)
       })

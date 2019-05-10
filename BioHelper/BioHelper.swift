@@ -45,6 +45,11 @@ extension BioHelper: HelperProtocol {
     
     reply(true) // <- Famous last words
   }
+
+  func uninstallHelper(reply: (Bool) -> Void) {
+    UninstallHelper.perform()
+    reply(true)
+  }
 }
 
 // MARK: - NSXPCListenerDelegate

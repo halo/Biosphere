@@ -5,11 +5,11 @@ class Elevator: NSObject {
 
   func install() {
     var cfError: Unmanaged<CFError>? = nil
-    if !SMJobBless(kSMDomainSystemLaunchd, "io.halo.github.biohelper" as CFString, authorization(), &cfError) {
+    if !SMJobBless(kSMDomainSystemLaunchd, Identifiers.helper.rawValue as CFString, authorization(), &cfError) {
       let blessError = cfError!.takeRetainedValue() as Error
       Log.debug("Bless Error: \(blessError)")
     } else {
-      Log.debug("io.halo.github.biohelper installed successfully")
+      Log.debug("\(Identifiers.helper.rawValue) installed successfully")
     }
   }
 
