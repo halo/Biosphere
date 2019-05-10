@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8352281D0310078FFF7 /* Cocoa.framework */; };
 		C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8372281D0340078FFF7 /* PreferencePanes.framework */; };
-		C234E8AC2284B2D50078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
-		C234E8AE2284B2D50078FFF7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AA2284B2D50078FFF7 /* main.swift */; };
-		C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AF2284B3280078FFF7 /* BioHelper.swift */; };
-		C234E8B722858D4C0078FFF7 /* io.github.halo.biohelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C234E8BE22858FEB0078FFF7 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */; };
 		C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D52285D4AA0078FFF7 /* Disk.icns */; };
 		C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D62285D4AA0078FFF7 /* Github.icns */; };
@@ -20,53 +16,21 @@
 		C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D92285D4AA0078FFF7 /* Biosphere.xib */; };
 		C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */; };
 		C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */; };
-		C234E8F52285D6380078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
-		C234E8F62285D6380078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
-		C234E8F72285D6380078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
-		C234E8F82285D6380078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
-		C234E90D2285D9E20078FFF7 /* UninstallHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */; };
 		C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E91F2285DF7C0078FFF7 /* PathsTest.swift */; };
-		C234E9312285E0800078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
-		C234E9322285E0A30078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
-		C234E9342285E2C90078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
 		C234E9352285E2C90078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
 		C234E9362285E2C90078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
-		C234E9372285E2C90078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
 		C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */; };
-		C234E9392285E2D20078FFF7 /* Intercom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CE2285D4AA0078FFF7 /* Intercom.swift */; };
 		C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CF2285D4AA0078FFF7 /* GitController.swift */; };
 		C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */; };
-		C234E93C2285E2D20078FFF7 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D12285D4AA0078FFF7 /* Elevator.swift */; };
-		C234E93D2285E2F40078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C234E8B822858D5D0078FFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C234E8192281CC250078FFF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C234E88A2284B11F0078FFF7;
-			remoteInfo = io.github.halo.biohelper;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		C234E8892284B11F0078FFF7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		C234E8B622858D350078FFF7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LaunchServices;
 			dstSubfolderSpec = 1;
 			files = (
-				C234E8B722858D4C0078FFF7 /* io.github.halo.biohelper in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,17 +40,9 @@
 		C234E8222281CC260078FFF7 /* Biosphere.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Biosphere.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		C234E8352281D0310078FFF7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C234E8372281D0340078FFF7 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
-		C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = io.github.halo.biohelper; sourceTree = BUILT_PRODUCTS_DIR; };
-		C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
-		C234E8A92284B2D50078FFF7 /* BioHelper-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BioHelper-Launchd.plist"; sourceTree = "<group>"; };
-		C234E8AA2284B2D50078FFF7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		C234E8AB2284B2D50078FFF7 /* BioHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BioHelper-Info.plist"; sourceTree = "<group>"; };
-		C234E8AF2284B3280078FFF7 /* BioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioHelper.swift; sourceTree = "<group>"; };
 		C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		C234E8CE2285D4AA0078FFF7 /* Intercom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intercom.swift; sourceTree = "<group>"; };
 		C234E8CF2285D4AA0078FFF7 /* GitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitController.swift; sourceTree = "<group>"; };
 		C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmnibusController.swift; sourceTree = "<group>"; };
-		C234E8D12285D4AA0078FFF7 /* Elevator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
 		C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiospherePane.swift; sourceTree = "<group>"; };
 		C234E8D32285D4AA0078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C234E8D52285D4AA0078FFF7 /* Disk.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Disk.icns; sourceTree = "<group>"; };
@@ -97,9 +53,6 @@
 		C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstallGit.xib; sourceTree = "<group>"; };
 		C234E8E92285D5580078FFF7 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		C234E8EA2285D5580078FFF7 /* Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
-		C234E8EB2285D5580078FFF7 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
-		C234E8F32285D5F80078FFF7 /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
-		C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UninstallHelper.swift; sourceTree = "<group>"; };
 		C234E9152285DB330078FFF7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C234E91D2285DF7C0078FFF7 /* BiosphereTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BiosphereTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C234E91F2285DF7C0078FFF7 /* PathsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathsTest.swift; sourceTree = "<group>"; };
@@ -118,13 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C234E8882284B11F0078FFF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C234E9232285DFA20078FFF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,8 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				C234E8CB2285D4AA0078FFF7 /* Biosphere */,
-				C234E8E82285D5580078FFF7 /* BioTools */,
-				C234E8A52284B2D50078FFF7 /* BioHelper */,
 				C234E91A2285DF090078FFF7 /* BiosphereTests */,
 				C234E8342281D0310078FFF7 /* Frameworks */,
 				C234E8232281CC260078FFF7 /* Products */,
@@ -151,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				C234E8222281CC260078FFF7 /* Biosphere.prefPane */,
-				C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */,
 				C234E9262285DFA20078FFF7 /* BiosphereTests.xctest */,
 			);
 			name = Products;
@@ -168,29 +111,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C234E8A52284B2D50078FFF7 /* BioHelper */ = {
-			isa = PBXGroup;
-			children = (
-				C234E8A62284B2D50078FFF7 /* Actions */,
-				C234E8EF2285D5650078FFF7 /* Config */,
-				C234E8AF2284B3280078FFF7 /* BioHelper.swift */,
-				C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */,
-				C234E8AA2284B2D50078FFF7 /* main.swift */,
-			);
-			path = BioHelper;
-			sourceTree = "<group>";
-		};
-		C234E8A62284B2D50078FFF7 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
 		C234E8CB2285D4AA0078FFF7 /* Biosphere */ = {
 			isa = PBXGroup;
 			children = (
+				C234E93E2285F4FF0078FFF7 /* Support */,
 				C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */,
 				C234E8CD2285D4AA0078FFF7 /* Controllers */,
 				C234E8CC2285D4AA0078FFF7 /* Config */,
@@ -211,10 +135,8 @@
 		C234E8CD2285D4AA0078FFF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8CE2285D4AA0078FFF7 /* Intercom.swift */,
 				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */,
-				C234E8D12285D4AA0078FFF7 /* Elevator.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,26 +161,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C234E8E82285D5580078FFF7 /* BioTools */ = {
-			isa = PBXGroup;
-			children = (
-				C234E8F32285D5F80078FFF7 /* Identifiers.swift */,
-				C234E8E92285D5580078FFF7 /* Log.swift */,
-				C234E8EA2285D5580078FFF7 /* Paths.swift */,
-				C234E8EB2285D5580078FFF7 /* Version.swift */,
-			);
-			path = BioTools;
-			sourceTree = "<group>";
-		};
-		C234E8EF2285D5650078FFF7 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				C234E8A92284B2D50078FFF7 /* BioHelper-Launchd.plist */,
-				C234E8AB2284B2D50078FFF7 /* BioHelper-Info.plist */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		C234E91A2285DF090078FFF7 /* BiosphereTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +169,15 @@
 				C234E92E2285DFCE0078FFF7 /* Info.plist */,
 			);
 			path = BiosphereTests;
+			sourceTree = "<group>";
+		};
+		C234E93E2285F4FF0078FFF7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C234E8E92285D5580078FFF7 /* Log.swift */,
+				C234E8EA2285D5580078FFF7 /* Paths.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,29 +206,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				C234E8B922858D5D0078FFF7 /* PBXTargetDependency */,
 			);
 			name = Biosphere;
 			productName = Biosphere;
 			productReference = C234E8222281CC260078FFF7 /* Biosphere.prefPane */;
 			productType = "com.apple.product-type.bundle";
-		};
-		C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C234E88F2284B11F0078FFF7 /* Build configuration list for PBXNativeTarget "io.github.halo.biohelper" */;
-			buildPhases = (
-				C234E8872284B11F0078FFF7 /* Sources */,
-				C234E8882284B11F0078FFF7 /* Frameworks */,
-				C234E8892284B11F0078FFF7 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = io.github.halo.biohelper;
-			productName = biohelper;
-			productReference = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */;
-			productType = "com.apple.product-type.tool";
 		};
 		C234E9252285DFA20078FFF7 /* BiosphereTests */ = {
 			isa = PBXNativeTarget;
@@ -350,9 +243,6 @@
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
 					};
-					C234E88A2284B11F0078FFF7 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
 					C234E9252285DFA20078FFF7 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -372,7 +262,6 @@
 			projectRoot = "";
 			targets = (
 				C234E8212281CC260078FFF7 /* Biosphere */,
-				C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */,
 				C234E9252285DFA20078FFF7 /* BiosphereTests */,
 			);
 		};
@@ -406,31 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C234E93D2285E2F40078FFF7 /* HelperProtocol.swift in Sources */,
 				C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */,
-				C234E9342285E2C90078FFF7 /* Identifiers.swift in Sources */,
-				C234E9372285E2C90078FFF7 /* Version.swift in Sources */,
 				C234E9352285E2C90078FFF7 /* Log.swift in Sources */,
 				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
-				C234E93C2285E2D20078FFF7 /* Elevator.swift in Sources */,
-				C234E9392285E2D20078FFF7 /* Intercom.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C234E8872284B11F0078FFF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C234E8F52285D6380078FFF7 /* Identifiers.swift in Sources */,
-				C234E8F62285D6380078FFF7 /* Log.swift in Sources */,
-				C234E90D2285D9E20078FFF7 /* UninstallHelper.swift in Sources */,
-				C234E8F72285D6380078FFF7 /* Paths.swift in Sources */,
-				C234E8F82285D6380078FFF7 /* Version.swift in Sources */,
-				C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */,
-				C234E8AE2284B2D50078FFF7 /* main.swift in Sources */,
-				C234E8AC2284B2D50078FFF7 /* HelperProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,21 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C234E9322285E0A30078FFF7 /* Identifiers.swift in Sources */,
-				C234E9312285E0800078FFF7 /* Paths.swift in Sources */,
 				C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C234E8B922858D5D0078FFF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C234E88A2284B11F0078FFF7 /* io.github.halo.biohelper */;
-			targetProxy = C234E8B822858D5D0078FFF7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C234E82F2281CC260078FFF7 /* Debug */ = {
@@ -619,34 +478,6 @@
 			};
 			name = Release;
 		};
-		C234E8902284B11F0078FFF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B9J4QR64LK;
-				INFOPLIST_FILE = "$(SRCROOT)/BioHelper/BioHelper-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		C234E8912284B11F0078FFF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B9J4QR64LK;
-				INFOPLIST_FILE = "$(SRCROOT)/BioHelper/BioHelper-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		C234E92C2285DFA20078FFF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -706,15 +537,6 @@
 			buildConfigurations = (
 				C234E8322281CC260078FFF7 /* Debug */,
 				C234E8332281CC260078FFF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C234E88F2284B11F0078FFF7 /* Build configuration list for PBXNativeTarget "io.github.halo.biohelper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C234E8902284B11F0078FFF7 /* Debug */,
-				C234E8912284B11F0078FFF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

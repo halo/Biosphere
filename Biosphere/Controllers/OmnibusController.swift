@@ -4,7 +4,6 @@ class OmnibusController: NSWindowController {
   public var bundle: Bundle?
   
   public var isSatisfied: Bool {
-    checkHelper()
     let fileManager = FileManager.default
     
     if fileManager.fileExists(atPath: Paths.chefExecutable) {
@@ -17,16 +16,6 @@ class OmnibusController: NSWindowController {
   }
   
   @IBOutlet weak var authorizeHelperButton: NSButton!
-
-  
-  @IBAction func checkSatisfaction(sender: NSButton) {
-    Log.debug("Checking satisfaction manually...")
-    if isSatisfied {
-      Log.debug("I am satisfied")
-    } else {
-      Log.debug("I am NOT satisfied")
-    }
-  }
   
   @IBAction func authorize(sender: NSButton) {
     Log.debug("Elevating Helper...")
@@ -35,6 +24,8 @@ class OmnibusController: NSWindowController {
   
   @IBAction func installOmnibus(sender: NSButton) {
     let task = Process()
+    // Could use `AEDeterminePermissionToAutomateTarget` but it's not available on High Sierra and it's buggy in Mojave.
+    // See https://www.felix-schwarz.org/blog/2018/08/new-apple-event-apis-in-macos-mojave
     task.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
     task.arguments = ["-e", "tell app \"Terminal\"",
                       "-e", "do script \"curl --location --silent  https://omnitruck.chef.io/install.sh | sudo bash\"",
@@ -45,6 +36,10 @@ class OmnibusController: NSWindowController {
     task.standardError = pipe
     
     task.terminationHandler = { (process) in
+      //guard process.terminationStatus == 0 else {
+      //
+      //}
+      
       Log.debug("osascript exitet with status: \(process.terminationStatus)")
       
       let data = pipe.fileHandleForReading.readDataToEndOfFile()
@@ -61,36 +56,6 @@ class OmnibusController: NSWindowController {
     }
   }
   
-  func checkHelper() {
-    Intercom.helperVersion(reply: { versionOrNil in
-      guard let version = versionOrNil else {
-        self.authorizeHelperButton.title = "Authorize Biosphere..."
-        self.authorizeHelperButton.isHidden = false
-        return
-      }
-      
-      if (version.isCompatible(with: version)) {
-        self.authorizeHelperButton.isHidden = true
-      } else {
-        self.authorizeHelperButton.title = "Re-authorize Biosphere..."
-        self.authorizeHelperButton.isHidden = false
-      }
-    })
-  }
-
-  /**
-   * Looks up the version of the Application Bundle in Info.plist.
-   *
-   * - Returns: An instance of `Version`.
-   */
-  private lazy var version: Version = {
-    assert((bundle != nil), "Forgot to pass in preference pane bundle from NSPreferencePane")
-    assert((bundle!.infoDictionary != nil))
-    assert(((bundle?.infoDictionary?["CFBundleShortVersionString"]) != nil), "The preference pane bundle is missing CFBundleShortVersionString")
-    
-    return Version(bundle!.infoDictionary!["CFBundleShortVersionString"] as! String)
-  }()
-
   override var windowNibName: String! {
     return "InstallChef"
   }
