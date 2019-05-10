@@ -42,7 +42,9 @@ class OmnibusController: NSWindowController {
       
       if output.contains("1743") {
         Log.debug("As of now, the user denied Automation access to Terminal for System Preferences")
-        NotificationCenter.default.post(name:.missingAutomationPermission, object: nil, userInfo: nil)
+        DispatchQueue.main.async {
+          NotificationCenter.default.post(name:.missingAutomationPermission, object: nil, userInfo: nil)
+        }
         return
       }
         

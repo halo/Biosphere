@@ -14,20 +14,17 @@ class BiospherePane: NSPreferencePane {
   }
   
   private func update() {
-    // Cannot update UI from e.g. notification receiving thread, must go to main thread
-    DispatchQueue.main.async {
-      self.mainView = self.recommendedView
-    }
+    self.mainView = self.recommendedView
   }
   
   private var recommendedView: NSView {
     if misingAutomationPermission {
-      Log.debug("Currently missing automation permission, loading automation controller...")
+      Log.debug("Currently missing automation permission, it'S automation controller turn...")
       return automationController.view
     }
     
     guard omnibusController.satisfied else {
-      Log.debug("Omnibus is not satisfied, bring it up...")
+      Log.debug("Omnibus is not satisfied, it's your turn...")
       return omnibusController.view
     }
     

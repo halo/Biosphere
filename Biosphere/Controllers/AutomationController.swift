@@ -10,9 +10,10 @@ class AutomationController: NSWindowController {
     let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Automation")!
     if NSWorkspace.shared.open(url) {
       Log.debug("Link was clicked")
-      
     }
-    NotificationCenter.default.post(name:.missingAutomationPermission, object: nil, userInfo: nil)
+    DispatchQueue.main.async {
+      NotificationCenter.default.post(name:.missingAutomationPermission, object: nil, userInfo: nil)
+    }
   }
   
   override var windowNibName: String! {
