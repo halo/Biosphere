@@ -1,7 +1,7 @@
 import Foundation
 import ServiceManagement
 
-class Elevator: NSObject {
+class Elevator {
 
   func install() {
     var cfError: Unmanaged<CFError>? = nil

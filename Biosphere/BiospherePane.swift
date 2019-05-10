@@ -1,7 +1,7 @@
 import Cocoa
 import PreferencePanes
 
-class Biosphere: NSPreferencePane {  
+class BiospherePane: NSPreferencePane {  
   override func mainViewDidLoad() {
     Log.debug("mainViewDidLoad...")
     mainView = omnibusController.view

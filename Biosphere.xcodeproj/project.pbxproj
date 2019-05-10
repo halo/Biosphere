@@ -14,30 +14,30 @@
 		C234E8B02284B3280078FFF7 /* BioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8AF2284B3280078FFF7 /* BioHelper.swift */; };
 		C234E8B722858D4C0078FFF7 /* io.github.halo.biohelper in CopyFiles */ = {isa = PBXBuildFile; fileRef = C234E88B2284B11F0078FFF7 /* io.github.halo.biohelper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C234E8BE22858FEB0078FFF7 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */; };
-		C234E8DC2285D4AA0078FFF7 /* Intercom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CE2285D4AA0078FFF7 /* Intercom.swift */; };
-		C234E8DD2285D4AA0078FFF7 /* GitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CF2285D4AA0078FFF7 /* GitController.swift */; };
-		C234E8DE2285D4AA0078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */; };
-		C234E8DF2285D4AA0078FFF7 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D12285D4AA0078FFF7 /* Elevator.swift */; };
-		C234E8E02285D4AA0078FFF7 /* Biosphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D22285D4AA0078FFF7 /* Biosphere.swift */; };
 		C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D52285D4AA0078FFF7 /* Disk.icns */; };
 		C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D62285D4AA0078FFF7 /* Github.icns */; };
 		C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D72285D4AA0078FFF7 /* Biosphere.icns */; };
 		C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D92285D4AA0078FFF7 /* Biosphere.xib */; };
 		C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */; };
 		C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */; };
-		C234E8F02285D58E0078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
-		C234E8F12285D58E0078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
-		C234E8F22285D58E0078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
-		C234E8F42285D5F80078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
 		C234E8F52285D6380078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
 		C234E8F62285D6380078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
 		C234E8F72285D6380078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
 		C234E8F82285D6380078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
 		C234E90D2285D9E20078FFF7 /* UninstallHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E90C2285D9E20078FFF7 /* UninstallHelper.swift */; };
-		C234E9172285DC2E0078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
 		C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E91F2285DF7C0078FFF7 /* PathsTest.swift */; };
 		C234E9312285E0800078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
 		C234E9322285E0A30078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
+		C234E9342285E2C90078FFF7 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8F32285D5F80078FFF7 /* Identifiers.swift */; };
+		C234E9352285E2C90078FFF7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
+		C234E9362285E2C90078FFF7 /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
+		C234E9372285E2C90078FFF7 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EB2285D5580078FFF7 /* Version.swift */; };
+		C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */; };
+		C234E9392285E2D20078FFF7 /* Intercom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CE2285D4AA0078FFF7 /* Intercom.swift */; };
+		C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8CF2285D4AA0078FFF7 /* GitController.swift */; };
+		C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */; };
+		C234E93C2285E2D20078FFF7 /* Elevator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D12285D4AA0078FFF7 /* Elevator.swift */; };
+		C234E93D2285E2F40078FFF7 /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8A72284B2D50078FFF7 /* HelperProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 		C234E8CF2285D4AA0078FFF7 /* GitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitController.swift; sourceTree = "<group>"; };
 		C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmnibusController.swift; sourceTree = "<group>"; };
 		C234E8D12285D4AA0078FFF7 /* Elevator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elevator.swift; sourceTree = "<group>"; };
-		C234E8D22285D4AA0078FFF7 /* Biosphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Biosphere.swift; sourceTree = "<group>"; };
+		C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiospherePane.swift; sourceTree = "<group>"; };
 		C234E8D32285D4AA0078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C234E8D52285D4AA0078FFF7 /* Disk.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Disk.icns; sourceTree = "<group>"; };
 		C234E8D62285D4AA0078FFF7 /* Github.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Github.icns; sourceTree = "<group>"; };
@@ -191,6 +191,7 @@
 		C234E8CB2285D4AA0078FFF7 /* Biosphere */ = {
 			isa = PBXGroup;
 			children = (
+				C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */,
 				C234E8CD2285D4AA0078FFF7 /* Controllers */,
 				C234E8CC2285D4AA0078FFF7 /* Config */,
 				C234E8D42285D4AA0078FFF7 /* Images */,
@@ -210,7 +211,6 @@
 		C234E8CD2285D4AA0078FFF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8D22285D4AA0078FFF7 /* Biosphere.swift */,
 				C234E8CE2285D4AA0078FFF7 /* Intercom.swift */,
 				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */,
@@ -406,16 +406,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C234E9172285DC2E0078FFF7 /* HelperProtocol.swift in Sources */,
-				C234E8F42285D5F80078FFF7 /* Identifiers.swift in Sources */,
-				C234E8F02285D58E0078FFF7 /* Log.swift in Sources */,
-				C234E8F12285D58E0078FFF7 /* Paths.swift in Sources */,
-				C234E8F22285D58E0078FFF7 /* Version.swift in Sources */,
-				C234E8DD2285D4AA0078FFF7 /* GitController.swift in Sources */,
-				C234E8DC2285D4AA0078FFF7 /* Intercom.swift in Sources */,
-				C234E8DE2285D4AA0078FFF7 /* OmnibusController.swift in Sources */,
-				C234E8E02285D4AA0078FFF7 /* Biosphere.swift in Sources */,
-				C234E8DF2285D4AA0078FFF7 /* Elevator.swift in Sources */,
+				C234E93D2285E2F40078FFF7 /* HelperProtocol.swift in Sources */,
+				C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */,
+				C234E9342285E2C90078FFF7 /* Identifiers.swift in Sources */,
+				C234E9372285E2C90078FFF7 /* Version.swift in Sources */,
+				C234E9352285E2C90078FFF7 /* Log.swift in Sources */,
+				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
+				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
+				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
+				C234E93C2285E2D20078FFF7 /* Elevator.swift in Sources */,
+				C234E9392285E2D20078FFF7 /* Intercom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

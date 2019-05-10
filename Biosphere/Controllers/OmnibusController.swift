@@ -2,7 +2,15 @@ import Cocoa
 
 class OmnibusController: NSWindowController {
   public var isSatisfied: Bool {
-    return false
+    let fileManager = FileManager.default
+    
+    if fileManager.fileExists(atPath: Paths.chefExecutable) {
+      Log.debug("\(Paths.chefExecutable) exists")
+      return true
+    } else {
+      Log.debug("\(Paths.chefExecutable) not found")
+      return false
+    }
   }
   
   @IBAction func authorize(sender: NSButton) {

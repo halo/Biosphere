@@ -27,7 +27,7 @@
 	<key>NSPrefPaneIconLabel</key>
 	<string>Biosphere</string>
 	<key>NSPrincipalClass</key>
-	<string>Biosphere</string>
+	<string>BiospherePane</string>
 	<key>SMPrivilegedExecutables</key>
 	<dict>
 		<key>io.github.halo.biospherehelper</key>

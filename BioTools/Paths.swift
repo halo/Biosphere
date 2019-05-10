@@ -6,7 +6,10 @@ extension String {
   }
 }
 
-class Paths {
+class Paths: NSObject {
+
+  static let chefExecutable = "/opt/bin/chef-solo"
+  static let chefExecutableUrl = URL(fileURLWithPath: chefExecutable)
 
   static let helperDirectory = "/Library/PrivilegedHelperTools"
   static let helperDirectoryURL = URL(fileURLWithPath: helperDirectory)
