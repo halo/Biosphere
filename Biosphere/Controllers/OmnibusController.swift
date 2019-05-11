@@ -28,7 +28,8 @@ class OmnibusController: NSViewController {
     // See https://www.felix-schwarz.org/blog/2018/08/new-apple-event-apis-in-macos-mojave
     task.executableURL = URL(fileURLWithPath: "/usr/bin/osascript")
     task.arguments = ["-e", "tell app \"Terminal\"",
-                      "-e", "do script \"curl --location --silent  https://omnitruck.chef.io/install.sh | sudo bash\"",
+                      "-e", "activate",
+                      "-e", "do script \"\(omniTruckCommand)\"",
                       "-e", "end tell"]
     
     let pipe = Pipe()
@@ -65,6 +66,10 @@ class OmnibusController: NSViewController {
     } catch {
       Log.debug("Failed to execute osascript. Does the executable exist?")
     }
+  }
+  
+  private var omniTruckCommand: String {
+    return "curl --location --silent  https://omnitruck.chef.io/install.sh | sudo bash"
   }
   
 }
