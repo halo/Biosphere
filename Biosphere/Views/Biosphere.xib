@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="BiospherePane" customModule="Biosphere" customModuleProvider="target">
             <connections>
                 <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+                <outlet property="container" destination="7bH-Bc-MW7" id="Qzu-LB-mTO"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

@@ -5,6 +5,8 @@ class BiospherePane: NSPreferencePane {
   
   public var misingAutomationPermission: Bool = false
   
+  @IBOutlet weak var container: NSView!
+  
   override func mainViewDidLoad() {
     Log.debug("mainViewDidLoad...")
     NotificationCenter.default.addObserver(forName: .missingAutomationPermission, object: nil, queue: nil, using: missingAutomationPermissionNotification)
@@ -14,17 +16,23 @@ class BiospherePane: NSPreferencePane {
   }
   
   private func update() {
-    self.mainView = self.recommendedView
+    let newView = recommendedView
+    Log.debug("Changing from current view \(mainView)")
+    Log.debug("To new view \(newView)")
+    for subview in mainView.subviews {
+      subview.removeFromSuperview()
+    }
+    mainView.addSubview(newView)
   }
   
   private var recommendedView: NSView {
     if misingAutomationPermission {
-      Log.debug("Currently missing automation permission, it'S automation controller turn...")
+      Log.debug("Currently missing automation permission, it should be displayed...")
       return automationController.view
     }
     
     guard omnibusController.satisfied else {
-      Log.debug("Omnibus is not satisfied, it's your turn...")
+      Log.debug("Omnibus is not satisfied, it should be displayed...")
       return omnibusController.view
     }
     
