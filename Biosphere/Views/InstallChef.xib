@@ -13,7 +13,7 @@
         </customObject>
         <view wantsLayer="YES" id="Vo1-RB-Dnp">
             <rect key="frame" x="0.0" y="0.0" width="391" height="130"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mac-jt-f9t">
                     <rect key="frame" x="18" y="61" width="382" height="49"/>

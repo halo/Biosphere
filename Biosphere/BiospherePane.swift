@@ -12,10 +12,10 @@ class BiospherePane: NSPreferencePane {
     Log.debug("mainViewDidLoad...")
     NotificationCenter.default.addObserver(forName: .missingAutomationPermission, object: nil, queue: nil, using: missingAutomationPermissionNotification)
     NotificationCenter.default.addObserver(forName: .forgetAutomationPermission, object: nil, queue: nil, using: forgetAutomationPermissionNotification)
-    
   }
   
   override func didSelect() {
+    Log.debug("didSelect...")
     update()
   }
   
@@ -23,75 +23,33 @@ class BiospherePane: NSPreferencePane {
     // Remembering current container height
     let currentContainerHeight = container.frame.height
     
-    // Swapping container content
-    container.subviews.forEach { $0.removeFromSuperview() }
+    // Determining new container height
     let newView = recommendedView
-    container.addSubview(newView)
-    
-    // No adjustments if the window is not visible yet
-    guard let window = mainView.window else {
-      Log.error("WHERE IS MY WINDOW?-----------------------")
-      return
-    }
-
-    // How differs the new container height from the old one?
     let newContainerHeight = newView.frame.height
     let heightDiff = newContainerHeight - currentContainerHeight
-    Log.debug("New container height differs by \(heightDiff) pixel")
-    
-    // Adjusting all relevant heights
+    Log.debug("New container height differs by \(heightDiff) pixels")
+
+    // Get Window
+    assert((mainView.window != nil))
+    let window = mainView.window!
+
+    // Adjusting window height
     var newWindowFrame = window.frame
     newWindowFrame.size.height += heightDiff
     newWindowFrame.origin.y -= heightDiff // If height increases, bottom goes down
     Log.debug("Changing window from \(window.frame) to \(newWindowFrame)")
     window.setFrame(newWindowFrame, display: true, animate: true)
 
+    // Adjusting view height
     var newMainViewFrame = mainView.frame
     newMainViewFrame.size.height += heightDiff
     //newMainViewFrame.origin.y += heightDiff
     Log.debug("Changing mainView from \(mainView.frame) to \(newMainViewFrame)")
     mainView.frame = newMainViewFrame
 
-    //var newContainerViewFrame = container.frame
-    //newContainerViewFrame.size.height += heightDiff
-    ////newMainViewFrame.origin.y += heightDiff
-    //Log.debug("Changing container from \(container.frame) to \(newContainerViewFrame)")
-    //container.frame = newContainerViewFrame
-
-    //var newScreenFrame = screen.frame
-    //newScreenFrame.size.height += heightDiff
-    ////newScreenFrame.origin.y += heightDiff
-    //screen.frame = newScreenFrame
-
-    
-
-    
-    //Log.debug("The optimal container height is \(optimalContainerHeight)")
-    //
-    //let windowWithoutCurrentContainerHeight = window.frame.height - container.frame.height
-    //Log.debug("The current net window height is \(windowWithoutCurrentContainerHeight)")
-//
-    //let newWindowHeight = windowWithoutCurrentContainerHeight + optimalContainerHeight
-    //Log.debug("The old window height is \(window.frame.height)")
-    //Log.debug("The new window height is \(newWindowHeight)")
-//
-    //Log.debug("The old mainView height is \(mainView.frame.height)")
-    //
-    //
-    //var newFrame = window.frame
-    //newFrame.size.height = newWindowHeight // Height increases
-    //newFrame.origin.y = window.frame.origin.y - newWindowHeight // Bottom goes down
-    //window.setFrame(newFrame, display: true, animate: true)
-    //mainView.needsLayout = true
-    //Log.debug("The new mainView height is \(mainView.frame.height)")
-//
-    //var newMainViewFrame = mainView.frame
-    //newMainViewFrame.size.height = newFrame.size.height
-    //newMainViewFrame.origin.y = window.frame.origin.y + 600 // Bottom goes up
-    //
-    //mainView.frame = newWindowHeight
-    //screen.frame = newWindowHeight
-
+    // Swapping container content
+    container.subviews.forEach { $0.removeFromSuperview() }
+    container.addSubview(newView)
   }
   
   private var recommendedView: NSView {
