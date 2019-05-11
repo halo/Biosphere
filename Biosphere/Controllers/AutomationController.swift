@@ -12,7 +12,7 @@ class AutomationController: NSViewController {
       Log.debug("Link was clicked")
     }
     DispatchQueue.main.async {
-      NotificationCenter.default.post(name:.missingAutomationPermission, object: nil, userInfo: nil)
+      NotificationCenter.default.post(name:.forgetAutomationPermission, object: nil, userInfo: nil)
     }
   }
   
