@@ -1,7 +1,7 @@
 import Cocoa
 
-class AutomationController: NSWindowController {
-
+class AutomationController: NSViewController {
+  
   public var isSatisfied: Bool {
     return true
   }
@@ -16,7 +16,7 @@ class AutomationController: NSWindowController {
     }
   }
   
-  override var windowNibName: String! {
-    return "AllowAutomation"
-  }
+  //override var windowNibName: String! {
+  //  return "AllowAutomation"
+  //}
 }

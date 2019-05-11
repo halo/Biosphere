@@ -1,6 +1,6 @@
 import Cocoa
 
-class OmnibusController: NSWindowController {
+class OmnibusController: NSViewController {
   
   public var satisfied: Bool {
     let fileManager = FileManager.default
@@ -59,7 +59,4 @@ class OmnibusController: NSWindowController {
     }
   }
   
-  override var windowNibName: String! {
-    return "InstallChef"
-  }
 }

@@ -52,18 +52,18 @@ class BiospherePane: NSPreferencePane {
     update()
   }
   
-  private lazy var gitController: GitController = {
-    Log.debug("Initializing GitController...")
-    return GitController()
-  }()
-
   private lazy var omnibusController: OmnibusController = {
     Log.debug("Initializing OmnibusController...")
-    return OmnibusController()
+    return OmnibusController.init(nibName: "InstallChef", bundle: bundle)
+  }()
+
+  private lazy var gitController: GitController = {
+    Log.debug("Initializing GitController...")
+    return GitController.init(nibName: "InstallGit", bundle: bundle)
   }()
   
   private lazy var automationController: AutomationController = {
     Log.debug("Initializing AutomationController...")
-    return AutomationController()
+    return AutomationController.init(nibName: "AllowAutomation", bundle: bundle)
   }()
 }

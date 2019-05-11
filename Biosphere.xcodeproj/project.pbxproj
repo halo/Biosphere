@@ -24,7 +24,6 @@
 		C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */; };
 		C234E9402285FCD40078FFF7 /* AllowAutomation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */; };
 		C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9412285FCF20078FFF7 /* AutomationController.swift */; };
-		C234E9452285FD390078FFF7 /* NSWindowController+view.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9442285FD390078FFF7 /* NSWindowController+view.swift */; };
 		C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9462285FF9F0078FFF7 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +63,6 @@
 		C234E92E2285DFCE0078FFF7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllowAutomation.xib; sourceTree = "<group>"; };
 		C234E9412285FCF20078FFF7 /* AutomationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationController.swift; sourceTree = "<group>"; };
-		C234E9442285FD390078FFF7 /* NSWindowController+view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWindowController+view.swift"; sourceTree = "<group>"; };
 		C234E9462285FF9F0078FFF7 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				C234E8CB2285D4AA0078FFF7 /* Biosphere */,
-				C234E9432285FD100078FFF7 /* Extensions */,
 				C234E91A2285DF090078FFF7 /* BiosphereTests */,
 				C234E8342281D0310078FFF7 /* Frameworks */,
 				C234E8232281CC260078FFF7 /* Products */,
@@ -144,8 +141,8 @@
 		C234E8CD2285D4AA0078FFF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */,
+				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E9412285FCF20078FFF7 /* AutomationController.swift */,
 			);
 			path = Controllers;
@@ -190,14 +187,6 @@
 				C234E9462285FF9F0078FFF7 /* Notifications.swift */,
 			);
 			path = Support;
-			sourceTree = "<group>";
-		};
-		C234E9432285FD100078FFF7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C234E9442285FD390078FFF7 /* NSWindowController+view.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +311,6 @@
 				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
 				C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */,
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
-				C234E9452285FD390078FFF7 /* NSWindowController+view.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

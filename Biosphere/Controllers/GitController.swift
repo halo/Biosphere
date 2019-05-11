@@ -1,6 +1,6 @@
 import Cocoa
 
-class GitController: NSWindowController {
+class GitController: NSViewController {
   public var isSatisfied: Bool {
     return false
   }
@@ -30,7 +30,4 @@ class GitController: NSWindowController {
     }
   }
   
-  override var windowNibName: String! {
-    return "InstallGit"
-  }
 }
