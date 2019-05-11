@@ -28,28 +28,45 @@ class BiospherePane: NSPreferencePane {
     let newContainerHeight = newView.frame.height
     let heightDiff = newContainerHeight - currentContainerHeight
     Log.debug("New container height differs by \(heightDiff) pixels")
-
-    // Get Window
-    assert((mainView.window != nil))
-    let window = mainView.window!
-
-    // Adjusting window height
-    var newWindowFrame = window.frame
-    newWindowFrame.size.height += heightDiff
-    newWindowFrame.origin.y -= heightDiff // If height increases, bottom goes down
-    Log.debug("Changing window from \(window.frame) to \(newWindowFrame)")
-    window.setFrame(newWindowFrame, display: true, animate: true)
-
-    // Adjusting view height
-    var newMainViewFrame = mainView.frame
-    newMainViewFrame.size.height += heightDiff
-    //newMainViewFrame.origin.y += heightDiff
-    Log.debug("Changing mainView from \(mainView.frame) to \(newMainViewFrame)")
-    mainView.frame = newMainViewFrame
+    
+    // Adjusting container height
+    adjustHeight(diff: heightDiff)
 
     // Swapping container content
     container.subviews.forEach { $0.removeFromSuperview() }
     container.addSubview(newView)
+  }
+  
+  private func adjustHeight(diff: CGFloat) {
+    // Get Window
+    assert((mainView.window != nil), "Please do not try to adjust the window when it is not visible yet.")
+    let window = mainView.window!
+    
+    // Adjusting window height
+    var newWindowFrame = window.frame
+    newWindowFrame.size.height += diff
+    newWindowFrame.origin.y -= diff // If height increases, bottom goes down
+    Log.debug("Changing window from \(window.frame) to \(newWindowFrame)")
+    
+    // Adjusting view height
+    var newMainViewFrame = mainView.frame
+    newMainViewFrame.size.height += diff
+    Log.debug("Changing mainView from \(mainView.frame) to \(newMainViewFrame)")
+
+    let windowResize = [
+      NSViewAnimation.Key.target: window,
+      NSViewAnimation.Key.endFrame: NSValue(rect: newWindowFrame)
+    ]
+    let mainViewResize = [
+      NSViewAnimation.Key.target: mainView,
+      NSViewAnimation.Key.endFrame: NSValue(rect: newMainViewFrame)
+    ]
+    let animations = [windowResize, mainViewResize]
+    let animation = NSViewAnimation(viewAnimations: animations)
+    animation.animationBlockingMode = .blocking
+    animation.animationCurve = .easeIn
+    animation.duration = 0.2
+    animation.start()
   }
   
   private var recommendedView: NSView {
