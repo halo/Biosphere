@@ -19,6 +19,11 @@ class BiospherePane: NSPreferencePane {
     update()
   }
   
+  override func didUnselect() {
+    Log.debug("didUnSelect...")
+    forgetAutomationPermissionNotification(Notification(name: .forgetAutomationPermission))
+  }
+  
   private func update() {
     // Remembering current container height
     let currentContainerHeight = container.frame.height
@@ -29,18 +34,19 @@ class BiospherePane: NSPreferencePane {
     let heightDiff = newContainerHeight - currentContainerHeight
     Log.debug("New container height differs by \(heightDiff) pixels")
     
-    // Adjusting container height
-    adjustHeight(diff: heightDiff)
-
-    // Swapping container content
+    // Remove container content
     container.subviews.forEach { $0.removeFromSuperview() }
+    // Adjusting height of container and window
+    adjustHeight(diff: heightDiff)
+    // Swapping container content
     container.addSubview(newView)
   }
   
   private func adjustHeight(diff: CGFloat) {
-    // Get Window
-    assert((mainView.window != nil), "Please do not try to adjust the window when it is not visible yet.")
-    let window = mainView.window!
+    guard let window = mainView.window else {
+      Log.debug("Skipping resize animation. We only have access to the window when our mainView is up.")
+      return
+    }
     
     // Adjusting window height
     var newWindowFrame = window.frame

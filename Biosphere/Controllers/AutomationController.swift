@@ -11,9 +11,6 @@ class AutomationController: NSViewController {
     if NSWorkspace.shared.open(url) {
       Log.debug("Link was clicked")
     }
-    DispatchQueue.main.async {
-      NotificationCenter.default.post(name:.forgetAutomationPermission, object: nil, userInfo: nil)
-    }
   }
   
   //override var windowNibName: String! {

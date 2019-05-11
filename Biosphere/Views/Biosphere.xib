@@ -56,23 +56,13 @@ AAAAAAEGA
                             </caTransition>
                         </animations>
                     </customView>
-                    <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="zBd-wn-BKY" userLabel="Outer Frame">
-                        <rect key="frame" x="0.0" y="1" width="667" height="400"/>
+                    <box fixedFrame="YES" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WT2-0S-db2">
+                        <rect key="frame" x="17" y="33" width="634" height="206"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <view key="contentView" ambiguous="YES" id="ye6-M5-po5">
-                            <rect key="frame" x="1" y="1" width="665" height="398"/>
+                        <view key="contentView" ambiguous="YES" id="UJs-Px-dIF">
+                            <rect key="frame" x="3" y="3" width="628" height="200"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </view>
-                        <color key="borderColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
-                    </box>
-                    <box fixedFrame="YES" boxType="custom" borderType="line" cornerRadius="1" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-TK-4Vx" userLabel="Inner Frame">
-                        <rect key="frame" x="19" y="34" width="630" height="205"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <view key="contentView" ambiguous="YES" id="QsY-bl-LHO">
-                            <rect key="frame" x="1" y="1" width="628" height="203"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </view>
-                        <color key="borderColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                     </box>
                 </subviews>
             </view>
