@@ -16,13 +16,15 @@ class BiospherePane: NSPreferencePane {
   }
   
   private func update() {
+    Log.debug("subviews: \(mainView.subviews)")
+    guard let oldView = mainView.subviews.last else {
+      Log.error("I really thought there was at least one subview in the main view")
+      return()
+    }
     let newView = recommendedView
     Log.debug("Changing from current view \(mainView)")
     Log.debug("To new view \(newView)")
-    for subview in mainView.subviews {
-      subview.removeFromSuperview()
-    }
-    mainView.addSubview(newView)
+    mainView.replaceSubview(oldView, with: newView)
   }
   
   private var recommendedView: NSView {
