@@ -61,7 +61,7 @@
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
                     <connections>
-                        <action selector="installOmnibusWithSender:" target="-2" id="az5-UZ-c7u"/>
+                        <action selector="openChefWebsiteWithSender:" target="-2" id="R6x-uH-57y"/>
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4m-tX-SVI">

@@ -13,7 +13,15 @@ class OmnibusController: NSViewController {
       return false
     }
   }
-    
+  
+  @IBAction func openChefWebsite(sender: NSButton) {
+    Log.debug("Chef Download Page Link was clicked")
+    let url = URL(string: "https://downloads.chef.io/chef#mac_os_x")!
+    if NSWorkspace.shared.open(url) {
+      Log.debug("Opened page successfully")
+    }
+  }
+  
   @IBAction func installOmnibus(sender: NSButton) {
     let task = Process()
     // Could use `AEDeterminePermissionToAutomateTarget` but it's not available on High Sierra and it's buggy in Mojave.

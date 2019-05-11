@@ -9,7 +9,7 @@ class AutomationController: NSViewController {
   @IBAction func goToPrivacySettings(sender: NSButton) {
     let url = URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Automation")!
     if NSWorkspace.shared.open(url) {
-      Log.debug("Link was clicked")
+      Log.debug("Go to privacy -> automation Link was clicked")
     }
   }
   
