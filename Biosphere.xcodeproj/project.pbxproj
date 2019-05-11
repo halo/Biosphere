@@ -26,6 +26,7 @@
 		C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9412285FCF20078FFF7 /* AutomationController.swift */; };
 		C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9462285FF9F0078FFF7 /* Notifications.swift */; };
 		C28DB30A2286D06500E8410A /* NSRect+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */; };
+		C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +67,7 @@
 		C234E9412285FCF20078FFF7 /* AutomationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationController.swift; sourceTree = "<group>"; };
 		C234E9462285FF9F0078FFF7 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		C28DB30F2286EB2C00E8410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Biosphere/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				C234E8D52285D4AA0078FFF7 /* Disk.icns */,
 				C234E8D62285D4AA0078FFF7 /* Github.icns */,
 				C234E8D72285D4AA0078FFF7 /* Biosphere.icns */,
+				C28DB30F2286EB2C00E8410A /* Assets.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */,
 				C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */,
 				C234E9402285FCD40078FFF7 /* AllowAutomation.xib in Resources */,
+				C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */,
 				C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

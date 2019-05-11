@@ -16,9 +16,9 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaX-8X-Bze">
-                    <rect key="frame" x="18" y="53" width="592" height="38"/>
+                    <rect key="frame" x="61" y="53" width="549" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" alignment="center" id="YAo-6K-ufL">
+                    <textFieldCell key="cell" alignment="left" id="YAo-6K-ufL">
                         <font key="font" metaFont="system"/>
                         <string key="title">I would like to open a new Terminal window and suggest a command for you to run.
 Please grant "System Preferences" access to "Terminal" in your privacy settings.</string>
