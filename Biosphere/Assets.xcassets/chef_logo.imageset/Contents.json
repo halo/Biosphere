@@ -2,17 +2,61 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "chef-2.png",
+      "filename" : "chef_logo-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "chef-1.png",
+      "filename" : "chef_logo.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "chef_logo_dark_background.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "chef_logo-3.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "chef.png",
+      "filename" : "chef_logo-1.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "chef_logo_dark_background-1.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "chef_logo-4.png",
       "scale" : "3x"
     }
   ],
