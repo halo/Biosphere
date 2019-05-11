@@ -4,7 +4,8 @@ import PreferencePanes
 
 class BiospherePane: NSPreferencePane {
   
-  public var misingAutomationPermission: Bool = false
+  private var misingAutomationPermission: Bool = false
+  private var observer: FileObserver? = nil
   
   @IBOutlet weak var container: NSView!
 
@@ -12,6 +13,15 @@ class BiospherePane: NSPreferencePane {
     Log.debug("mainViewDidLoad...")
     NotificationCenter.default.addObserver(forName: .missingAutomationPermission, object: nil, queue: nil, using: missingAutomationPermissionNotification)
     NotificationCenter.default.addObserver(forName: .forgetAutomationPermission, object: nil, queue: nil, using: forgetAutomationPermissionNotification)
+    NotificationCenter.default.addObserver(forName: .dependenciesChanged, object: nil, queue: nil, using: forgetAutomationPermissionNotification)
+
+    Log.debug("Setting up listener for \(Paths.chefExecutable)")
+    observer = FileObserver(path: Paths.chefExecutable, callback: {
+      Log.debug("Path \(Paths.chefExecutable) changed, notifying...")
+      DispatchQueue.main.async {
+        NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
+      }
+    })
   }
   
   override func didSelect() {

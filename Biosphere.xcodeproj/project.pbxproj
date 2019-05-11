@@ -27,6 +27,7 @@
 		C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9462285FF9F0078FFF7 /* Notifications.swift */; };
 		C28DB30A2286D06500E8410A /* NSRect+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */; };
 		C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
+		C28DB31222874DB500E8410A /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB31122874DB500E8410A /* FileObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		C234E9462285FF9F0078FFF7 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		C28DB30F2286EB2C00E8410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Biosphere/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C28DB31122874DB500E8410A /* FileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		C234E93E2285F4FF0078FFF7 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				C28DB31122874DB500E8410A /* FileObserver.swift */,
 				C234E8E92285D5580078FFF7 /* Log.swift */,
 				C234E8EA2285D5580078FFF7 /* Paths.swift */,
 				C234E9462285FF9F0078FFF7 /* Notifications.swift */,
@@ -328,6 +331,7 @@
 				C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */,
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
+				C28DB31222874DB500E8410A /* FileObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

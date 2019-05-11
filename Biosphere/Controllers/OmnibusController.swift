@@ -16,8 +16,7 @@ class OmnibusController: NSViewController {
   
   @IBAction func openChefWebsite(sender: NSButton) {
     Log.debug("Chef Download Page Link was clicked")
-    let url = URL(string: "https://downloads.chef.io/chef#mac_os_x")!
-    if NSWorkspace.shared.open(url) {
+    if NSWorkspace.shared.open(Paths.chefDownloadWebsiteUrl) {
       Log.debug("Opened page successfully")
     }
   }
