@@ -68,7 +68,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Moving the preference pane into this directory prevents&#10;# the &quot;already installed&quot;-warning message when starting System Preferences&#10;# (Hardcoding the app name to avoid accidental missing variable interpolation) &#10;cp -a &quot;$TARGET_BUILD_DIR/Biosphere.prefPane&quot; &quot;$USER_LIBRARY_DIR/PreferencePanes&quot;&#10;#say &quot;pre&quot;&#10;">
+               scriptText = "# System Preferences appears to strongly cache this.&#10;# Removing it ensures that it is properly picked up on the next run.&#10;# say &quot;Removing prefpane file&quot;&#10;rm -r &quot;$USER_LIBRARY_DIR/PreferencePanes/Biosphere.prefPane&quot;&#10;&#10;# say &quot;Killing System Preferences&quot;&#10;killall -SIGTERM &quot;System Preferences&quot;&#10;&#10;# say &quot;Starting System Preferences&quot;&#10;/Applications/System\ Preferences.app/Contents/MacOS/System\ Preferences &amp;&#10;sleep 1&#10;&#10;# say &quot;Killing System Preferences&quot;&#10;killall -SIGTERM &quot;System Preferences&quot;&#10;&#10;# Moving the preference pane into this directory prevents&#10;# the &quot;already installed&quot;-warning message when starting System Preferences&#10;# (Hardcoding the app name to avoid accidental missing variable interpolation) &#10;cp -a &quot;$TARGET_BUILD_DIR/Biosphere.prefPane&quot; &quot;$USER_LIBRARY_DIR/PreferencePanes&quot;&#10;&#10;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"

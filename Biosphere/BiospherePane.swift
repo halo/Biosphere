@@ -7,7 +7,6 @@ class BiospherePane: NSPreferencePane {
   public var misingAutomationPermission: Bool = false
   
   @IBOutlet weak var container: NSView!
-  @IBOutlet weak var screen: NSView!
 
   override func mainViewDidLoad() {
     Log.debug("mainViewDidLoad...")
@@ -34,33 +33,37 @@ class BiospherePane: NSPreferencePane {
       Log.error("WHERE IS MY WINDOW?-----------------------")
       return
     }
-    Log.debug("The mainView  is \(mainView.frame)")
 
     // How differs the new container height from the old one?
     let newContainerHeight = newView.frame.height
     let heightDiff = newContainerHeight - currentContainerHeight
-    Log.debug("The new container height is \(heightDiff) pixel different")
+    Log.debug("New container height differs by \(heightDiff) pixel")
     
     // Adjusting all relevant heights
     var newWindowFrame = window.frame
     newWindowFrame.size.height += heightDiff
     newWindowFrame.origin.y -= heightDiff // If height increases, bottom goes down
+    Log.debug("Changing window from \(window.frame) to \(newWindowFrame)")
     window.setFrame(newWindowFrame, display: true, animate: true)
 
     var newMainViewFrame = mainView.frame
     newMainViewFrame.size.height += heightDiff
     //newMainViewFrame.origin.y += heightDiff
+    Log.debug("Changing mainView from \(mainView.frame) to \(newMainViewFrame)")
     mainView.frame = newMainViewFrame
-    screen.frame = mainView.frame
-    
+
+    //var newContainerViewFrame = container.frame
+    //newContainerViewFrame.size.height += heightDiff
+    ////newMainViewFrame.origin.y += heightDiff
+    //Log.debug("Changing container from \(container.frame) to \(newContainerViewFrame)")
+    //container.frame = newContainerViewFrame
+
     //var newScreenFrame = screen.frame
     //newScreenFrame.size.height += heightDiff
     ////newScreenFrame.origin.y += heightDiff
     //screen.frame = newScreenFrame
 
     
-
-    Log.debug("The mainView  is \(mainView.frame)")
 
     
     //Log.debug("The optimal container height is \(optimalContainerHeight)")
