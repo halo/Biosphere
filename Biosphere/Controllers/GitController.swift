@@ -1,8 +1,14 @@
 import Cocoa
 
 class GitController: NSViewController {
-  public var isSatisfied: Bool {
-    return false
+  public var satisfied: Bool {
+    if FileManager.default.fileExists(atPath: Paths.gitExecutable) {
+      Log.debug("\(Paths.gitExecutable) exists")
+      return true
+    } else {
+      Log.debug("\(Paths.gitExecutable) not found")
+      return false
+    }
   }
   
   @IBAction func installCommandLineTools(sender: NSButton) {

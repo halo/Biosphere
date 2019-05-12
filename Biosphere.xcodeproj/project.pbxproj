@@ -28,6 +28,11 @@
 		C28DB30A2286D06500E8410A /* NSRect+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */; };
 		C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
 		C28DB31222874DB500E8410A /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB31122874DB500E8410A /* FileObserver.swift */; };
+		C28DB314228809BC00E8410A /* RunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB313228809BC00E8410A /* RunController.swift */; };
+		C28DB316228809D500E8410A /* RunChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DB315228809D500E8410A /* RunChef.xib */; };
+		C28DB31722888DE300E8410A /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
+		C28DE2E32288952F00230ED7 /* BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */; };
+		C28DE2E42288962500230ED7 /* BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +75,9 @@
 		C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		C28DB30F2286EB2C00E8410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Biosphere/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C28DB31122874DB500E8410A /* FileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileObserver.swift; sourceTree = "<group>"; };
+		C28DB313228809BC00E8410A /* RunController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunController.swift; sourceTree = "<group>"; };
+		C28DB315228809D500E8410A /* RunChef.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunChef.xib; sourceTree = "<group>"; };
+		C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleIdentifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,7 @@
 				C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */,
 				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E9412285FCF20078FFF7 /* AutomationController.swift */,
+				C28DB313228809BC00E8410A /* RunController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,8 +180,9 @@
 			children = (
 				C234E8D92285D4AA0078FFF7 /* Biosphere.xib */,
 				C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */,
-				C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */,
 				C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */,
+				C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */,
+				C28DB315228809D500E8410A /* RunChef.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 				C234E8E92285D5580078FFF7 /* Log.swift */,
 				C234E8EA2285D5580078FFF7 /* Paths.swift */,
 				C234E9462285FF9F0078FFF7 /* Notifications.swift */,
+				C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -303,6 +314,7 @@
 				C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */,
 				C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */,
 				C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */,
+				C28DB316228809D500E8410A /* RunChef.xib in Resources */,
 				C234E9402285FCD40078FFF7 /* AllowAutomation.xib in Resources */,
 				C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */,
 				C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */,
@@ -328,6 +340,8 @@
 				C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */,
 				C234E9352285E2C90078FFF7 /* Log.swift in Sources */,
 				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
+				C28DE2E32288952F00230ED7 /* BundleIdentifier.swift in Sources */,
+				C28DB314228809BC00E8410A /* RunController.swift in Sources */,
 				C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */,
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
@@ -339,6 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28DE2E42288962500230ED7 /* BundleIdentifier.swift in Sources */,
+				C28DB31722888DE300E8410A /* Paths.swift in Sources */,
 				C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

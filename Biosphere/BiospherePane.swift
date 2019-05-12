@@ -85,6 +85,8 @@ class BiospherePane: NSPreferencePane {
     animation.start()
   }
   
+  // MARK: - Workflow
+
   private var recommendedView: NSView {
     if misingAutomationPermission {
       Log.debug("Currently missing automation permission, it should be displayed...")
@@ -95,9 +97,13 @@ class BiospherePane: NSPreferencePane {
       Log.debug("Omnibus is not satisfied, it should be displayed...")
       return omnibusController.view
     }
+
+    guard gitController.satisfied else {
+      Log.debug("Git is not satisfied, it should be displayed...")
+      return gitController.view
+    }
     
-    Log.debug("TODO: showing Default")
-    return gitController.view
+    return runController.view
   }
   
   private func missingAutomationPermissionNotification(_ _: Notification) {
@@ -112,6 +118,8 @@ class BiospherePane: NSPreferencePane {
     update()
   }
   
+  // MARK: - Controller instances
+
   private lazy var omnibusController: OmnibusController = {
     Log.debug("Initializing OmnibusController...")
     return OmnibusController.init(nibName: "InstallChef", bundle: bundle)
@@ -126,4 +134,10 @@ class BiospherePane: NSPreferencePane {
     Log.debug("Initializing AutomationController...")
     return AutomationController.init(nibName: "AllowAutomation", bundle: bundle)
   }()
+
+  private lazy var runController: RunController = {
+    Log.debug("Initializing RunController...")
+    return RunController.init(nibName: "RunChef", bundle: bundle)
+  }()
+
 }

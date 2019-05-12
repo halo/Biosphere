@@ -1,7 +1,7 @@
 import Foundation
 
 extension Notification.Name {
-  static let missingAutomationPermission = Notification.Name("io.github.halo.Biosphere.notifications.missingAutomationPermission")
-  static let forgetAutomationPermission = Notification.Name("io.github.halo.Biosphere.notifications.forgetAutomationPermission")
-  static let dependenciesChanged = Notification.Name("io.github.halo.Biosphere.notifications.dependenciesChanged")
+  static let missingAutomationPermission = Notification.Name("\(BundleIdentifier.string).notifications.missingAutomationPermission")
+  static let forgetAutomationPermission = Notification.Name("\(BundleIdentifier.string).notifications.forgetAutomationPermission")
+  static let dependenciesChanged = Notification.Name("\(BundleIdentifier.string).notifications.dependenciesChanged")
 }

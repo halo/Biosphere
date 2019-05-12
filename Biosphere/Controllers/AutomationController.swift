@@ -7,9 +7,9 @@ class AutomationController: NSViewController {
   }
 
   @IBAction func goToPrivacySettings(sender: NSButton) {
+    Log.debug("Go to privacy -> automation Link was clicked")
     if NSWorkspace.shared.open(Paths.automationPrivacySettingsUrl) {
-      Log.debug("Go to privacy -> automation Link was clicked")
-    }
+      Log.debug("Opened privacy settings pane successfully")
+}
   }
-  
 }

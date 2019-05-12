@@ -3,9 +3,7 @@ import Cocoa
 class OmnibusController: NSViewController {
   
   public var satisfied: Bool {
-    let fileManager = FileManager.default
-    
-    if fileManager.fileExists(atPath: Paths.chefExecutable) {
+    if FileManager.default.fileExists(atPath: Paths.chefExecutable) {
       Log.debug("\(Paths.chefExecutable) exists")
       return true
     } else {
