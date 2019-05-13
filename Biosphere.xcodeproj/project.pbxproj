@@ -33,6 +33,29 @@
 		C28DB31722888DE300E8410A /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8EA2285D5580078FFF7 /* Paths.swift */; };
 		C28DE2E32288952F00230ED7 /* BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */; };
 		C28DE2E42288962500230ED7 /* BundleIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */; };
+		C28DE2E6228898DC00230ED7 /* JSONWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E5228898DC00230ED7 /* JSONWriter.swift */; };
+		C28DE2E82288990000230ED7 /* JSONWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E72288990000230ED7 /* JSONWriterTests.swift */; };
+		C28DE2E92288993100230ED7 /* JSONWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2E5228898DC00230ED7 /* JSONWriter.swift */; };
+		C28DE2EA2288997200230ED7 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E8E92285D5580078FFF7 /* Log.swift */; };
+		C28DE2EC2288998F00230ED7 /* JSONReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2EB2288998F00230ED7 /* JSONReaderTests.swift */; };
+		C28DE2EE228899A200230ED7 /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2ED228899A200230ED7 /* JSONReader.swift */; };
+		C28DE2EF228899A200230ED7 /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2ED228899A200230ED7 /* JSONReader.swift */; };
+		C28DE2F3228899D200230ED7 /* minimalConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C28DE2F1228899D200230ED7 /* minimalConfig.json */; };
+		C28DE2F4228899D200230ED7 /* justText.json in Resources */ = {isa = PBXBuildFile; fileRef = C28DE2F2228899D200230ED7 /* justText.json */; };
+		C28DE2F622889B1100230ED7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2F522889B1100230ED7 /* Config.swift */; };
+		C28DE2F722889B1100230ED7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2F522889B1100230ED7 /* Config.swift */; };
+		C28DE2F922889B5300230ED7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2F822889B5300230ED7 /* Configuration.swift */; };
+		C28DE2FA22889B5300230ED7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2F822889B5300230ED7 /* Configuration.swift */; };
+		C28DE2FE2289DD5100230ED7 /* ConfigWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2FD2289DD5100230ED7 /* ConfigWriter.swift */; };
+		C28DE2FF2289DD5100230ED7 /* ConfigWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE2FD2289DD5100230ED7 /* ConfigWriter.swift */; };
+		C28DE3012289DFCB00230ED7 /* BundleVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3002289DFCB00230ED7 /* BundleVersion.swift */; };
+		C28DE3022289DFCB00230ED7 /* BundleVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3002289DFCB00230ED7 /* BundleVersion.swift */; };
+		C28DE3042289E0B400230ED7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3032289E0B400230ED7 /* Repository.swift */; };
+		C28DE3052289E0B400230ED7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3032289E0B400230ED7 /* Repository.swift */; };
+		C28DE3082289E2F700230ED7 /* RepositoryForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DE3072289E2F700230ED7 /* RepositoryForm.xib */; };
+		C28DE30A2289E31700230ED7 /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3092289E31700230ED7 /* RepositoryController.swift */; };
+		C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */; };
+		C28DE30E2289E44200230ED7 /* CreateFirstRepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,11 +96,26 @@
 		C234E9412285FCF20078FFF7 /* AutomationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationController.swift; sourceTree = "<group>"; };
 		C234E9462285FF9F0078FFF7 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+CustomStringConvertible.swift"; sourceTree = "<group>"; };
-		C28DB30F2286EB2C00E8410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Biosphere/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		C28DB30F2286EB2C00E8410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Biosphere/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C28DB31122874DB500E8410A /* FileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileObserver.swift; sourceTree = "<group>"; };
 		C28DB313228809BC00E8410A /* RunController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunController.swift; sourceTree = "<group>"; };
 		C28DB315228809D500E8410A /* RunChef.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunChef.xib; sourceTree = "<group>"; };
 		C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleIdentifier.swift; sourceTree = "<group>"; };
+		C28DE2E5228898DC00230ED7 /* JSONWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONWriter.swift; sourceTree = "<group>"; };
+		C28DE2E72288990000230ED7 /* JSONWriterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONWriterTests.swift; sourceTree = "<group>"; };
+		C28DE2EB2288998F00230ED7 /* JSONReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReaderTests.swift; sourceTree = "<group>"; };
+		C28DE2ED228899A200230ED7 /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
+		C28DE2F1228899D200230ED7 /* minimalConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = minimalConfig.json; sourceTree = "<group>"; };
+		C28DE2F2228899D200230ED7 /* justText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = justText.json; sourceTree = "<group>"; };
+		C28DE2F522889B1100230ED7 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C28DE2F822889B5300230ED7 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		C28DE2FD2289DD5100230ED7 /* ConfigWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigWriter.swift; sourceTree = "<group>"; };
+		C28DE3002289DFCB00230ED7 /* BundleVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleVersion.swift; sourceTree = "<group>"; };
+		C28DE3032289E0B400230ED7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C28DE3072289E2F700230ED7 /* RepositoryForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryForm.xib; sourceTree = "<group>"; };
+		C28DE3092289E31700230ED7 /* RepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
+		C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFirstRepository.xib; sourceTree = "<group>"; };
+		C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFirstRepositoryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,21 +174,24 @@
 			children = (
 				C234E8D22285D4AA0078FFF7 /* BiospherePane.swift */,
 				C234E8CD2285D4AA0078FFF7 /* Controllers */,
-				C234E93E2285F4FF0078FFF7 /* Support */,
+				C28DE3062289E0B700230ED7 /* Models */,
+				C28DE2FC2289DB6200230ED7 /* Configuration */,
 				C234E8D82285D4AA0078FFF7 /* Views */,
+				C234E93E2285F4FF0078FFF7 /* Support */,
 				C28DB3082286D00900E8410A /* Extensions */,
-				C234E8CC2285D4AA0078FFF7 /* Config */,
+				C234E8CC2285D4AA0078FFF7 /* Resources */,
 				C234E8D42285D4AA0078FFF7 /* Images */,
 			);
 			path = Biosphere;
 			sourceTree = "<group>";
 		};
-		C234E8CC2285D4AA0078FFF7 /* Config */ = {
+		C234E8CC2285D4AA0078FFF7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				C234E8D32285D4AA0078FFF7 /* Info.plist */,
+				C28DB30F2286EB2C00E8410A /* Assets.xcassets */,
 			);
-			path = Config;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C234E8CD2285D4AA0078FFF7 /* Controllers */ = {
@@ -159,7 +200,9 @@
 				C234E8D02285D4AA0078FFF7 /* OmnibusController.swift */,
 				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E9412285FCF20078FFF7 /* AutomationController.swift */,
+				C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */,
 				C28DB313228809BC00E8410A /* RunController.swift */,
+				C28DE3092289E31700230ED7 /* RepositoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,7 +213,6 @@
 				C234E8D52285D4AA0078FFF7 /* Disk.icns */,
 				C234E8D62285D4AA0078FFF7 /* Github.icns */,
 				C234E8D72285D4AA0078FFF7 /* Biosphere.icns */,
-				C28DB30F2286EB2C00E8410A /* Assets.xcassets */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -182,6 +224,8 @@
 				C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */,
 				C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */,
 				C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */,
+				C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */,
+				C28DE3072289E2F700230ED7 /* RepositoryForm.xib */,
 				C28DB315228809D500E8410A /* RunChef.xib */,
 			);
 			path = Views;
@@ -190,7 +234,10 @@
 		C234E91A2285DF090078FFF7 /* BiosphereTests */ = {
 			isa = PBXGroup;
 			children = (
+				C28DE2F0228899D200230ED7 /* Fixtures */,
 				C234E91F2285DF7C0078FFF7 /* PathsTest.swift */,
+				C28DE2EB2288998F00230ED7 /* JSONReaderTests.swift */,
+				C28DE2E72288990000230ED7 /* JSONWriterTests.swift */,
 				C234E91D2285DF7C0078FFF7 /* BiosphereTests-Bridging-Header.h */,
 				C234E92E2285DFCE0078FFF7 /* Info.plist */,
 			);
@@ -200,11 +247,12 @@
 		C234E93E2285F4FF0078FFF7 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				C28DB31122874DB500E8410A /* FileObserver.swift */,
 				C234E8E92285D5580078FFF7 /* Log.swift */,
 				C234E8EA2285D5580078FFF7 /* Paths.swift */,
 				C234E9462285FF9F0078FFF7 /* Notifications.swift */,
 				C28DE2E22288952F00230ED7 /* BundleIdentifier.swift */,
+				C28DE3002289DFCB00230ED7 /* BundleVersion.swift */,
+				C28DB31122874DB500E8410A /* FileObserver.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -215,6 +263,35 @@
 				C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C28DE2F0228899D200230ED7 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				C28DE2F1228899D200230ED7 /* minimalConfig.json */,
+				C28DE2F2228899D200230ED7 /* justText.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		C28DE2FC2289DB6200230ED7 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C28DE2F522889B1100230ED7 /* Config.swift */,
+				C28DE2F822889B5300230ED7 /* Configuration.swift */,
+				C28DE2FD2289DD5100230ED7 /* ConfigWriter.swift */,
+				C28DE2ED228899A200230ED7 /* JSONReader.swift */,
+				C28DE2E5228898DC00230ED7 /* JSONWriter.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C28DE3062289E0B700230ED7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C28DE3032289E0B400230ED7 /* Repository.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +386,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */,
 				C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */,
 				C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */,
 				C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */,
+				C28DE3082289E2F700230ED7 /* RepositoryForm.xib in Resources */,
 				C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */,
 				C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */,
 				C28DB316228809D500E8410A /* RunChef.xib in Resources */,
@@ -325,6 +404,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28DE2F4228899D200230ED7 /* justText.json in Resources */,
+				C28DE2F3228899D200230ED7 /* minimalConfig.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,17 +416,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28DE2FE2289DD5100230ED7 /* ConfigWriter.swift in Sources */,
 				C28DB30A2286D06500E8410A /* NSRect+CustomStringConvertible.swift in Sources */,
 				C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */,
 				C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */,
+				C28DE30E2289E44200230ED7 /* CreateFirstRepositoryController.swift in Sources */,
+				C28DE2F622889B1100230ED7 /* Config.swift in Sources */,
+				C28DE30A2289E31700230ED7 /* RepositoryController.swift in Sources */,
 				C234E9352285E2C90078FFF7 /* Log.swift in Sources */,
+				C28DE3012289DFCB00230ED7 /* BundleVersion.swift in Sources */,
 				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
+				C28DE2F922889B5300230ED7 /* Configuration.swift in Sources */,
 				C28DE2E32288952F00230ED7 /* BundleIdentifier.swift in Sources */,
 				C28DB314228809BC00E8410A /* RunController.swift in Sources */,
+				C28DE2EE228899A200230ED7 /* JSONReader.swift in Sources */,
 				C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */,
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
+				C28DE2E6228898DC00230ED7 /* JSONWriter.swift in Sources */,
 				C28DB31222874DB500E8410A /* FileObserver.swift in Sources */,
+				C28DE3042289E0B400230ED7 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +443,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28DE2EF228899A200230ED7 /* JSONReader.swift in Sources */,
+				C28DE2FF2289DD5100230ED7 /* ConfigWriter.swift in Sources */,
+				C28DE2EA2288997200230ED7 /* Log.swift in Sources */,
+				C28DE3052289E0B400230ED7 /* Repository.swift in Sources */,
+				C28DE2F722889B1100230ED7 /* Config.swift in Sources */,
+				C28DE2E92288993100230ED7 /* JSONWriter.swift in Sources */,
 				C28DE2E42288962500230ED7 /* BundleIdentifier.swift in Sources */,
 				C28DB31722888DE300E8410A /* Paths.swift in Sources */,
+				C28DE2FA22889B5300230ED7 /* Configuration.swift in Sources */,
+				C28DE2EC2288998F00230ED7 /* JSONReaderTests.swift in Sources */,
+				C28DE2E82288990000230ED7 /* JSONWriterTests.swift in Sources */,
+				C28DE3022289DFCB00230ED7 /* BundleVersion.swift in Sources */,
 				C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +584,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B9J4QR64LK;
-				INFOPLIST_FILE = "$(SRCROOT)/Biosphere/Config/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Biosphere/Resources/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,7 +610,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B9J4QR64LK;
-				INFOPLIST_FILE = "$(SRCROOT)/Biosphere/Config/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Biosphere/Resources/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -102,7 +102,12 @@ class BiospherePane: NSPreferencePane {
       Log.debug("Git is not satisfied, it should be displayed...")
       return gitController.view
     }
-    
+
+    guard createFirstRepositoryController.satisfied else {
+      Log.debug("FirstRepository is not satisfied, it should be displayed...")
+      return createFirstRepositoryController.view
+    }
+
     return runController.view
   }
   
@@ -133,6 +138,11 @@ class BiospherePane: NSPreferencePane {
   private lazy var automationController: AutomationController = {
     Log.debug("Initializing AutomationController...")
     return AutomationController.init(nibName: "AllowAutomation", bundle: bundle)
+  }()
+
+  private lazy var createFirstRepositoryController: CreateFirstRepositoryController = {
+    Log.debug("Initializing CreateFirstRepositoryController...")
+    return CreateFirstRepositoryController.init(nibName: "CreateFirstRepository", bundle: bundle)
   }()
 
   private lazy var runController: RunController = {

@@ -23,6 +23,9 @@ class Paths: NSObject {
   static let configDirectory = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory, .userDomainMask, true).first!.appendPath(BundleIdentifier.string)
   static let configDirectoryUrl = URL(fileURLWithPath: configDirectory)
 
+  static let configFile = configDirectory.appendPath("config.json")
+  static let configFileUrl = URL(fileURLWithPath: configFile)
+
   static let gitExecutable = "/Library/Developer/CommandLineTools/usr/bin/git"
   static let gitExecutableUrl = URL(fileURLWithPath: gitExecutable)
 
