@@ -15,7 +15,11 @@ class RemoteRepositoryFormController: NSWindowController, NSWindowDelegate, Focu
       let _ = subdirectoryTextField.becomeFirstResponder()
       // Without the following lines, the url popover is not shown initially
       let _ = urlTextField.becomeFirstResponder()
-      textFieldDidBecomeFirstResponder(urlTextField)
+      
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        // Show the popup after 2 seconds to not overload people's brains
+        self.textFieldDidBecomeFirstResponder(self.urlTextField)
+      }
     }
   }
  
