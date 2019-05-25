@@ -18,23 +18,20 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "Git-Logo-2Color-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Git-Logo-White-1.png",
+      "scale" : "2x",
       "appearances" : [
         {
           "appearance" : "luminosity",
           "value" : "dark"
         }
-      ],
-      "scale" : "2x"
+      ]
     },
     {
       "idiom" : "universal",
-      "filename" : "Git-Logo-2Color-2.png",
       "scale" : "3x"
     }
   ],

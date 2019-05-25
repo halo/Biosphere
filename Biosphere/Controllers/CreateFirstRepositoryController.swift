@@ -2,9 +2,6 @@ import Cocoa
 
 class CreateFirstRepositoryController: NSViewController {
   
-  @IBOutlet weak var urlTextField: NSTextField!
-  @IBOutlet weak var subdirectoryTextfield: NSTextField!
-  
   public var satisfied: Bool {
     if Config.instance.repositories.isEmpty {
       Log.debug("There are no known repositories.")
@@ -15,7 +12,29 @@ class CreateFirstRepositoryController: NSViewController {
     }
   }
 
-  @IBAction func createRepository(_ sender: Any) {
+  @IBAction func newRemoteRepository(sender: NSButton) {
+    Log.debug("The user wants to add a new remote repository...")
+    guard let mainWindow = view.window else {
+      Log.error("I really thought I'd have a window")
+      return
+    }
+    
+    guard let sheet = remoteRepositoryFormController.window else {
+      Log.error("I really thought remoteRepositoryFormController has a window")
+      return
+    }
+    
+    mainWindow.beginSheet(sheet, completionHandler: { response in
+      Log.debug("response: \(response)")
+    })
+  }
+
+  @IBAction func newLocalRepository(sender: NSButton) {
   }
   
+  private lazy var remoteRepositoryFormController: RemoteRepositoryFormController = {
+    Log.debug("Initializing RemoteRepositoryFormController...")
+    return RemoteRepositoryFormController.init(windowNibName: "RemoteRepositoryForm")
+  }()
+
 }

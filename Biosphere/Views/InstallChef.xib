@@ -105,7 +105,7 @@ or let me run the installer for you in a Terminal window.</string>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
     </objects>
     <resources>
-        <image name="Chef Logo" width="541.5" height="579.5"/>
+        <image name="Chef Logo" width="1083" height="1159"/>
         <image name="NSFollowLinkFreestandingTemplate" width="14" height="14"/>
     </resources>
 </document>

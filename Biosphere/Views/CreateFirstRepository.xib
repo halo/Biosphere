@@ -8,151 +8,79 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CreateFirstRepositoryController" customModule="Biosphere" customModuleProvider="target">
             <connections>
-                <outlet property="subdirectoryTextfield" destination="h1C-jv-aeR" id="Ca6-BP-iNz"/>
-                <outlet property="urlTextField" destination="465-La-4Ej" id="jg8-2v-qqh"/>
-                <outlet property="view" destination="c22-O7-iKe" id="A8Z-kj-rpH"/>
+                <outlet property="view" destination="Uuu-eg-HV8" id="1h0-0T-fTO"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="628" height="206"/>
+        <customView id="Uuu-eg-HV8">
+            <rect key="frame" x="0.0" y="0.0" width="628" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qda-i1-gyA">
-                    <rect key="frame" x="18" y="169" width="254" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-NK-P6q">
+                    <rect key="frame" x="18" y="163" width="254" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Where are your Chef cookbooks located?" id="H0S-jl-Lra">
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Where are your Chef cookbooks located?" id="9md-v6-CeS">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xj1-Kr-LfU">
-                    <rect key="frame" x="267" y="15" width="95" height="32"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Niz-Lg-2JG">
+                    <rect key="frame" x="142" y="30" width="4" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TbW-QR-JWN">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="createRepository:" target="-2" id="7nn-e4-KSj"/>
-                    </connections>
-                </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGY-qV-6uJ">
-                    <rect key="frame" x="62" y="154" width="4" height="17"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" id="9YK-Ep-t1B">
-                        <font key="font" metaFont="system"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" id="VmU-BP-v6E">
+                        <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uuj-w3-wL5">
-                    <rect key="frame" x="18" y="105" width="58" height="14"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="euE-hy-BXh">
+                    <rect key="frame" x="394" y="31" width="67" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Examples:" id="ch8-yA-y3A">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Local Path" id="Ag6-Zd-cQG">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9R-UT-zOo">
-                    <rect key="frame" x="32" y="87" width="190" height="15"/>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRP-dF-c0x">
+                    <rect key="frame" x="376" y="56" width="102" height="82"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" id="yNq-xT-Ijn">
-                        <font key="font" metaFont="smallSystem"/>
-                        <string key="title">https://github.com/halo/spheres.git
-</string>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICP-Mt-aaG">
-                    <rect key="frame" x="20" y="87" width="16" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="・" id="moR-Wc-qNH">
-                        <font key="font" size="11" name=".PingFangSC-Regular"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VX-US-dgE">
-                    <rect key="frame" x="20" y="72" width="16" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="・" id="dhq-Xa-eGk">
-                        <font key="font" size="11" name=".PingFangSC-Regular"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9Z-md-b3Q">
-                    <rect key="frame" x="20" y="57" width="16" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="・" id="YvW-6S-iJv">
-                        <font key="font" size="11" name=".PingFangSC-Regular"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bP-0L-hFN">
-                    <rect key="frame" x="401" y="89" width="209" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" title="If you specified a Git repository, you can go further into a subdirectory. " id="vRd-pQ-hUR">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vv7-au-HVC">
-                    <rect key="frame" x="32" y="72" width="175" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" id="4Ua-s0-0gT">
-                        <font key="font" metaFont="smallSystem"/>
-                        <string key="title">git@github.com:halo/spheres.git
-</string>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8mH-to-NIF">
-                    <rect key="frame" x="32" y="57" width="175" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="~/Code/dotfiles/cookbooks" id="iuO-sL-kR2">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="465-La-4Ej">
-                    <rect key="frame" x="20" y="133" width="375" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="URL to remote Git repository or local folder" drawsBackground="YES" id="FYZ-4B-kAJ">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Disk" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="KZd-5L-97C">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1C-jv-aeR">
-                    <rect key="frame" x="403" y="133" width="205" height="22"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="newLocalRepositoryWithSender:" target="-2" id="aBU-2b-rch"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qv-mp-IY0">
+                    <rect key="frame" x="139" y="50" width="136" height="93"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Subdirectory (optional)" drawsBackground="YES" id="JDM-am-1Lj">
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Octocat" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="fUM-ui-QAP">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hY4-K8-nfQ">
-                    <rect key="frame" x="401" y="58" width="209" height="28"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="newRemoteRepositoryWithSender:" target="-2" id="yzN-Ey-Ddc"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XF0-c5-CLZ">
+                    <rect key="frame" x="137" y="31" width="140" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" title="Leave this empty if the cookbooks are located in the root of the repository." id="4Ha-yR-HNF">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Remote Git Repository" id="jTk-76-s2W">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="139" y="121"/>
+            <point key="canvasLocation" x="139" y="387"/>
         </customView>
     </objects>
+    <resources>
+        <image name="Disk" width="512" height="512"/>
+        <image name="Octocat" width="512" height="512"/>
+    </resources>
 </document>

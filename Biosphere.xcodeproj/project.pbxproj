@@ -10,9 +10,6 @@
 		C234E8362281D0310078FFF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8352281D0310078FFF7 /* Cocoa.framework */; };
 		C234E8382281D0340078FFF7 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8372281D0340078FFF7 /* PreferencePanes.framework */; };
 		C234E8BE22858FEB0078FFF7 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */; };
-		C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D52285D4AA0078FFF7 /* Disk.icns */; };
-		C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D62285D4AA0078FFF7 /* Github.icns */; };
-		C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D72285D4AA0078FFF7 /* Biosphere.icns */; };
 		C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8D92285D4AA0078FFF7 /* Biosphere.xib */; };
 		C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DA2285D4AA0078FFF7 /* InstallChef.xib */; };
 		C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */; };
@@ -26,7 +23,6 @@
 		C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9412285FCF20078FFF7 /* AutomationController.swift */; };
 		C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9462285FF9F0078FFF7 /* Notifications.swift */; };
 		C28DB30A2286D06500E8410A /* NSRect+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */; };
-		C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
 		C28DB31222874DB500E8410A /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB31122874DB500E8410A /* FileObserver.swift */; };
 		C28DB314228809BC00E8410A /* RunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB313228809BC00E8410A /* RunController.swift */; };
 		C28DB316228809D500E8410A /* RunChef.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DB315228809D500E8410A /* RunChef.xib */; };
@@ -52,10 +48,16 @@
 		C28DE3022289DFCB00230ED7 /* BundleVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3002289DFCB00230ED7 /* BundleVersion.swift */; };
 		C28DE3042289E0B400230ED7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3032289E0B400230ED7 /* Repository.swift */; };
 		C28DE3052289E0B400230ED7 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3032289E0B400230ED7 /* Repository.swift */; };
-		C28DE3082289E2F700230ED7 /* RepositoryForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DE3072289E2F700230ED7 /* RepositoryForm.xib */; };
-		C28DE30A2289E31700230ED7 /* RepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3092289E31700230ED7 /* RepositoryController.swift */; };
+		C28DE3082289E2F700230ED7 /* RemoteRepositoryForm.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DE3072289E2F700230ED7 /* RemoteRepositoryForm.xib */; };
+		C28DE30A2289E31700230ED7 /* RemoteRepositoryFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3092289E31700230ED7 /* RemoteRepositoryFormController.swift */; };
 		C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */; };
 		C28DE30E2289E44200230ED7 /* CreateFirstRepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */; };
+		C28DE30F228B3BEB00230ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
+		C28DE311228B3ED800230ED7 /* Octocat.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE310228B3ED800230ED7 /* Octocat.icns */; };
+		C28DE313228B3EE900230ED7 /* Disk.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE312228B3EE900230ED7 /* Disk.icns */; };
+		C28DE315228C3EA300230ED7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE314228C3EA300230ED7 /* Biosphere.icns */; };
+		C28DE317228C954800230ED7 /* NSWindowWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE316228C954700230ED7 /* NSWindowWithAnimation.swift */; };
+		C2FAC586229481CD00F798ED /* FocussingNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,10 +114,15 @@
 		C28DE2FD2289DD5100230ED7 /* ConfigWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigWriter.swift; sourceTree = "<group>"; };
 		C28DE3002289DFCB00230ED7 /* BundleVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleVersion.swift; sourceTree = "<group>"; };
 		C28DE3032289E0B400230ED7 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		C28DE3072289E2F700230ED7 /* RepositoryForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryForm.xib; sourceTree = "<group>"; };
-		C28DE3092289E31700230ED7 /* RepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryController.swift; sourceTree = "<group>"; };
+		C28DE3072289E2F700230ED7 /* RemoteRepositoryForm.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoteRepositoryForm.xib; sourceTree = "<group>"; };
+		C28DE3092289E31700230ED7 /* RemoteRepositoryFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepositoryFormController.swift; sourceTree = "<group>"; };
 		C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateFirstRepository.xib; sourceTree = "<group>"; };
 		C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFirstRepositoryController.swift; sourceTree = "<group>"; };
+		C28DE310228B3ED800230ED7 /* Octocat.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Octocat.icns; sourceTree = "<group>"; };
+		C28DE312228B3EE900230ED7 /* Disk.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Disk.icns; path = Biosphere/Images/Disk.icns; sourceTree = SOURCE_ROOT; };
+		C28DE314228C3EA300230ED7 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Biosphere.icns; path = Biosphere/Images/Biosphere.icns; sourceTree = SOURCE_ROOT; };
+		C28DE316228C954700230ED7 /* NSWindowWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowWithAnimation.swift; sourceTree = "<group>"; };
+		C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocussingNSTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +195,11 @@
 		C234E8CC2285D4AA0078FFF7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C234E8D32285D4AA0078FFF7 /* Info.plist */,
 				C28DB30F2286EB2C00E8410A /* Assets.xcassets */,
+				C28DE314228C3EA300230ED7 /* Biosphere.icns */,
+				C28DE312228B3EE900230ED7 /* Disk.icns */,
+				C28DE310228B3ED800230ED7 /* Octocat.icns */,
+				C234E8D32285D4AA0078FFF7 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -201,8 +211,8 @@
 				C234E8CF2285D4AA0078FFF7 /* GitController.swift */,
 				C234E9412285FCF20078FFF7 /* AutomationController.swift */,
 				C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */,
+				C28DE3092289E31700230ED7 /* RemoteRepositoryFormController.swift */,
 				C28DB313228809BC00E8410A /* RunController.swift */,
-				C28DE3092289E31700230ED7 /* RepositoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,8 +235,9 @@
 				C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */,
 				C234E8DB2285D4AA0078FFF7 /* InstallGit.xib */,
 				C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */,
-				C28DE3072289E2F700230ED7 /* RepositoryForm.xib */,
+				C28DE3072289E2F700230ED7 /* RemoteRepositoryForm.xib */,
 				C28DB315228809D500E8410A /* RunChef.xib */,
+				C28DE316228C954700230ED7 /* NSWindowWithAnimation.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				C28DE3032289E0B400230ED7 /* Repository.swift */,
+				C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -386,16 +398,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28DE30F228B3BEB00230ED7 /* Assets.xcassets in Resources */,
+				C28DE311228B3ED800230ED7 /* Octocat.icns in Resources */,
 				C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */,
+				C28DE313228B3EE900230ED7 /* Disk.icns in Resources */,
 				C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */,
-				C234E8E32285D4AA0078FFF7 /* Github.icns in Resources */,
-				C234E8E42285D4AA0078FFF7 /* Biosphere.icns in Resources */,
-				C28DE3082289E2F700230ED7 /* RepositoryForm.xib in Resources */,
-				C234E8E22285D4AA0078FFF7 /* Disk.icns in Resources */,
+				C28DE3082289E2F700230ED7 /* RemoteRepositoryForm.xib in Resources */,
+				C28DE315228C3EA300230ED7 /* Biosphere.icns in Resources */,
 				C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */,
 				C28DB316228809D500E8410A /* RunChef.xib in Resources */,
 				C234E9402285FCD40078FFF7 /* AllowAutomation.xib in Resources */,
-				C28DB3102286EB2C00E8410A /* Assets.xcassets in Resources */,
 				C234E8E62285D4AB0078FFF7 /* InstallChef.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,8 +434,10 @@
 				C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */,
 				C28DE30E2289E44200230ED7 /* CreateFirstRepositoryController.swift in Sources */,
 				C28DE2F622889B1100230ED7 /* Config.swift in Sources */,
-				C28DE30A2289E31700230ED7 /* RepositoryController.swift in Sources */,
+				C28DE30A2289E31700230ED7 /* RemoteRepositoryFormController.swift in Sources */,
 				C234E9352285E2C90078FFF7 /* Log.swift in Sources */,
+				C2FAC586229481CD00F798ED /* FocussingNSTextField.swift in Sources */,
+				C28DE317228C954800230ED7 /* NSWindowWithAnimation.swift in Sources */,
 				C28DE3012289DFCB00230ED7 /* BundleVersion.swift in Sources */,
 				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
 				C28DE2F922889B5300230ED7 /* Configuration.swift in Sources */,
