@@ -14,6 +14,7 @@ class JSONWriter {
   }
 
   public func write(_ dictionary: [String: Any]) {
+    ensureDirectory()
     do {
       let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted) as NSData
       let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
@@ -29,4 +30,13 @@ class JSONWriter {
     }
   }
   
+  private func ensureDirectory() {
+    let manager = FileManager.default
+    do {
+      try manager.createDirectory(atPath: Paths.configDirectory, withIntermediateDirectories: false)
+      Log.debug("Created config directory \(Paths.configDirectory)")
+    } catch let error as NSError {
+      Log.info("Could not create config directory \(Paths.configDirectory) does it already exist? \(error.localizedDescription)")
+    }
+  }
 }

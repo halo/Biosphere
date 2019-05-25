@@ -1,5 +1,6 @@
 import Foundation
 
+// A singleton which loads and holds a Configuration instance.
 struct Config {
 
   static var observer: FileObserver = {

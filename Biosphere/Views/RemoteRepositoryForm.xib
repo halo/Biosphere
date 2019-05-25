@@ -8,6 +8,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RemoteRepositoryFormController" customModule="Biosphere" customModuleProvider="target">
             <connections>
+                <outlet property="nameHelpPopover" destination="Z2O-qf-ZaK" id="97d-KB-F9s"/>
+                <outlet property="nameHelpPopoverViewController" destination="EsV-Gp-GcJ" id="FeE-0j-LH3"/>
+                <outlet property="nameTextField" destination="Fxj-6n-Zpo" id="g7F-zR-Fzj"/>
                 <outlet property="subdirectoryHelpPopover" destination="fke-YW-31X" id="IzP-1g-l1A"/>
                 <outlet property="subdirectoryHelpPopoverViewController" destination="LsO-OR-1Jj" id="mhE-MU-6dF"/>
                 <outlet property="subdirectoryTextField" destination="qsc-DM-zGe" id="ecj-sz-vcT"/>
@@ -22,14 +25,14 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="NSWindowWithAnimation" customModule="Biosphere" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="357" height="129"/>
+            <rect key="contentRect" x="196" y="240" width="357" height="158"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="357" height="129"/>
+                <rect key="frame" x="0.0" y="0.0" width="357" height="158"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-Sj-rbn">
-                        <rect key="frame" x="52" y="77" width="4" height="17"/>
+                        <rect key="frame" x="52" y="106" width="4" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" id="J66-Wx-Rxv">
                             <font key="font" metaFont="system"/>
@@ -37,10 +40,21 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0m-sb-VbM" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
-                        <rect key="frame" x="20" y="87" width="317" height="22"/>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-KF-n5Z">
+                        <rect key="frame" x="273" y="13" width="70" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="URL to remote Git repository" drawsBackground="YES" id="8Bb-Xf-tA2">
+                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="v68-Tm-b5j">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveWithSender:" target="-2" id="BtQ-r7-qY9"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0m-sb-VbM" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
+                        <rect key="frame" x="20" y="84" width="317" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="URL" drawsBackground="YES" id="8Bb-Xf-tA2">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -49,28 +63,20 @@
                             <outlet property="delegate" destination="-2" id="52X-8O-gNx"/>
                         </connections>
                     </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-DM-zGe" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
-                        <rect key="frame" x="20" y="55" width="317" height="22"/>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxj-6n-Zpo" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
+                        <rect key="frame" x="20" y="116" width="317" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Subdirectory (optional)" drawsBackground="YES" id="HHC-Md-zGG">
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="ybD-zH-wox">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
-                            <outlet property="delegate" destination="-2" id="j7T-8x-ADz"/>
+                            <outlet property="delegate" destination="-2" id="CA7-zn-8AV"/>
                         </connections>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-KF-n5Z">
-                        <rect key="frame" x="248" y="13" width="95" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="Continue" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="v68-Tm-b5j">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18g-YX-Hs4">
-                        <rect key="frame" x="166" y="13" width="82" height="32"/>
+                        <rect key="frame" x="191" y="13" width="82" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gdZ-PL-WId">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -83,13 +89,35 @@ Gw
                             <action selector="cancelWithSender:" target="-2" id="eaT-Kd-lSN"/>
                         </connections>
                     </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-DM-zGe" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
+                        <rect key="frame" x="20" y="52" width="317" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Subdirectory (optional)" drawsBackground="YES" id="HHC-Md-zGG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="j7T-8x-ADz"/>
+                        </connections>
+                    </textField>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="nyt-lz-KdM"/>
             </connections>
-            <point key="canvasLocation" x="423.5" y="47.5"/>
+            <point key="canvasLocation" x="423.5" y="62"/>
         </window>
+        <viewController id="EsV-Gp-GcJ" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="DdY-fc-heh" id="12J-Wi-ryG"/>
+            </connections>
+        </viewController>
+        <popover id="Z2O-qf-ZaK">
+            <connections>
+                <outlet property="contentViewController" destination="EsV-Gp-GcJ" id="NIP-gh-m3D"/>
+            </connections>
+        </popover>
         <viewController id="13S-s2-HjO" userLabel="Popover View Controller">
             <connections>
                 <outlet property="view" destination="zPS-C2-qLc" id="BaZ-lO-kKY"/>
@@ -101,11 +129,11 @@ Gw
             </connections>
         </popover>
         <customView id="zPS-C2-qLc">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="102"/>
+            <rect key="frame" x="0.0" y="0.0" width="240" height="87"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-yG-HgV">
-                    <rect key="frame" x="18" y="68" width="58" height="14"/>
+                    <rect key="frame" x="18" y="53" width="58" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Examples:" id="dHa-dm-Xnq">
                         <font key="font" metaFont="smallSystem"/>
@@ -114,9 +142,9 @@ Gw
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SB7-Pc-Mwr">
-                    <rect key="frame" x="32" y="50" width="190" height="15"/>
+                    <rect key="frame" x="32" y="35" width="190" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" usesSingleLineMode="YES" id="umz-A8-lou">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" usesSingleLineMode="YES" id="umz-A8-lou">
                         <font key="font" metaFont="smallSystem"/>
                         <string key="title">https://github.com/halo/spheres.git
 </string>
@@ -125,7 +153,7 @@ Gw
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zLf-iP-G93">
-                    <rect key="frame" x="20" y="50" width="16" height="15"/>
+                    <rect key="frame" x="20" y="35" width="16" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="・" id="l1g-q2-JLh">
                         <font key="font" size="11" name=".PingFangSC-Regular"/>
@@ -134,7 +162,7 @@ Gw
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBW-Qs-7o0">
-                    <rect key="frame" x="20" y="35" width="16" height="15"/>
+                    <rect key="frame" x="20" y="20" width="16" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="・" id="Gq7-3k-or8">
                         <font key="font" size="11" name=".PingFangSC-Regular"/>
@@ -142,19 +170,10 @@ Gw
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o03-22-3Il">
-                    <rect key="frame" x="20" y="20" width="16" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="・" id="gl7-3S-bA7">
-                        <font key="font" size="11" name=".PingFangSC-Regular"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-2G-kMg">
-                    <rect key="frame" x="32" y="35" width="175" height="15"/>
+                    <rect key="frame" x="32" y="20" width="175" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" usesSingleLineMode="YES" id="dtX-dZ-vdA">
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" usesSingleLineMode="YES" id="dtX-dZ-vdA">
                         <font key="font" metaFont="smallSystem"/>
                         <string key="title">git@github.com:halo/spheres.git
 </string>
@@ -162,17 +181,8 @@ Gw
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3VY-S1-qAs">
-                    <rect key="frame" x="32" y="20" width="175" height="15"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" title="~/Code/dotfiles/cookbooks" usesSingleLineMode="YES" id="OnA-Yt-Vfd">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
             </subviews>
-            <point key="canvasLocation" x="389" y="427"/>
+            <point key="canvasLocation" x="785" y="38"/>
         </customView>
         <customView id="pcd-JX-Yqh">
             <rect key="frame" x="0.0" y="0.0" width="245" height="101"/>
@@ -197,7 +207,7 @@ Gw
                     </textFieldCell>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="696.5" y="426.5"/>
+            <point key="canvasLocation" x="788" y="178"/>
         </customView>
         <viewController id="LsO-OR-1Jj" userLabel="Popover View Controller">
             <connections>
@@ -209,5 +219,21 @@ Gw
                 <outlet property="contentViewController" destination="LsO-OR-1Jj" id="l63-kh-i7H"/>
             </connections>
         </popover>
+        <customView id="DdY-fc-heh">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I6i-iE-aCl">
+                    <rect key="frame" x="18" y="53" width="117" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="For your convenience" id="hhI-Jg-dGO">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="785" y="-98"/>
+        </customView>
     </objects>
 </document>
