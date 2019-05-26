@@ -16,17 +16,13 @@ struct ConfigWriter {
     repository.subdirectory = subdirectory
 
     var dictionary = dictionaryWithCurrentVersion()
-    guard var repositories = dictionary["repositories"] as? [[String: String]] else {
-      Log.debug("Adding first repository \(repository.asJson)")
-      dictionary["repositories"] = [repository.asJson]
-      JSONWriter(filePath: Paths.configFile).write(dictionary)
-      return
-    }
-
+    let repositoriesOnFile = dictionary["repositories"] as? [[String: String]]
+    var currentRepositories: [[String: String]] = repositoriesOnFile ?? []
+    
     Log.debug("Adding new repository \(repository.asJson)")
-    Log.debug("To existing repositories \(repositories)")
-    repositories.append(repository.asJson)
-    dictionary["repositories"] = repositories
+    Log.debug("To existing repositories \(currentRepositories)")
+    
+    dictionary["repositories"] = currentRepositories.append(repository.asJson)
     JSONWriter(filePath: Paths.configFile).write(dictionary)
   }
   

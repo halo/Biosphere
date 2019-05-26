@@ -42,6 +42,9 @@ class RemoteRepositoryFormController: NSWindowController, NSWindowDelegate, Focu
     ConfigWriter.addRemoteRepository(label: nameTextField.stringValue,
                                      url: urlTextField.stringValue,
                                      subdirectory: subdirectoryTextField.stringValue)
+    DispatchQueue.main.async {
+      NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
+    }
     
     window?.sheetParent!.endSheet(window!)
   }

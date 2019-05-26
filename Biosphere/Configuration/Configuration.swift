@@ -26,16 +26,20 @@ struct Configuration {
   // MARK: Instance Methods
   
   public var repositories: [Repository] {
-    guard let rawRepositoriesDictionary = dictionary["repositories"] as? [String: Any] else { return [] }
+    guard let rawRepositoriesDictionary = dictionary["repositories"] as? [[String: Any]] else {
+      Log.error("Could not find repositories array")
+      return []
+    }
     var repositories: [Repository] = []
       
-    for (id, rawAttributes) in rawRepositoriesDictionary {
-      guard let attributes = rawAttributes as? Dictionary<String, String> else {
+    for (rawAttributes) in rawRepositoriesDictionary {
+      guard let attributes = rawAttributes as? [String:String] else {
+        Log.error("A repository has no valid attributes \(rawAttributes)")
         break
       }
 
       let repository = Repository()
-      repository.id = id
+      repository.label = attributes["id"] ?? "unknown-id"
       repository.label = attributes["label"] ?? "unknown label"
       repository.url = attributes["url"] ?? ""
       repository.subdirectory = attributes["subdirectory"] ?? ""
