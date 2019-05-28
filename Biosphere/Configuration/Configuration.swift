@@ -39,7 +39,7 @@ struct Configuration {
       }
 
       let repository = Repository()
-      repository.label = attributes["id"] ?? "unknown-id"
+      repository.id = attributes["id"] ?? "unknown-id"
       repository.label = attributes["label"] ?? "unknown label"
       repository.url = attributes["url"] ?? ""
       repository.subdirectory = attributes["subdirectory"] ?? ""
@@ -47,6 +47,10 @@ struct Configuration {
       repositories.append(repository)
     }
     return repositories
+  }
+  
+  public func repository(_ label: String) -> Repository? {
+    return repositories.first(where: { $0.label == label })
   }
 
 

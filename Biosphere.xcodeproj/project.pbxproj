@@ -58,6 +58,10 @@
 		C28DE315228C3EA300230ED7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE314228C3EA300230ED7 /* Biosphere.icns */; };
 		C28DE317228C954800230ED7 /* NSWindowWithAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE316228C954700230ED7 /* NSWindowWithAnimation.swift */; };
 		C2FAC586229481CD00F798ED /* FocussingNSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */; };
+		C2FAC587229B09D100F798ED /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9462285FF9F0078FFF7 /* Notifications.swift */; };
+		C2FAC58A229B0BB900F798ED /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB31122874DB500E8410A /* FileObserver.swift */; };
+		C2FAC58C229D173B00F798ED /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC58B229D173B00F798ED /* Chef.swift */; };
+		C2FAC58D229D173B00F798ED /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC58B229D173B00F798ED /* Chef.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -123,6 +127,8 @@
 		C28DE314228C3EA300230ED7 /* Biosphere.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = Biosphere.icns; path = Biosphere/Images/Biosphere.icns; sourceTree = SOURCE_ROOT; };
 		C28DE316228C954700230ED7 /* NSWindowWithAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSWindowWithAnimation.swift; sourceTree = "<group>"; };
 		C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocussingNSTextField.swift; sourceTree = "<group>"; };
+		C2FAC588229B0A2700F798ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C2FAC58B229D173B00F798ED /* Chef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chef.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,7 @@
 		C234E8342281D0310078FFF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2FAC588229B0A2700F798ED /* Foundation.framework */,
 				C234E9152285DB330078FFF7 /* XCTest.framework */,
 				C234E8BD22858FEB0078FFF7 /* ServiceManagement.framework */,
 				C234E8372281D0340078FFF7 /* PreferencePanes.framework */,
@@ -300,6 +307,7 @@
 		C28DE3062289E0B700230ED7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C2FAC58B229D173B00F798ED /* Chef.swift */,
 				C28DE3032289E0B400230ED7 /* Repository.swift */,
 				C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */,
 			);
@@ -446,6 +454,7 @@
 				C28DE2EE228899A200230ED7 /* JSONReader.swift in Sources */,
 				C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */,
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
+				C2FAC58C229D173B00F798ED /* Chef.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
 				C28DE2E6228898DC00230ED7 /* JSONWriter.swift in Sources */,
 				C28DB31222874DB500E8410A /* FileObserver.swift in Sources */,
@@ -457,15 +466,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28DE2EF228899A200230ED7 /* JSONReader.swift in Sources */,
+				C2FAC587229B09D100F798ED /* Notifications.swift in Sources */,
 				C28DE2FF2289DD5100230ED7 /* ConfigWriter.swift in Sources */,
 				C28DE2EA2288997200230ED7 /* Log.swift in Sources */,
 				C28DE3052289E0B400230ED7 /* Repository.swift in Sources */,
+				C28DE2EF228899A200230ED7 /* JSONReader.swift in Sources */,
+				C2FAC58A229B0BB900F798ED /* FileObserver.swift in Sources */,
 				C28DE2F722889B1100230ED7 /* Config.swift in Sources */,
 				C28DE2E92288993100230ED7 /* JSONWriter.swift in Sources */,
 				C28DE2E42288962500230ED7 /* BundleIdentifier.swift in Sources */,
 				C28DB31722888DE300E8410A /* Paths.swift in Sources */,
 				C28DE2FA22889B5300230ED7 /* Configuration.swift in Sources */,
+				C2FAC58D229D173B00F798ED /* Chef.swift in Sources */,
 				C28DE2EC2288998F00230ED7 /* JSONReaderTests.swift in Sources */,
 				C28DE2E82288990000230ED7 /* JSONWriterTests.swift in Sources */,
 				C28DE3022289DFCB00230ED7 /* BundleVersion.swift in Sources */,

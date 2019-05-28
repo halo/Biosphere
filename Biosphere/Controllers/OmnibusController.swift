@@ -66,7 +66,7 @@ class OmnibusController: NSViewController {
   }
   
   private var omniTruckCommand: String {
-    return "curl --location --silent  https://omnitruck.chef.io/install.sh | sudo bash"
+    return "\(Paths.curlExecutable) --location --silent  https://omnitruck.chef.io/install.sh | sudo bash"
   }
   
 }

@@ -20,6 +20,7 @@ class JSONWriter {
       let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
 
       do {
+        Log.debug("Writing to file: \(path)")
         try jsonString.write(toFile: path, atomically: true, encoding: .utf8)
       } catch let error as NSError {
         Log.error("Could not write: \(error)")

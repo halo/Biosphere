@@ -10,7 +10,7 @@ struct ConfigWriter {
 
   static func addRemoteRepository(label: String, url: String, subdirectory: String) {
     let repository = Repository()
-    repository.id = NSUUID().uuidString
+    repository.id = String(Int.random(in: 1000000 ..< 2000000))
     repository.label = label
     repository.url = url
     repository.subdirectory = subdirectory
@@ -21,8 +21,9 @@ struct ConfigWriter {
     
     Log.debug("Adding new repository \(repository.asJson)")
     Log.debug("To existing repositories \(currentRepositories)")
+    currentRepositories.append(repository.asJson)
     
-    dictionary["repositories"] = currentRepositories.append(repository.asJson)
+    dictionary["repositories"] = currentRepositories
     JSONWriter(filePath: Paths.configFile).write(dictionary)
   }
   

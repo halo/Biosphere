@@ -33,7 +33,9 @@ struct Config {
     }
     let dictionary = reader.dictionary
     _instance = Configuration(dictionary: dictionary)
-    NotificationCenter.default.post(name:.configChanged, object: nil, userInfo: nil)
+    DispatchQueue.main.async {
+      NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
+    }
   }
 
 }

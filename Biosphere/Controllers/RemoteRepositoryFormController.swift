@@ -1,6 +1,6 @@
 import Cocoa
 
-class RemoteRepositoryFormController: NSWindowController, NSWindowDelegate, FocussingNSTextFieldDelegate {
+class RemoteRepositoryFormController: NSWindowController {
   
   @IBOutlet weak var nameTextField: FocussingNSTextField!
   @IBOutlet weak var urlTextField: FocussingNSTextField!
@@ -10,10 +10,27 @@ class RemoteRepositoryFormController: NSWindowController, NSWindowDelegate, Focu
   @IBOutlet var urlHelpPopover: NSPopover!
   @IBOutlet var subdirectoryHelpPopover: NSPopover!
 
-  @IBOutlet var nameHelpPopoverViewController: NSViewController!
-  @IBOutlet var urlHelpPopoverViewController: NSViewController!
-  @IBOutlet var subdirectoryHelpPopoverViewController: NSViewController!
+   @IBAction func cancel(sender: NSButton) {
+    Log.debug("Cancelling the sheet")
+    window?.sheetParent!.endSheet(window!)
+  }
+  
+  @IBAction func save(sender: NSButton) {
+    Log.debug("Saving the sheet")
+    ConfigWriter.addRemoteRepository(label: nameTextField.stringValue,
+                                     url: urlTextField.stringValue,
+                                     subdirectory: subdirectoryTextField.stringValue)
+    DispatchQueue.main.async {
+      NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
+    }
+    
+    window?.sheetParent!.endSheet(window!)
+  }
+  
+ 
+}
 
+extension RemoteRepositoryFormController: NSWindowDelegate {
   func windowDidChangeOcclusionState(_ notification: Notification) {
     if (window!.occlusionState.contains(.visible)) {
       // Without the following lines, the popover is not shown the first time :/
@@ -31,24 +48,12 @@ class RemoteRepositoryFormController: NSWindowController, NSWindowDelegate, Focu
       }
     }
   }
- 
-  @IBAction func cancel(sender: NSButton) {
-    Log.debug("Cancelling the sheet")
-    window?.sheetParent!.endSheet(window!)
-  }
   
-  @IBAction func save(sender: NSButton) {
-    Log.debug("Saving the sheet")
-    ConfigWriter.addRemoteRepository(label: nameTextField.stringValue,
-                                     url: urlTextField.stringValue,
-                                     subdirectory: subdirectoryTextField.stringValue)
-    DispatchQueue.main.async {
-      NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
-    }
-    
-    window?.sheetParent!.endSheet(window!)
-  }
-  
+
+}
+
+
+extension RemoteRepositoryFormController: FocussingNSTextFieldDelegate {
   func textFieldDidBecomeFirstResponder(_ textField: FocussingNSTextField) {
     switch textField {
     case nameTextField:
@@ -75,3 +80,4 @@ class RemoteRepositoryFormController: NSWindowController, NSWindowDelegate, Focu
     }
   }
 }
+

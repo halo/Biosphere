@@ -22,6 +22,8 @@ class BiospherePane: NSPreferencePane {
         NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
       }
     })
+    
+    Config.observe()
   }
   
   override func didSelect() {
