@@ -8,6 +8,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="RunController" customModule="Biosphere" customModuleProvider="target">
             <connections>
+                <outlet property="editRepositoryButton" destination="XUH-gN-5mn" id="qv0-Yw-XQx"/>
+                <outlet property="newRepositoryButton" destination="xgJ-bK-D3R" id="uXr-ry-cej"/>
+                <outlet property="removeRepositoryButton" destination="lAV-FZ-Rxa" id="riB-oA-LDg"/>
                 <outlet property="repositoryDropdown" destination="GJd-qf-yw4" id="bsG-Dj-nPQ"/>
                 <outlet property="view" destination="c22-O7-iKe" id="HV1-6U-Ccy"/>
             </connections>
@@ -21,7 +24,16 @@
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W7-S3-dWF">
                     <rect key="frame" x="18" y="107" width="370" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" title="You are now ready to run your cookbooks with Chef." id="TR9-KL-6Up">
+                    <textFieldCell key="cell" title="You are now ready to run your" id="TR9-KL-6Up">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kb3-DQ-fC0">
+                    <rect key="frame" x="324" y="107" width="147" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" title="cookbooks with Chef." id="cG8-rk-0S7">
                         <font key="font" usesAppearanceFont="YES"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -48,15 +60,15 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUH-gN-5mn">
-                    <rect key="frame" x="591" y="14" width="27" height="33"/>
+                    <rect key="frame" x="587" y="100" width="27" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="Pencil" imagePosition="overlaps" alignment="center" inset="2" id="Dog-o5-Agj">
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSStatusUnavailable" imagePosition="overlaps" alignment="center" inset="2" id="Dog-o5-Agj">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgJ-bK-D3R">
-                    <rect key="frame" x="554" y="14" width="14" height="33"/>
+                    <rect key="frame" x="550" y="99" width="14" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSAddTemplate" imagePosition="overlaps" alignment="center" inset="2" id="Kfc-lW-4Qg">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -64,7 +76,7 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-FZ-Rxa">
-                    <rect key="frame" x="575" y="14" width="14" height="33"/>
+                    <rect key="frame" x="571" y="99" width="14" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" inset="2" id="beW-RV-5dJ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -72,7 +84,7 @@
                     </buttonCell>
                 </button>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-qf-yw4">
-                    <rect key="frame" x="496" y="105" width="112" height="19"/>
+                    <rect key="frame" x="206" y="105" width="112" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="roundRect" title="Personal" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Nbn-W8-9vr" id="kKe-gd-xxZ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -94,6 +106,6 @@
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
-        <image name="Pencil" width="12" height="12"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
     </resources>
 </document>

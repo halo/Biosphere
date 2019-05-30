@@ -52,7 +52,6 @@
 		C28DE30A2289E31700230ED7 /* RemoteRepositoryFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE3092289E31700230ED7 /* RemoteRepositoryFormController.swift */; };
 		C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28DE30B2289E41400230ED7 /* CreateFirstRepository.xib */; };
 		C28DE30E2289E44200230ED7 /* CreateFirstRepositoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */; };
-		C28DE30F228B3BEB00230ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
 		C28DE311228B3ED800230ED7 /* Octocat.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE310228B3ED800230ED7 /* Octocat.icns */; };
 		C28DE313228B3EE900230ED7 /* Disk.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE312228B3EE900230ED7 /* Disk.icns */; };
 		C28DE315228C3EA300230ED7 /* Biosphere.icns in Resources */ = {isa = PBXBuildFile; fileRef = C28DE314228C3EA300230ED7 /* Biosphere.icns */; };
@@ -62,6 +61,9 @@
 		C2FAC58A229B0BB900F798ED /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB31122874DB500E8410A /* FileObserver.swift */; };
 		C2FAC58C229D173B00F798ED /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC58B229D173B00F798ED /* Chef.swift */; };
 		C2FAC58D229D173B00F798ED /* Chef.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC58B229D173B00F798ED /* Chef.swift */; };
+		C2FAC594229FEF4200F798ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28DB30F2286EB2C00E8410A /* Assets.xcassets */; };
+		C2FAC596229FFBD900F798ED /* Pencil Black.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2FAC595229FFBD900F798ED /* Pencil Black.icns */; };
+		C2FAC59A229FFF0500F798ED /* Pencil White.icns in Resources */ = {isa = PBXBuildFile; fileRef = C2FAC599229FFF0500F798ED /* Pencil White.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -129,6 +131,8 @@
 		C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocussingNSTextField.swift; sourceTree = "<group>"; };
 		C2FAC588229B0A2700F798ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2FAC58B229D173B00F798ED /* Chef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chef.swift; sourceTree = "<group>"; };
+		C2FAC595229FFBD900F798ED /* Pencil Black.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Pencil Black.icns"; sourceTree = "<group>"; };
+		C2FAC599229FFF0500F798ED /* Pencil White.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Pencil White.icns"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				C28DB30F2286EB2C00E8410A /* Assets.xcassets */,
+				C2FAC595229FFBD900F798ED /* Pencil Black.icns */,
+				C2FAC599229FFF0500F798ED /* Pencil White.icns */,
 				C28DE314228C3EA300230ED7 /* Biosphere.icns */,
 				C28DE312228B3EE900230ED7 /* Disk.icns */,
 				C28DE310228B3ED800230ED7 /* Octocat.icns */,
@@ -406,11 +412,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28DE30F228B3BEB00230ED7 /* Assets.xcassets in Resources */,
+				C2FAC59A229FFF0500F798ED /* Pencil White.icns in Resources */,
+				C2FAC594229FEF4200F798ED /* Assets.xcassets in Resources */,
 				C28DE311228B3ED800230ED7 /* Octocat.icns in Resources */,
 				C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */,
 				C28DE313228B3EE900230ED7 /* Disk.icns in Resources */,
 				C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */,
+				C2FAC596229FFBD900F798ED /* Pencil Black.icns in Resources */,
 				C28DE3082289E2F700230ED7 /* RemoteRepositoryForm.xib in Resources */,
 				C28DE315228C3EA300230ED7 /* Biosphere.icns in Resources */,
 				C234E8E52285D4AA0078FFF7 /* Biosphere.xib in Resources */,

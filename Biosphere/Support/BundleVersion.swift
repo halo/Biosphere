@@ -1,12 +1,12 @@
 import Foundation
 
 class BundleVersion {
-  public static var string: String {
+  public static var bundle: Bundle {
     // Cannot use `Bundle.main` because that is `System Preferences`
-    guard let bundle = Bundle.init(identifier: BundleIdentifier.string) else {
-      Log.error("Where is my bundle?")
-      return "?"
-    }
+    return Bundle.init(identifier: BundleIdentifier.string)!
+  }
+    
+  public static var string: String {
     
     guard let dictionary = bundle.infoDictionary else {
       Log.error("Where is my bundle's dictionary<?")

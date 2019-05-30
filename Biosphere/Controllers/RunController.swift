@@ -4,8 +4,45 @@ class RunController: NSViewController {
   
   @IBOutlet weak var repositoryDropdown: NSPopUpButton!
   
+  @IBOutlet weak var newRepositoryButton: NSButton!
+  @IBOutlet weak var editRepositoryButton: NSButton!
+  @IBOutlet weak var removeRepositoryButton: NSButton!
+  
   override func viewDidLoad() {
     NotificationCenter.default.addObserver(forName: .dependenciesChanged, object: nil, queue: nil, using: dependenciesChangedNotification)
+    
+    //guard let url = BundleVersion.bundle.url(forResource: "Pencil Black", withExtension: "icns") else {
+    //  Log.error("where is my pencil black")
+    //  return
+    //}
+
+    guard let url = BundleVersion.bundle.url(forResource: "Pencil Black", withExtension: "icns") else {
+      Log.error("where is my pencil black")
+      return
+    }
+    guard let image = NSImage(contentsOf: url) else {
+      Log.error("where is my pencil black content")
+      return
+    }
+    image.size = NSMakeSize(12, 12)
+    
+    editRepositoryButton.image = image
+    
+    if #available(macOS 10.14, *) {
+      if NSAppearance.current.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua {
+        guard let darkUrl = BundleVersion.bundle.url(forResource: "Pencil White", withExtension: "icns") else {
+          Log.error("where is my pencil white")
+          return
+        }
+        guard let darkImage = NSImage(contentsOf: darkUrl) else {
+          Log.error("where is my pencil black content")
+          return
+        }
+        darkImage.size = NSMakeSize(12, 12)
+editRepositoryButton.image = darkImage
+}
+    }
+    
   }
   
   private func update() {
@@ -13,10 +50,10 @@ class RunController: NSViewController {
     Config.instance.repositories.forEach() {
       repositoryDropdown.addItem(withTitle: $0.label)
     }
-    repositoryDropdown.menu?.addItem(NSMenuItem.separator())
-    let addRepositoryMenuItem = NSMenuItem.init(title: "Add Repository", action: #selector(self.addRepository), keyEquivalent: "")
-    addRepositoryMenuItem.target = self
-    repositoryDropdown.menu?.addItem(addRepositoryMenuItem)
+    //repositoryDropdown.menu?.addItem(NSMenuItem.separator())
+    //let addRepositoryMenuItem = NSMenuItem.init(title: "Add Repository", action: #selector(self.addRepository), keyEquivalent: "")
+    //addRepositoryMenuItem.target = self
+    //repositoryDropdown.menu?.addItem(addRepositoryMenuItem)
   }
   
   @objc private func addRepository(_ sender: Any) {
