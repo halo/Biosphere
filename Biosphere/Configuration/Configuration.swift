@@ -44,6 +44,8 @@ struct Configuration {
       repository.url = attributes["url"] ?? ""
       repository.subdirectory = attributes["subdirectory"] ?? ""
       repository.path = attributes["path"] ?? ""
+      repository.cookbook = attributes["cookbook"] ?? ""
+      repository.privileged = attributes["privileged"] ?? ""
       repositories.append(repository)
     }
     return repositories

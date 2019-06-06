@@ -2,19 +2,14 @@ import Cocoa
 
 class RunController: NSViewController {
   
-  @IBOutlet weak var repositoryDropdown: NSPopUpButton!
+  @IBOutlet var repositoryDropdown: NSPopUpButton!
   
-  @IBOutlet weak var newRepositoryButton: NSButton!
-  @IBOutlet weak var editRepositoryButton: NSButton!
-  @IBOutlet weak var removeRepositoryButton: NSButton!
+  @IBOutlet var newRepositoryButton: NSButton!
+  @IBOutlet var editRepositoryButton: NSButton!
+  @IBOutlet var removeRepositoryButton: NSButton!
   
   override func viewDidLoad() {
     NotificationCenter.default.addObserver(forName: .dependenciesChanged, object: nil, queue: nil, using: dependenciesChangedNotification)
-    
-    //guard let url = BundleVersion.bundle.url(forResource: "Pencil Black", withExtension: "icns") else {
-    //  Log.error("where is my pencil black")
-    //  return
-    //}
 
     guard let url = BundleVersion.bundle.url(forResource: "Pencil Black", withExtension: "icns") else {
       Log.error("where is my pencil black")
@@ -39,8 +34,8 @@ class RunController: NSViewController {
           return
         }
         darkImage.size = NSMakeSize(12, 12)
-editRepositoryButton.image = darkImage
-}
+        editRepositoryButton.image = darkImage
+      }
     }
     
   }
@@ -50,14 +45,41 @@ editRepositoryButton.image = darkImage
     Config.instance.repositories.forEach() {
       repositoryDropdown.addItem(withTitle: $0.label)
     }
-    //repositoryDropdown.menu?.addItem(NSMenuItem.separator())
-    //let addRepositoryMenuItem = NSMenuItem.init(title: "Add Repository", action: #selector(self.addRepository), keyEquivalent: "")
-    //addRepositoryMenuItem.target = self
-    //repositoryDropdown.menu?.addItem(addRepositoryMenuItem)
   }
   
-  @objc private func addRepository(_ sender: Any) {
+  @IBAction func addRepository(_ sender: NSButton) {
     Log.debug("Request for adding a repository...")
+  }
+
+  @IBAction func removeRepository(_ sender: NSButton) {
+    Log.debug("Request for removing current repository...")
+  }
+
+  @IBAction func editRepository(_ sender: NSButton) {
+    Log.debug("Request for editing current repository...")
+    guard let repository = selectedRepository else {
+      Log.error("You cannot edit a non-existing repository")
+      return
+    }
+    
+    if (repository.isRemote) {
+
+      guard let window = view.window else {
+        Log.error("I really thought I'd have a window")
+        return
+      }
+
+      guard let sheet = remoteRepositoryFormController.window else {
+        Log.error("I really thought remoteRepositoryFormController has a window")
+        return
+      }
+      
+      remoteRepositoryFormController.edit(repository)
+      
+      window.beginSheet(sheet, completionHandler: { response in
+        Log.debug("response: \(response)")
+      })
+    }
   }
   
   private func dependenciesChangedNotification(_ _: Notification) {
@@ -70,7 +92,37 @@ editRepositoryButton.image = darkImage
       return
     }
     
+    guard prepareRepository(repository) else {
+      Log.debug("Could not prepare repository, skipping chef run")
+      return
+    }
     Chef(repository: repository).run()
+  }
+  
+  private func prepareRepository(_ repository: Repository) -> Bool{
+    guard repository.isRemote else {
+      Log.debug("No need to clone local repository \(repository.id) at \(repository.path)")
+      return true
+    }
+    Log.debug("This is a remote repository, preparing sync")
+    
+    let result = Repositories.sync(repository: repository)
+    if (result.success) {
+      Log.debug("The sync was successful")
+      return true
+    }
+    Log.debug("The sync failed")
+
+    guard let window = view.window else {
+      Log.error("I really thought I'd have a window")
+      return false
+    }
+    
+    gitFailedController.show(onWindow: window, result: result)
+    
+   
+
+    return false
   }
   
   
@@ -83,5 +135,14 @@ editRepositoryButton.image = darkImage
     return Config.instance.repository(selectedTitle)
   }
   
+  private lazy var remoteRepositoryFormController: RemoteRepositoryFormController = {
+    Log.debug("Initializing RemoteRepositoryFormController...")
+    return RemoteRepositoryFormController.init(windowNibName: "RemoteRepositoryForm")
+  }()
+
+  private lazy var gitFailedController: GitFailedController = {
+    Log.debug("Initializing gitFailedControllerController...")
+    return GitFailedController.init(windowNibName: "GitFailed")
+  }()
 
 }

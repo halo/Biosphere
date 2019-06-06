@@ -52,5 +52,8 @@ class Paths: NSObject {
   
   static let gitExecutable = "/Library/Developer/CommandLineTools/usr/bin/git"
   static let gitExecutableUrl = URL(fileURLWithPath: gitExecutable)
+  
+  static let sudoExecutable = "/usr/bin/sudo"
+  static let sudoExecutableUrl = URL(fileURLWithPath: sudoExecutable)
 
 }

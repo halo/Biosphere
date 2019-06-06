@@ -22,6 +22,16 @@
 		C234E9402285FCD40078FFF7 /* AllowAutomation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */; };
 		C234E9422285FCF20078FFF7 /* AutomationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9412285FCF20078FFF7 /* AutomationController.swift */; };
 		C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C234E9462285FF9F0078FFF7 /* Notifications.swift */; };
+		C24CB63822A7B39700153C94 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB63722A7B39700153C94 /* Repositories.swift */; };
+		C24CB63922A7B39700153C94 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB63722A7B39700153C94 /* Repositories.swift */; };
+		C24CB63B22A847EB00153C94 /* Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB63A22A847EB00153C94 /* Git.swift */; };
+		C24CB63C22A847EB00153C94 /* Git.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB63A22A847EB00153C94 /* Git.swift */; };
+		C24CB63E22A84ABC00153C94 /* CommandResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB63D22A84ABC00153C94 /* CommandResult.swift */; };
+		C24CB63F22A84ABC00153C94 /* CommandResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB63D22A84ABC00153C94 /* CommandResult.swift */; };
+		C24CB64122A855CE00153C94 /* GitFailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB64022A855CE00153C94 /* GitFailedController.swift */; };
+		C24CB64222A855CE00153C94 /* GitFailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CB64022A855CE00153C94 /* GitFailedController.swift */; };
+		C24CB64422A982E800153C94 /* GitFailed.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24CB64322A982E800153C94 /* GitFailed.xib */; };
+		C24CB64522A982E800153C94 /* GitFailed.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24CB64322A982E800153C94 /* GitFailed.xib */; };
 		C28DB30A2286D06500E8410A /* NSRect+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */; };
 		C28DB31222874DB500E8410A /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB31122874DB500E8410A /* FileObserver.swift */; };
 		C28DB314228809BC00E8410A /* RunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28DB313228809BC00E8410A /* RunController.swift */; };
@@ -103,6 +113,11 @@
 		C234E93F2285FCD40078FFF7 /* AllowAutomation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllowAutomation.xib; sourceTree = "<group>"; };
 		C234E9412285FCF20078FFF7 /* AutomationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationController.swift; sourceTree = "<group>"; };
 		C234E9462285FF9F0078FFF7 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		C24CB63722A7B39700153C94 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		C24CB63A22A847EB00153C94 /* Git.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git.swift; sourceTree = "<group>"; };
+		C24CB63D22A84ABC00153C94 /* CommandResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandResult.swift; sourceTree = "<group>"; };
+		C24CB64022A855CE00153C94 /* GitFailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitFailedController.swift; sourceTree = "<group>"; };
+		C24CB64322A982E800153C94 /* GitFailed.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitFailed.xib; sourceTree = "<group>"; };
 		C28DB3092286D06500E8410A /* NSRect+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRect+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		C28DB30F2286EB2C00E8410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Biosphere/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		C28DB31122874DB500E8410A /* FileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileObserver.swift; sourceTree = "<group>"; };
@@ -226,6 +241,7 @@
 				C28DE30D2289E44200230ED7 /* CreateFirstRepositoryController.swift */,
 				C28DE3092289E31700230ED7 /* RemoteRepositoryFormController.swift */,
 				C28DB313228809BC00E8410A /* RunController.swift */,
+				C24CB64022A855CE00153C94 /* GitFailedController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +267,8 @@
 				C28DE3072289E2F700230ED7 /* RemoteRepositoryForm.xib */,
 				C28DB315228809D500E8410A /* RunChef.xib */,
 				C28DE316228C954700230ED7 /* NSWindowWithAnimation.swift */,
+				C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */,
+				C24CB64322A982E800153C94 /* GitFailed.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,7 +333,9 @@
 			children = (
 				C2FAC58B229D173B00F798ED /* Chef.swift */,
 				C28DE3032289E0B400230ED7 /* Repository.swift */,
-				C2FAC585229481CD00F798ED /* FocussingNSTextField.swift */,
+				C24CB63722A7B39700153C94 /* Repositories.swift */,
+				C24CB63A22A847EB00153C94 /* Git.swift */,
+				C24CB63D22A84ABC00153C94 /* CommandResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -417,6 +437,7 @@
 				C28DE311228B3ED800230ED7 /* Octocat.icns in Resources */,
 				C28DE30C2289E41400230ED7 /* CreateFirstRepository.xib in Resources */,
 				C28DE313228B3EE900230ED7 /* Disk.icns in Resources */,
+				C24CB64422A982E800153C94 /* GitFailed.xib in Resources */,
 				C234E8E72285D4AB0078FFF7 /* InstallGit.xib in Resources */,
 				C2FAC596229FFBD900F798ED /* Pencil Black.icns in Resources */,
 				C28DE3082289E2F700230ED7 /* RemoteRepositoryForm.xib in Resources */,
@@ -434,6 +455,7 @@
 			files = (
 				C28DE2F4228899D200230ED7 /* justText.json in Resources */,
 				C28DE2F3228899D200230ED7 /* minimalConfig.json in Resources */,
+				C24CB64522A982E800153C94 /* GitFailed.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,14 +471,17 @@
 				C234E9472285FF9F0078FFF7 /* Notifications.swift in Sources */,
 				C234E9382285E2CD0078FFF7 /* BiospherePane.swift in Sources */,
 				C28DE30E2289E44200230ED7 /* CreateFirstRepositoryController.swift in Sources */,
+				C24CB63822A7B39700153C94 /* Repositories.swift in Sources */,
 				C28DE2F622889B1100230ED7 /* Config.swift in Sources */,
 				C28DE30A2289E31700230ED7 /* RemoteRepositoryFormController.swift in Sources */,
 				C234E9352285E2C90078FFF7 /* Log.swift in Sources */,
 				C2FAC586229481CD00F798ED /* FocussingNSTextField.swift in Sources */,
+				C24CB64122A855CE00153C94 /* GitFailedController.swift in Sources */,
 				C28DE317228C954800230ED7 /* NSWindowWithAnimation.swift in Sources */,
 				C28DE3012289DFCB00230ED7 /* BundleVersion.swift in Sources */,
 				C234E9362285E2C90078FFF7 /* Paths.swift in Sources */,
 				C28DE2F922889B5300230ED7 /* Configuration.swift in Sources */,
+				C24CB63B22A847EB00153C94 /* Git.swift in Sources */,
 				C28DE2E32288952F00230ED7 /* BundleIdentifier.swift in Sources */,
 				C28DB314228809BC00E8410A /* RunController.swift in Sources */,
 				C28DE2EE228899A200230ED7 /* JSONReader.swift in Sources */,
@@ -464,6 +489,7 @@
 				C234E93A2285E2D20078FFF7 /* GitController.swift in Sources */,
 				C2FAC58C229D173B00F798ED /* Chef.swift in Sources */,
 				C234E93B2285E2D20078FFF7 /* OmnibusController.swift in Sources */,
+				C24CB63E22A84ABC00153C94 /* CommandResult.swift in Sources */,
 				C28DE2E6228898DC00230ED7 /* JSONWriter.swift in Sources */,
 				C28DB31222874DB500E8410A /* FileObserver.swift in Sources */,
 				C28DE3042289E0B400230ED7 /* Repository.swift in Sources */,
@@ -474,19 +500,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24CB63F22A84ABC00153C94 /* CommandResult.swift in Sources */,
 				C2FAC587229B09D100F798ED /* Notifications.swift in Sources */,
 				C28DE2FF2289DD5100230ED7 /* ConfigWriter.swift in Sources */,
 				C28DE2EA2288997200230ED7 /* Log.swift in Sources */,
 				C28DE3052289E0B400230ED7 /* Repository.swift in Sources */,
+				C24CB64222A855CE00153C94 /* GitFailedController.swift in Sources */,
 				C28DE2EF228899A200230ED7 /* JSONReader.swift in Sources */,
 				C2FAC58A229B0BB900F798ED /* FileObserver.swift in Sources */,
 				C28DE2F722889B1100230ED7 /* Config.swift in Sources */,
 				C28DE2E92288993100230ED7 /* JSONWriter.swift in Sources */,
+				C24CB63C22A847EB00153C94 /* Git.swift in Sources */,
 				C28DE2E42288962500230ED7 /* BundleIdentifier.swift in Sources */,
 				C28DB31722888DE300E8410A /* Paths.swift in Sources */,
 				C28DE2FA22889B5300230ED7 /* Configuration.swift in Sources */,
 				C2FAC58D229D173B00F798ED /* Chef.swift in Sources */,
 				C28DE2EC2288998F00230ED7 /* JSONReaderTests.swift in Sources */,
+				C24CB63922A7B39700153C94 /* Repositories.swift in Sources */,
 				C28DE2E82288990000230ED7 /* JSONWriterTests.swift in Sources */,
 				C28DE3022289DFCB00230ED7 /* BundleVersion.swift in Sources */,
 				C234E9302285E0480078FFF7 /* PathsTest.swift in Sources */,

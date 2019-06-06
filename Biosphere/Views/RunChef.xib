@@ -66,6 +66,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="editRepository:" target="-2" id="naK-iW-AHq"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xgJ-bK-D3R">
                     <rect key="frame" x="550" y="99" width="14" height="33"/>
@@ -74,6 +77,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="addRepository:" target="-2" id="V9d-Qb-tzV"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAV-FZ-Rxa">
                     <rect key="frame" x="571" y="99" width="14" height="33"/>
@@ -82,6 +88,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="smallSystemBold"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="removeRepository:" target="-2" id="Zmg-VJ-FNk"/>
+                    </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-qf-yw4">
                     <rect key="frame" x="206" y="105" width="112" height="19"/>

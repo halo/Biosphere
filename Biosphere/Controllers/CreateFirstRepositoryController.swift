@@ -23,7 +23,8 @@ class CreateFirstRepositoryController: NSViewController {
       Log.error("I really thought remoteRepositoryFormController has a window")
       return
     }
-    
+    remoteRepositoryFormController.clear()
+
     mainWindow.beginSheet(sheet, completionHandler: { response in
       Log.debug("response: \(response)")
     })

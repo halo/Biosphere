@@ -7,7 +7,7 @@ class BiospherePane: NSPreferencePane {
   private var misingAutomationPermission: Bool = false
   private var observer: FileObserver? = nil
   
-  @IBOutlet weak var container: NSView!
+  @IBOutlet var container: NSView!
 
   override func mainViewDidLoad() {
     Log.debug("mainViewDidLoad...")

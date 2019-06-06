@@ -12,12 +12,6 @@ class Chef {
   public func run() {
     ensureCacheDirectory()
     
-    Log.debug("Instructing cookbook repository to get ready...")
-    guard repository.clone() else {
-      Log.debug("Cookbook repository said the clone failed.")
-      return
-    }
-    
     let soloConfig: [String: Any] = [
       "run_list": "recipe[\(repository.cookbook)]",
       "biosphere": [
@@ -89,7 +83,7 @@ class Chef {
     }
   }
   private var chefCommand: String {
-    return "\(Paths.chefExecutable) --config '\(Paths.chefKnifeConfig)'"
+    return "\(Paths.sudoExecutable) \(Paths.chefExecutable) --config '\(Paths.chefKnifeConfig)'"
   }
 
   // See https://docs.chef.io/config_rb_solo.html
