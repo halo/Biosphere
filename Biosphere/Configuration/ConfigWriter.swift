@@ -18,9 +18,9 @@ struct ConfigWriter {
     writeRepositories(currentRepositories)
   }
 
-  static func addRemoteRepository(label: String, url: String, subdirectory: String, cookbook: String, privileged: Bool) {
+  static func addRemoteRepository(id: String, label: String, url: String, subdirectory: String, cookbook: String, privileged: Bool) {
     let repository = Repository()
-    repository.id = String(Int.random(in: 1000000 ..< 2000000))
+    repository.id = id == "" ? String(Int.random(in: 1000000 ..< 2000000)) : id
     repository.label = label
     repository.url = url
     repository.subdirectory = subdirectory
@@ -44,6 +44,7 @@ struct ConfigWriter {
     var dictionary = dictionaryWithCurrentVersion()
     dictionary["repositories"] = repositories
     JSONWriter(filePath: Paths.configFile).write(dictionary)
+    Config.reload()
   }
   
   private static func dictionaryWithCurrentVersion() -> [String: Any] {
