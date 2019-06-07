@@ -16,7 +16,7 @@ class JSONWriter {
   @discardableResult public func write(_ dictionary: [String: Any]) -> Bool {
     ensureDirectory()
     do {
-      let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted) as NSData
+      let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: [.sortedKeys, .prettyPrinted]) as NSData
       let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
 
       do {
