@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GitSyncingController" customModule="Biosphere" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="Ca4-XY-a8R"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="NSWindowWithAnimation" customModule="Biosphere" customModuleProvider="target">
+            <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="263" height="109"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="263" height="109"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEo-kh-z6C">
+                        <rect key="frame" x="20" y="20" width="70" height="69"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Octocat" id="GwJ-Hg-YOq"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNq-Y5-EqC">
+                        <rect key="frame" x="115" y="38" width="22" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSRightFacingTriangleTemplate" id="EBY-yj-K0o"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zug-C7-hXd">
+                        <rect key="frame" x="176" y="20" width="59" height="64"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Disk" id="0Fn-ik-nGA"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="30.5" y="66.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="Disk" width="512" height="512"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
+        <image name="Octocat" width="512" height="512"/>
+    </resources>
+</document>

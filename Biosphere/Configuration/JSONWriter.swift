@@ -13,7 +13,7 @@ class JSONWriter {
     self.path = filePath
   }
 
-  public func write(_ dictionary: [String: Any]) {
+  @discardableResult public func write(_ dictionary: [String: Any]) -> Bool {
     ensureDirectory()
     do {
       let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted) as NSData
@@ -22,12 +22,15 @@ class JSONWriter {
       do {
         Log.debug("Writing to file: \(path)")
         try jsonString.write(toFile: path, atomically: true, encoding: .utf8)
+        return true
       } catch let error as NSError {
         Log.error("Could not write: \(error)")
+        return false
       }
 
     } catch let error as NSError {
       Log.error("Could not serialize: \(error)")
+      return false
     }
   }
   

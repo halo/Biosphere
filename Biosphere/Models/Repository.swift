@@ -37,7 +37,15 @@ class Repository {
     
     return cachePath.appendPath(subdirectory)
   }
-  
+
+  public var runList: String {
+    if (cookbook == "") {
+      return "recipe[default]"
+    }
+    
+   return "recipe[\(cookbook)]"
+  }
+
   public var asJson: Dictionary<String, String> {
     return ["id": id,
             "label": label,

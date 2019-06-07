@@ -28,7 +28,12 @@ class RemoteRepositoryFormController: NSWindowController {
     privilegedButton.state = .off
   }
 
-  public func edit(_ repository: Repository) {
+  public func edit(repository: Repository, onWindow: NSWindow) {
+    guard let myWindow = window else {
+      Log.debug("I really thought I'd have a window.")
+      return
+    }
+
     Log.debug("Loading repository data into form...")
     repositoryID = repository.id
     nameTextField.stringValue = repository.label
@@ -36,6 +41,12 @@ class RemoteRepositoryFormController: NSWindowController {
     subdirectoryTextField.stringValue = repository.subdirectory
     cookbookTextField.stringValue = repository.cookbook
     privilegedButton.state = repository.isPrivileged ? .on : .off
+
+    
+    Log.debug("Opening form sheet")
+    onWindow.beginSheet(myWindow, completionHandler: { response in
+      Log.debug("remote repository form sheet closed: \(response)")
+    })
   }
   
   @IBAction func cancel(sender: NSButton) {
@@ -45,11 +56,12 @@ class RemoteRepositoryFormController: NSWindowController {
   
   @IBAction func save(sender: NSButton) {
     Log.debug("Saving the sheet")
-    Repositories.addRemote(label: nameTextField.stringValue,
-                          url: urlTextField.stringValue,
-                          subdirectory: subdirectoryTextField.stringValue,
-                          cookbook: cookbookTextField.stringValue,
-                          privileged: privilegedButton.state == .on)
+    Repositories.saveRemote(id: repositoryID,
+                            label: nameTextField.stringValue,
+                            url: urlTextField.stringValue,
+                            subdirectory: subdirectoryTextField.stringValue,
+                            cookbook: cookbookTextField.stringValue,
+                            privileged: privilegedButton.state == .on)
     
     DispatchQueue.main.async {
       NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)

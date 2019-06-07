@@ -11,23 +11,8 @@ class Chef {
   
   public func run() {
     ensureCacheDirectory()
-    
-    let soloConfig: [String: Any] = [
-      "run_list": "recipe[\(repository.cookbook)]",
-      "biosphere": [
-        "version": BundleVersion.string
-      ]
-    ]
-    JSONWriter(filePath: Paths.chefSoloConfig).write(soloConfig)
-    
-    
-    do {
-      Log.debug("Creating knife config file at \(Paths.chefKnifeConfig)")
-      try knifeConfig.write(to: Paths.chefKnifeConfigUrl, atomically: true, encoding: .utf8)
-    } catch let error as NSError {
-      Log.info("Could not write knife config file \(Paths.chefKnifeConfig) \(error.localizedDescription)")
-      return
-    }
+    guard writeSoloConfig() else { return }
+    guard writeKnifeConfig() else { return }
     
     let task = Process()
     task.executableURL = URL(fileURLWithPath: Paths.osascriptExecutable)
@@ -73,6 +58,30 @@ class Chef {
 
   }
   
+  private func writeSoloConfig() -> Bool {
+    return JSONWriter(filePath: Paths.chefSoloConfig).write(soloConfig)
+  }
+  
+  private func writeKnifeConfig() -> Bool {
+    do {
+      Log.debug("Creating knife config file at \(Paths.chefKnifeConfig)")
+      try knifeConfig.write(to: Paths.chefKnifeConfigUrl, atomically: true, encoding: .utf8)
+      return true
+    } catch let error as NSError {
+      Log.info("Could not write knife config file \(Paths.chefKnifeConfig) \(error.localizedDescription)")
+      return false
+    }
+  }
+  
+  private var soloConfig: [String: Any] {
+    return [
+      "run_list": repository.runList,
+      "biosphere": [
+        "version": BundleVersion.string
+      ]
+    ]
+  }
+  
   private func ensureCacheDirectory() {
     let manager = FileManager.default
     do {
@@ -94,8 +103,8 @@ class Chef {
     file_backup_path "\(Paths.chefBackupsDirectory)"
     file_cache_path  "\(Paths.chefCacheDirectory)"
     json_attribs     "\(Paths.chefSoloConfig)"
-    #log_level        #{(Runtime.debug_mode? ? :debug : :info).inspect}
-    #verbose_logging  #{(Runtime.debug_mode? ? true : false).inspect}
+    # log_level        :debug # :info
+    # verbose_logging  true # false
     """
   }
 

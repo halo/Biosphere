@@ -51,9 +51,12 @@ struct Configuration {
     return repositories
   }
   
-  public func repository(_ label: String) -> Repository? {
+  public func repository(label: String) -> Repository? {
     return repositories.first(where: { $0.label == label })
   }
 
+  public func repositoryExists(id: String) -> Bool {
+    return repositories.contains(where: { $0.id == id })
+  }
 
 }

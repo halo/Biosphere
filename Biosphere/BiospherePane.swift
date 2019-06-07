@@ -42,6 +42,13 @@ class BiospherePane: NSPreferencePane {
     
     // Determining new container height
     let newView = recommendedView
+    let currentView = container.subviews.first
+    
+    guard newView != currentView else {
+      Log.debug("The recommended view is already loaded")
+      return
+    }
+    
     let newContainerHeight = newView.frame.height
     let heightDiff = newContainerHeight - currentContainerHeight
     Log.debug("New container height differs by \(heightDiff) pixels")
