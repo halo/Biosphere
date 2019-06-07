@@ -23,6 +23,13 @@ class RunController: NSViewController {
   
   @IBAction func addRepository(_ sender: NSButton) {
     Log.debug("Request for adding a repository...")
+
+    guard let window = view.window else {
+      Log.error("I really thought I'd have a window")
+      return
+    }
+
+    chooseRepositoryKindController.show(onWindow: window)
   }
   
   @IBAction func removeRepository(_ sender: NSButton) {
@@ -166,6 +173,11 @@ class RunController: NSViewController {
   private lazy var gitFailedController: GitFailedController = {
     Log.debug("Initializing gitFailedControllerController...")
     return GitFailedController.init(windowNibName: "GitFailed")
+  }()
+
+  private lazy var chooseRepositoryKindController: ChooseRepositoryKindController = {
+    Log.debug("Initializing chooseRepositoryKindController...")
+    return ChooseRepositoryKindController.init(windowNibName: "ChooseRepositoryKind")
   }()
 
 }

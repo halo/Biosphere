@@ -13,6 +13,10 @@ class ChooseRepositoryKindController: NSWindowController {
     })
   }
   
+  @IBAction func cancel(_ sender: NSButton) {
+    hide()
+  }
+  
   public func hide() {
     window?.sheetParent!.endSheet(window!)
   }

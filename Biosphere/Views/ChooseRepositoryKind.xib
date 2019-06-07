@@ -5,7 +5,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="ChooseRepositoryKindController" customModule="Biosphere" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="5BQ-Ge-vBN"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="NSWindowWithAnimation" customModule="Biosphere" customModuleProvider="target">
@@ -35,6 +39,17 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dfe-pp-oEi">
+                        <rect key="frame" x="200" y="48" width="102" height="63"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Disk" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="cbM-ZV-kwn">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="6MJ-3I-6pd" id="l62-nE-Zx2"/>
+                        </connections>
+                    </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6MJ-3I-6pd">
                         <rect key="frame" x="35" y="44" width="136" height="75"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -42,6 +57,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="Dfe-pp-oEi" id="uxW-UE-Uom"/>
+                        </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjR-Nr-emU">
                         <rect key="frame" x="33" y="20" width="140" height="17"/>
@@ -52,13 +70,19 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dfe-pp-oEi">
-                        <rect key="frame" x="200" y="48" width="102" height="63"/>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" alphaValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-ns-4nd">
+                        <rect key="frame" x="-5" y="97" width="12" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Disk" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="cbM-ZV-kwn">
+                        <buttonCell key="cell" type="push" title="Esc" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EWS-um-Q3l">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
                         </buttonCell>
+                        <connections>
+                            <action selector="cancel:" target="-2" id="wmU-oc-mSs"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
