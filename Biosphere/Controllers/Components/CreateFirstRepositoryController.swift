@@ -18,24 +18,26 @@ class CreateFirstRepositoryController: NSViewController {
       Log.error("I really thought I'd have a window")
       return
     }
-    
-    guard let sheet = remoteRepositoryFormController.window else {
-      Log.error("I really thought remoteRepositoryFormController has a window")
-      return
-    }
-    remoteRepositoryFormController.clear()
-
-    mainWindow.beginSheet(sheet, completionHandler: { response in
-      Log.debug("response: \(response)")
-    })
+    remoteRepositoryFormController.draftNew(onWindow: mainWindow)
   }
 
   @IBAction func newLocalRepository(sender: NSButton) {
+    Log.debug("The user wants to add a new local repository...")
+    guard let mainWindow = view.window else {
+      Log.error("I really thought I'd have a window")
+      return
+    }
+    localRepositoryFormController.draftNew(onWindow: mainWindow)
   }
   
   private lazy var remoteRepositoryFormController: RemoteRepositoryFormController = {
     Log.debug("Initializing RemoteRepositoryFormController...")
     return RemoteRepositoryFormController.init(windowNibName: "RemoteRepositoryForm")
+  }()
+
+  private lazy var localRepositoryFormController: LocalRepositoryFormController = {
+    Log.debug("Initializing localRepositoryFormController...")
+    return LocalRepositoryFormController.init(windowNibName: "LocalRepositoryForm")
   }()
 
 }

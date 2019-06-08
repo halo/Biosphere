@@ -27,21 +27,12 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="NSWindowWithAnimation" customModule="Biosphere" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="357" height="135"/>
+            <rect key="contentRect" x="196" y="240" width="357" height="128"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="357" height="135"/>
+                <rect key="frame" x="0.0" y="0.0" width="357" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-Sj-rbn">
-                        <rect key="frame" x="52" y="83" width="4" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" id="J66-Wx-Rxv">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jeI-KF-n5Z">
                         <rect key="frame" x="273" y="13" width="70" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -54,10 +45,11 @@ DQ
                         </buttonCell>
                         <connections>
                             <action selector="saveWithSender:" target="-2" id="BtQ-r7-qY9"/>
+                            <outlet property="nextKeyView" destination="Fxj-6n-Zpo" id="IMT-7t-Ebj"/>
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0m-sb-VbM" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
-                        <rect key="frame" x="20" y="61" width="317" height="22"/>
+                        <rect key="frame" x="20" y="54" width="317" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="URL" drawsBackground="YES" id="8Bb-Xf-tA2">
                             <font key="font" metaFont="system"/>
@@ -66,10 +58,11 @@ DQ
                         </textFieldCell>
                         <connections>
                             <outlet property="delegate" destination="-2" id="52X-8O-gNx"/>
+                            <outlet property="nextKeyView" destination="vca-Fn-7MK" id="CU7-XJ-LSq"/>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxj-6n-Zpo" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
-                        <rect key="frame" x="20" y="93" width="317" height="22"/>
+                        <rect key="frame" x="20" y="86" width="317" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="ybD-zH-wox">
                             <font key="font" metaFont="system"/>
@@ -77,7 +70,9 @@ DQ
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
+                            <action selector="nameTextField:" target="-1" id="ada-3W-7fH"/>
                             <outlet property="delegate" destination="-2" id="CA7-zn-8AV"/>
+                            <outlet property="nextKeyView" destination="H0m-sb-VbM" id="gPU-sA-Esa"/>
                         </connections>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18g-YX-Hs4">
@@ -92,10 +87,11 @@ Gw
                         </buttonCell>
                         <connections>
                             <action selector="cancelWithSender:" target="-2" id="eaT-Kd-lSN"/>
+                            <outlet property="nextKeyView" destination="jeI-KF-n5Z" id="BJf-Ff-lf4"/>
                         </connections>
                     </button>
                     <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vca-Fn-7MK">
-                        <rect key="frame" x="20" y="40" width="13" height="13"/>
+                        <rect key="frame" x="20" y="33" width="13" height="13"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AJ5-Mt-cij">
                             <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
@@ -103,10 +99,11 @@ Gw
                         </buttonCell>
                         <connections>
                             <action selector="toggleAdvanced:" target="-2" id="N6p-l4-m7d"/>
+                            <outlet property="nextKeyView" destination="qsc-DM-zGe" id="4LC-mh-jGM"/>
                         </connections>
                     </button>
                     <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-qT-JUE">
-                        <rect key="frame" x="7" y="-50" width="341" height="89"/>
+                        <rect key="frame" x="7" y="-57" width="341" height="89"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-DM-zGe" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
@@ -119,6 +116,7 @@ Gw
                                 </textFieldCell>
                                 <connections>
                                     <outlet property="delegate" destination="-2" id="j7T-8x-ADz"/>
+                                    <outlet property="nextKeyView" destination="PCc-Po-B2X" id="K44-P0-X8y"/>
                                 </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PCc-Po-B2X" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
@@ -131,6 +129,7 @@ Gw
                                 </textFieldCell>
                                 <connections>
                                     <outlet property="delegate" destination="-2" id="CQW-oq-afg"/>
+                                    <outlet property="nextKeyView" destination="FCD-Cb-HzN" id="FZ7-tg-Q1D"/>
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-Cb-HzN">
@@ -140,13 +139,16 @@ Gw
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="18g-YX-Hs4" id="97d-hG-IUt"/>
+                                </connections>
                             </button>
                         </subviews>
                     </customView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bK7-8t-A54">
-                        <rect key="frame" x="33" y="38" width="64" height="17"/>
+                        <rect key="frame" x="33" y="31" width="64" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="inline" title="Advanced" bezelStyle="inline" alignment="left" inset="2" id="85m-P5-93g">
+                        <buttonCell key="cell" type="inline" title="Advanced" bezelStyle="inline" alignment="left" refusesFirstResponder="YES" inset="2" id="85m-P5-93g">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="smallSystem"/>
                         </buttonCell>
@@ -159,7 +161,7 @@ Gw
             <connections>
                 <outlet property="delegate" destination="-2" id="nyt-lz-KdM"/>
             </connections>
-            <point key="canvasLocation" x="423.5" y="50.5"/>
+            <point key="canvasLocation" x="423.5" y="47"/>
         </window>
         <viewController id="EsV-Gp-GcJ" userLabel="Popover View Controller">
             <connections>
@@ -295,6 +297,5 @@ Examples:
             </subviews>
             <point key="canvasLocation" x="779" y="233.5"/>
         </customView>
-        <userDefaultsController representsSharedInstance="YES" id="J1a-oI-XkM"/>
     </objects>
 </document>

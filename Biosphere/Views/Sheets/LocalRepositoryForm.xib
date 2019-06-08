@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LocalRepositoryFormController" customModule="Biosphere" customModuleProvider="target">
+            <connections>
+                <outlet property="advancedContainer" destination="KHe-QX-U80" id="qjE-Bf-SBQ"/>
+                <outlet property="cookbookHelpPopover" destination="WeJ-15-ixA" id="BiU-RV-dk9"/>
+                <outlet property="cookbookTextField" destination="MfR-JK-lck" id="PNU-Lf-aRH"/>
+                <outlet property="nameHelpPopover" destination="roU-zI-vEi" id="byY-nh-3Tf"/>
+                <outlet property="nameTextField" destination="V4j-MV-5C4" id="yUb-Yl-pfK"/>
+                <outlet property="pathHelpPopover" destination="RyH-qm-bS9" id="uJj-xD-EjP"/>
+                <outlet property="pathTextField" destination="W4c-Tq-vr0" id="Dlh-Dl-teq"/>
+                <outlet property="privilegedButton" destination="Ccf-aQ-ry4" id="EgT-nc-ObZ"/>
+                <outlet property="saveButton" destination="43O-oO-RHl" id="Lov-OY-kxU"/>
+                <outlet property="window" destination="vyE-UF-4iY" id="Vcq-4n-20H"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="vyE-UF-4iY" customClass="NSWindowWithAnimation" customModule="Biosphere" customModuleProvider="target">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="357" height="129"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" wantsLayer="YES" id="Nll-ta-gRa">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43O-oO-RHl">
+                        <rect key="frame" x="273" y="13" width="70" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MQ7-1X-yfU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveWithSender:" target="-2" id="WsU-tD-lU7"/>
+                            <outlet property="nextKeyView" destination="V4j-MV-5C4" id="PQ6-dn-vds"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4c-Tq-vr0" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
+                        <rect key="frame" x="20" y="55" width="317" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Path" drawsBackground="YES" id="kxW-M0-Aja">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="xl2-9p-oUu"/>
+                            <outlet property="nextKeyView" destination="W2r-QF-zc7" id="RZL-4j-IWE"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4j-MV-5C4" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
+                        <rect key="frame" x="20" y="87" width="317" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="0BV-uW-sBK">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="delegate" destination="-2" id="cZl-0I-cnq"/>
+                            <outlet property="nextKeyView" destination="W4c-Tq-vr0" id="hcD-I7-HGE"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G94-0N-xse">
+                        <rect key="frame" x="191" y="13" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="waM-bO-5hn">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelWithSender:" target="-2" id="BQe-Dp-CrO"/>
+                            <outlet property="nextKeyView" destination="43O-oO-RHl" id="9KY-Zp-g8m"/>
+                        </connections>
+                    </button>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2r-QF-zc7">
+                        <rect key="frame" x="20" y="34" width="13" height="13"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="only" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ORM-Hk-yT9">
+                            <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleAdvanced:" target="-2" id="yVo-Pf-sLC"/>
+                        </connections>
+                    </button>
+                    <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHe-QX-U80">
+                        <rect key="frame" x="7" y="-30" width="341" height="63"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfR-JK-lck" customClass="FocussingNSTextField" customModule="Biosphere" customModuleProvider="target">
+                                <rect key="frame" x="13" y="34" width="317" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Cookbook name (optional)" drawsBackground="YES" id="nBi-kb-t6E">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="Ccf-aQ-ry4" id="3ha-t4-o5C"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ccf-aQ-ry4">
+                                <rect key="frame" x="11" y="8" width="165" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Run with root privileges" bezelStyle="regularSquare" imagePosition="left" inset="2" id="aTX-b4-j73">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <outlet property="nextKeyView" destination="G94-0N-xse" id="0gs-GZ-YCf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </customView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pu3-FL-fDl">
+                        <rect key="frame" x="33" y="32" width="64" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="inline" title="Advanced" bezelStyle="inline" alignment="left" refusesFirstResponder="YES" inset="2" id="Mg9-fc-uoG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="performClick:" target="W2r-QF-zc7" id="hYW-Wo-pMT"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="423.5" y="47.5"/>
+        </window>
+        <viewController id="gAZ-2o-kkk" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="V4n-mr-3JS" id="o0J-67-A7n"/>
+            </connections>
+        </viewController>
+        <popover id="roU-zI-vEi">
+            <connections>
+                <outlet property="contentViewController" destination="gAZ-2o-kkk" id="VFD-fd-JZp"/>
+            </connections>
+        </popover>
+        <viewController id="2pc-2w-l75" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="Akh-m9-Dz5" id="TBn-OS-niq"/>
+            </connections>
+        </viewController>
+        <popover id="RyH-qm-bS9">
+            <connections>
+                <outlet property="contentViewController" destination="2pc-2w-l75" id="DMC-EW-yE8"/>
+            </connections>
+        </popover>
+        <viewController id="gZ6-K1-TNq" userLabel="Popover View Controller">
+            <connections>
+                <outlet property="view" destination="sk7-uK-Thw" id="DVQ-ma-EoE"/>
+            </connections>
+        </viewController>
+        <popover id="WeJ-15-ixA">
+            <connections>
+                <outlet property="contentViewController" destination="gZ6-K1-TNq" id="UkC-zn-Zma"/>
+            </connections>
+        </popover>
+        <customView id="Akh-m9-Dz5">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKC-Lt-4af">
+                    <rect key="frame" x="8" y="12" width="224" height="126"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" id="Spi-Vi-hHH">
+                        <font key="font" metaFont="smallSystem"/>
+                        <string key="title">The path to the local directory containing your cookbooks.
+
+It does not matter whether it is a Git repository or not.
+
+Examples:
+・~/Code/my_cookbooks
+・/tmp/testing_cookbooks</string>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="54" y="122.5"/>
+        </customView>
+        <customView id="V4n-mr-3JS">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMg-Lj-e43">
+                    <rect key="frame" x="8" y="8" width="224" height="126"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" id="dUr-Gl-q8Q">
+                        <font key="font" metaFont="smallSystem"/>
+                        <string key="title">A name for this cookbook repository.
+
+This is just for your convenience so that you can identify which set of cookbooks to run. Pick whatever name you like.
+
+Examples:
+・Work
+・Personal</string>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="54" y="-77"/>
+        </customView>
+        <customView id="sk7-uK-Thw">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACh-X0-45m">
+                    <rect key="frame" x="5" y="8" width="231" height="224"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" id="ODk-Yc-ZPK">
+                        <font key="font" metaFont="smallSystem"/>
+                        <mutableString key="title">With Chef, you normally provide a run list or role wihch determines which cookbooks to run.
+
+Biosphere runs only one single cookbook. It's your job to execute further cookbooks from there, by including those in your initial cookbook.
+
+If you do not specify a cookbook here, Biosphere will attempt to run a cookbook called "default".
+
+Examples:
+・initial_cookbook
+・start_here</mutableString>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="779" y="83"/>
+        </customView>
+    </objects>
+</document>

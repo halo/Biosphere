@@ -47,6 +47,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
+                            <action selector="chooseLocal:" target="-2" id="LRD-ZA-nQk"/>
                             <outlet property="nextKeyView" destination="6MJ-3I-6pd" id="l62-nE-Zx2"/>
                         </connections>
                     </button>
@@ -58,6 +59,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
+                            <action selector="chooseRemote:" target="-2" id="36V-Id-wZ3"/>
                             <outlet property="nextKeyView" destination="Dfe-pp-oEi" id="uxW-UE-Uom"/>
                         </connections>
                     </button>

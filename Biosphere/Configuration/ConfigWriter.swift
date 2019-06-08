@@ -29,12 +29,28 @@ struct ConfigWriter {
 
     var currentRepositories = readCurrentRepositories()
 
-    Log.debug("Adding new repository \(repository.asJson)")
+    Log.debug("Adding new remote repository \(repository.asJson)")
     Log.debug("To existing repositories \(currentRepositories)")
     currentRepositories.append(repository.asJson)
     writeRepositories(currentRepositories)
   }
-  
+
+  static func addLocalRepository(id: String, label: String, path: String, cookbook: String, privileged: Bool) {
+    let repository = Repository()
+    repository.id = id == "" ? String(Int.random(in: 1000000 ..< 2000000)) : id
+    repository.label = label
+    repository.path = path
+    repository.cookbook = cookbook
+    repository.privileged = privileged ? "yes" : ""
+    
+    var currentRepositories = readCurrentRepositories()
+    
+    Log.debug("Adding new local repository \(repository.asJson)")
+    Log.debug("To existing repositories \(currentRepositories)")
+    currentRepositories.append(repository.asJson)
+    writeRepositories(currentRepositories)
+  }
+
   private static func readCurrentRepositories() -> [[String: String]] {
     let repositoriesOnFile = dictionaryWithCurrentVersion()["repositories"] as? [[String: String]]
     return repositoriesOnFile ?? []

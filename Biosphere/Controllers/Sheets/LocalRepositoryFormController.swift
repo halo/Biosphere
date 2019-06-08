@@ -1,53 +1,60 @@
 import Cocoa
 
-class RemoteRepositoryFormController: NSWindowController {
+class LocalRepositoryFormController: NSWindowController {
   
+  // MARK: Outlets
+  
+  // Form
   @IBOutlet var nameTextField: FocussingNSTextField!
-  @IBOutlet var urlTextField: FocussingNSTextField!
-  @IBOutlet var subdirectoryTextField: FocussingNSTextField!
+  @IBOutlet var pathTextField: FocussingNSTextField!
   @IBOutlet var cookbookTextField: FocussingNSTextField!
   @IBOutlet var privilegedButton: NSButton!
-
+  
+  // Help
   @IBOutlet var nameHelpPopover: NSPopover!
-  @IBOutlet var urlHelpPopover: NSPopover!
-  @IBOutlet var subdirectoryHelpPopover: NSPopover!
+  @IBOutlet var pathHelpPopover: NSPopover!
   @IBOutlet var cookbookHelpPopover: NSPopover!
-
+  
+  // GUI
   @IBOutlet var advancedContainer: NSView!
   @IBOutlet var saveButton: NSButton!
   
   private var repositoryID: String = ""
   
-  public func clear() {
-    Log.debug("Clearing form...")
-    repositoryID = ""
-    nameTextField.stringValue = ""
-    urlTextField.stringValue = ""
-    subdirectoryTextField.stringValue = ""
-    cookbookTextField.stringValue = ""
-    privilegedButton.state = .off
+  // MARK: Activation
+  
+  public func draftNew(onWindow: NSWindow) {
+    clear()
+    guard let myWindow = window else {
+      Log.debug("I really thought I'd have a window.")
+      return
+    }
+    Log.debug("Opening new form sheet")
+    onWindow.beginSheet(myWindow, completionHandler: { response in
+      Log.debug("new local repository form sheet closed: \(response)")
+    })
   }
-
+  
   public func edit(repository: Repository, onWindow: NSWindow) {
     guard let myWindow = window else {
       Log.debug("I really thought I'd have a window.")
       return
     }
-
+    
     Log.debug("Loading repository data into form...")
     repositoryID = repository.id
     nameTextField.stringValue = repository.label
-    urlTextField.stringValue = repository.url
-    subdirectoryTextField.stringValue = repository.subdirectory
+    pathTextField.stringValue = repository.path
     cookbookTextField.stringValue = repository.cookbook
     privilegedButton.state = repository.isPrivileged ? .on : .off
-
     
     Log.debug("Opening form sheet")
     onWindow.beginSheet(myWindow, completionHandler: { response in
-      Log.debug("remote repository form sheet closed: \(response)")
+      Log.debug("local repository form sheet closed: \(response)")
     })
   }
+  
+  // MARK: Actions
   
   @IBAction func cancel(sender: NSButton) {
     Log.debug("Cancelling the sheet")
@@ -56,10 +63,9 @@ class RemoteRepositoryFormController: NSWindowController {
   
   @IBAction func save(sender: NSButton) {
     Log.debug("Saving the sheet")
-    Repositories.saveRemote(id: repositoryID,
+    Repositories.saveLocal(id: repositoryID,
                             label: nameTextField.stringValue,
-                            url: urlTextField.stringValue,
-                            subdirectory: subdirectoryTextField.stringValue,
+                            path: pathTextField.stringValue,
                             cookbook: cookbookTextField.stringValue,
                             privileged: privilegedButton.state == .on)
     
@@ -80,13 +86,13 @@ class RemoteRepositoryFormController: NSWindowController {
     if (show) {
       Log.debug("Revealing advanced options...")
       newFrame.size.height += advancedContainer.frame.height
-
+      
       // Without this dispatch, the triangle rotation animation glitches a little bit.
       DispatchQueue.main.async {
         self.window!.setFrame(newFrame, display: true, animate: true)
         self.advancedContainer.isHidden = !show
       }
-
+      
     } else {
       Log.debug("Hiding advanced options...")
       newFrame.size.height -= advancedContainer.frame.height
@@ -97,22 +103,36 @@ class RemoteRepositoryFormController: NSWindowController {
       }
     }
   }
+  
+  // MARK: Private helper methods
+  
+  private func clear() {
+    guard let _ = window else {
+      Log.debug("Cannot clean form without a loaded window")
+      return
+    }
+    Log.debug("Clearing form...")
+    repositoryID = ""
+    nameTextField.stringValue = ""
+    pathTextField.stringValue = ""
+    cookbookTextField.stringValue = ""
+    privilegedButton.state = .off
+  }
+  
 }
 
-extension RemoteRepositoryFormController: NSWindowDelegate {
+extension LocalRepositoryFormController: NSWindowDelegate {
   func windowDidChangeOcclusionState(_ notification: Notification) {
     if (window!.occlusionState.contains(.visible)) {
       // Without the following lines, the popover is not shown the first time :/
-      let _ = urlTextField.becomeFirstResponder()
-      let _ = subdirectoryTextField.becomeFirstResponder()
+      let _ = pathTextField.becomeFirstResponder()
       let _ = cookbookTextField.becomeFirstResponder()
-      // Without the following lines, the url popover is not shown initially
+      // Without the following lines, the path popover is not shown initially
       let _ = nameTextField.becomeFirstResponder()
       
       DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
         // If any other popup is showing, don't do anything
-        if self.urlHelpPopover.isShown { return }
-        if self.subdirectoryHelpPopover.isShown { return }
+        if self.pathHelpPopover.isShown { return }
         if self.cookbookHelpPopover.isShown { return }
         // Show the popup after a few seconds to not overload people's brains
         self.textFieldDidBecomeFirstResponder(self.nameTextField)
@@ -121,9 +141,9 @@ extension RemoteRepositoryFormController: NSWindowDelegate {
   }
 }
 
-extension RemoteRepositoryFormController: NSTextFieldDelegate {
+extension LocalRepositoryFormController: NSTextFieldDelegate {
   func controlTextDidChange(_ notification: Notification) {
-    if (nameTextField.stringValue == "" || urlTextField.stringValue == "") {
+    if (nameTextField.stringValue == "" || pathTextField.stringValue == "") {
       Log.debug("Some mandatory fields are missing")
       saveButton.isEnabled = false
     } else {
@@ -133,15 +153,13 @@ extension RemoteRepositoryFormController: NSTextFieldDelegate {
   }
 }
 
-extension RemoteRepositoryFormController: FocussingNSTextFieldDelegate {
+extension LocalRepositoryFormController: FocussingNSTextFieldDelegate {
   func textFieldDidBecomeFirstResponder(_ textField: FocussingNSTextField) {
     switch textField {
     case nameTextField:
       nameHelpPopover.show(relativeTo: NSRect(), of: textField, preferredEdge: NSRectEdge.maxX)
-    case urlTextField:
-      urlHelpPopover.show(relativeTo: NSRect(), of: textField, preferredEdge: NSRectEdge.maxX)
-    case subdirectoryTextField:
-      subdirectoryHelpPopover.show(relativeTo: NSRect(), of: textField, preferredEdge: NSRectEdge.maxX)
+    case pathTextField:
+      pathHelpPopover.show(relativeTo: NSRect(), of: textField, preferredEdge: NSRectEdge.maxX)
     case cookbookTextField:
       cookbookHelpPopover.show(relativeTo: NSRect(), of: textField, preferredEdge: NSRectEdge.maxX)
     default:
@@ -153,10 +171,8 @@ extension RemoteRepositoryFormController: FocussingNSTextFieldDelegate {
     switch textField {
     case nameTextField:
       nameHelpPopover.close()
-    case urlTextField:
-      urlHelpPopover.close()
-    case subdirectoryTextField:
-      subdirectoryHelpPopover.close()
+    case pathTextField:
+      pathHelpPopover.close()
     case cookbookTextField:
       cookbookHelpPopover.close()
     default:

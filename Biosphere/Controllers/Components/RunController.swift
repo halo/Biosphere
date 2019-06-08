@@ -66,14 +66,15 @@ class RunController: NSViewController {
   // MARK: Private Repository Lifecycle
   
   private func editRepository(_ repository: Repository) {
+    guard let window = view.window else {
+      Log.error("I really thought I'd have a window")
+      return
+    }
+
     if (repository.isRemote) {
-      
-      guard let window = view.window else {
-        Log.error("I really thought I'd have a window")
-        return
-      }
-      
       remoteRepositoryFormController.edit(repository: repository, onWindow: window)
+    } else {
+      localRepositoryFormController.edit(repository: repository, onWindow: window)
     }
   }
   
@@ -165,6 +166,11 @@ class RunController: NSViewController {
     return RemoteRepositoryFormController.init(windowNibName: "RemoteRepositoryForm")
   }()
 
+  private lazy var localRepositoryFormController: LocalRepositoryFormController = {
+    Log.debug("Initializing localRepositoryFormController...")
+    return LocalRepositoryFormController.init(windowNibName: "LocalRepositoryForm")
+  }()
+
   private lazy var gitSyncingController: GitSyncingController = {
     Log.debug("Initializing gitSyncingController...")
     return GitSyncingController.init(windowNibName: "GitSyncing")
@@ -177,7 +183,30 @@ class RunController: NSViewController {
 
   private lazy var chooseRepositoryKindController: ChooseRepositoryKindController = {
     Log.debug("Initializing chooseRepositoryKindController...")
-    return ChooseRepositoryKindController.init(windowNibName: "ChooseRepositoryKind")
+    let controller = ChooseRepositoryKindController.init(windowNibName: "ChooseRepositoryKind")
+    controller.delegate = self
+    return controller
   }()
 
+}
+
+extension RunController: ChooseRepositoryKindDelegate {
+  func choseRepositoryKindRemote() {
+    guard let window = view.window else {
+      Log.error("I really thought I'd have a window")
+      return
+    }
+    chooseRepositoryKindController.hide()
+    remoteRepositoryFormController.draftNew(onWindow: window)
+  }
+  
+  func choseRepositoryKindLocal() {
+    guard let window = view.window else {
+      Log.error("I really thought I'd have a window")
+      return
+    }
+    chooseRepositoryKindController.hide()
+    localRepositoryFormController.draftNew(onWindow: window)
+  }
+  
 }
