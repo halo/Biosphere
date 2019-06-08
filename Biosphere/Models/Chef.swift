@@ -92,7 +92,13 @@ class Chef {
     }
   }
   private var chefCommand: String {
-    return "\(Paths.sudoExecutable) \(Paths.chefExecutable) --config '\(Paths.chefKnifeConfig)'"
+    let path = Paths.chefKnifeConfig as NSString?
+    let abbreviatedPath = path!.abbreviatingWithTildeInPath
+    if (repository.isPrivileged) {
+      return "\(Paths.sudoExecutable) \(Paths.chefExecutable) --config \(abbreviatedPath)"
+    } else {
+      return "\(Paths.chefExecutable) --config \(abbreviatedPath)"
+    }
   }
 
   // See https://docs.chef.io/config_rb_solo.html
