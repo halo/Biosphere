@@ -24,7 +24,7 @@ class JSONReaderTests: XCTestCase {
     let reader = JSONReader(filePath: fixturePath("minimalConfig.json"))
     let json = reader.dictionary
     XCTAssertEqual(json.count, 1)
-    XCTAssertEqual(json["version"] as? String, "0.0.1")
+    XCTAssertEqual(json["version"] as? String, "0.0.2")
   }
 
   func testObjectWithNonJson() {
