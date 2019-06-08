@@ -1,6 +1,6 @@
 [![Version](https://img.shields.io/github/tag/halo/Biosphere.svg?style=flat&label=version)](https://github.com/halo/Biosphere/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/halo/Biosphere/blob/master/LICENSE.md)
-![https://img.shields.io/badge/Swift-5-orange.svg]
+![](https://img.shields.io/badge/Swift-5-orange.svg)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/halo/Biosphere)
 
 ## Introduction
