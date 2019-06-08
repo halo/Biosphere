@@ -1,6 +1,12 @@
+All source code is released under the MIT license (see below).
+The icon, however, was created by Archigraphs and is released under the Creative Commons 3.0
+license found at http://creativecommons.org/licenses/by-nc-nd/3.0 you can download the icon
+set here: http://archigraphs.com/?portfolio_page=seats (as of 2012)
+
+
 MIT License
 
-Copyright (c) 2019 halo - https://github.com/halo/Biosphere
+Copyright (c) 2012-2019 halo - https://github.com/halo/Biosphere
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
