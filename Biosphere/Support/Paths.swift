@@ -11,6 +11,9 @@ class Paths: NSObject {
   static let automationPrivacySettings = "x-apple.systempreferences:com.apple.preference.security?Privacy_Automation"
   static let automationPrivacySettingsUrl = URL(string: automationPrivacySettings)!
 
+  static let biosphereWebsite = "https://github.com/halo/Biosphere"
+  static let biosphereWebsiteUrl = URL(fileURLWithPath: biosphereWebsite)
+
   static let cacheDirectory = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!.appendPath(BundleIdentifier.string)
   static let cacheDirectoryUrl = URL(fileURLWithPath: cacheDirectory)
   

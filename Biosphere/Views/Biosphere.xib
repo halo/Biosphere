@@ -64,11 +64,21 @@ AAAAAAEGA
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </view>
                     </box>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vde-Lt-HPa">
+                        <rect key="frame" x="625" y="356" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JdW-QQ-0LA">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="help:" target="-2" id="SuX-Wc-45S"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="139" y="163.5"/>
         </window>
-        <userDefaultsController representsSharedInstance="YES" id="Uzg-Um-Xty"/>
     </objects>
     <resources>
         <image name="Biosphere" width="512" height="512"/>

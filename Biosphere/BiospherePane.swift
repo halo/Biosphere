@@ -1,7 +1,6 @@
 import Cocoa
 import PreferencePanes
 
-
 class BiospherePane: NSPreferencePane {
   
   private var misingAutomationPermission: Bool = false
@@ -34,6 +33,15 @@ class BiospherePane: NSPreferencePane {
   override func didUnselect() {
     Log.debug("didUnSelect...")
     forgetAutomationPermissionNotification(Notification(name: .forgetAutomationPermission))
+  }
+  
+  @IBAction func help(_ sender: NSButton) {
+    guard let window = mainView.window else {
+      Log.debug("I'm in lack of a window.")
+      return
+    }
+    
+    aboutController.show(onWindow: window)
   }
   
   private func update() {
@@ -157,6 +165,11 @@ class BiospherePane: NSPreferencePane {
   private lazy var runController: RunController = {
     Log.debug("Initializing RunController...")
     return RunController.init(nibName: "RunChef", bundle: bundle)
+  }()
+
+  private lazy var aboutController: AboutController = {
+    Log.debug("Initializing AboutController...")
+    return AboutController.init(windowNibName: "About")
   }()
 
 }
