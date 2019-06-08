@@ -12,6 +12,15 @@ The preference pane is designed to run without dependencies, it works as the fir
 
 ![Screenshot](/doc/screenshot-2019-06-08.jpg?raw=true)
 
+## Features
+
+What does Biosphere do?
+
+* If Git is missing, Xcode Command Line Tools can be installed with a click
+* If Chef is missing, it can be installed with a click
+* Choose a set of cookbooks from a remote Git repository or a local folder
+* Run your cookbooks with Chef Solo
+
 ## Installation
 
 Get the [latest build here](https://github.com/halo/Biosphere/releases/latest) and double-click it.
