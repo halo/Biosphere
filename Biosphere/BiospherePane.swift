@@ -14,14 +14,7 @@ class BiospherePane: NSPreferencePane {
     NotificationCenter.default.addObserver(forName: .forgetAutomationPermission, object: nil, queue: nil, using: forgetAutomationPermissionNotification)
     NotificationCenter.default.addObserver(forName: .dependenciesChanged, object: nil, queue: nil, using: forgetAutomationPermissionNotification)
 
-    Log.debug("Setting up listener for \(Paths.chefExecutable)")
-    observer = FileObserver(path: Paths.chefExecutable, callback: {
-      Log.debug("Path \(Paths.chefExecutable) changed, notifying...")
-      DispatchQueue.main.async {
-        NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
-      }
-    })
-    
+    setupFileObservers()
     Config.observe()
   }
   
@@ -135,6 +128,24 @@ class BiospherePane: NSPreferencePane {
     update()
   }
   
+  private func setupFileObservers() {
+    Log.debug("Setting up listener for \(Paths.chefExecutable)")
+    observer = FileObserver(path: Paths.chefExecutable, callback: {
+      Log.debug("Path \(Paths.chefExecutable) changed, notifying...")
+      DispatchQueue.main.async {
+        NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
+      }
+    })
+    
+    Log.debug("Setting up listener for \(Paths.gitExecutable)")
+    observer = FileObserver(path: Paths.gitExecutable, callback: {
+      Log.debug("Path \(Paths.gitExecutable) changed, notifying...")
+      DispatchQueue.main.async {
+        NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
+      }
+    })
+  }
+
   // MARK: - Controller instances
 
   private lazy var omnibusController: OmnibusController = {
