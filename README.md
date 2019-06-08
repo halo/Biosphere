@@ -10,8 +10,6 @@ It fetches your cookbooks (maintained by yourself or your team) and runs them lo
 
 The preference pane is designed to run without dependencies, it works as the first thing on a new Mac.
 
-![Screenshot](/doc/screenshot-2019-06-08.jpg?raw=true)
-
 ## Features
 
 What does Biosphere do?
@@ -32,3 +30,11 @@ Right-click on the Preference Pane icon and choose "Remove".
 ## Copyright
 
 Released under MIT. See [LICENSE](http://github.com/halo/Biosphere/blob/master/LICENSE.md).
+
+## Screenshots
+
+![Screenshot](/doc/screenshot-01-2019-06-08.jpg?raw=true)
+![Screenshot](/doc/screenshot-02-2019-06-08.jpg?raw=true)
+![Screenshot](/doc/screenshot-03-2019-06-08.jpg?raw=true)
+![Screenshot](/doc/screenshot-04-2019-06-08.jpg?raw=true)
+![Screenshot](/doc/screenshot-05-2019-06-08.jpg?raw=true)
