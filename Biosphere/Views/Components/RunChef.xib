@@ -95,17 +95,10 @@
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-qf-yw4">
                     <rect key="frame" x="206" y="105" width="112" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="roundRect" title="Personal" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Nbn-W8-9vr" id="kKe-gd-xxZ">
+                    <popUpButtonCell key="cell" type="roundRect" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingMiddle" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kKe-gd-xxZ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
-                        <menu key="menu" id="14i-ma-P07">
-                            <items>
-                                <menuItem title="Personal" state="on" id="Nbn-W8-9vr"/>
-                                <menuItem title="Work" id="saH-pE-bVF"/>
-                                <menuItem isSeparatorItem="YES" id="ke6-6K-nWy"/>
-                                <menuItem title="Add Repository..." id="PPL-ZN-2G7"/>
-                            </items>
-                        </menu>
+                        <menu key="menu" id="14i-ma-P07"/>
                     </popUpButtonCell>
                 </popUpButton>
             </subviews>

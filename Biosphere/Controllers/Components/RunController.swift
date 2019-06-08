@@ -17,6 +17,7 @@ class RunController: NSViewController {
   override func viewDidLoad() {
     NotificationCenter.default.addObserver(forName: .dependenciesChanged, object: nil, queue: nil, using: dependenciesChangedNotification)
     setupEditButton()
+    update()
   }
   
   // MARK: Interface Actions
