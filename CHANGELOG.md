@@ -1,3 +1,9 @@
+## 0.0.3
+
+### Fixed
+
+* Fixed the git detection that didn't get fixed in 0.0.2 as I said it would
+
 ## 0.0.2
 
 ### Fixed

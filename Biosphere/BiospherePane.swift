@@ -4,8 +4,9 @@ import PreferencePanes
 class BiospherePane: NSPreferencePane {
   
   private var misingAutomationPermission: Bool = false
-  private var observer: FileObserver? = nil
-  
+  private var chefObserver: FileObserver? = nil
+  private var gitObserver: FileObserver? = nil
+
   @IBOutlet var container: NSView!
 
   override func mainViewDidLoad() {
@@ -130,7 +131,7 @@ class BiospherePane: NSPreferencePane {
   
   private func setupFileObservers() {
     Log.debug("Setting up listener for \(Paths.chefExecutable)")
-    observer = FileObserver(path: Paths.chefExecutable, callback: {
+    chefObserver = FileObserver(path: Paths.chefExecutable, callback: {
       Log.debug("Path \(Paths.chefExecutable) changed, notifying...")
       DispatchQueue.main.async {
         NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
@@ -138,7 +139,7 @@ class BiospherePane: NSPreferencePane {
     })
     
     Log.debug("Setting up listener for \(Paths.gitExecutable)")
-    observer = FileObserver(path: Paths.gitExecutable, callback: {
+    gitObserver = FileObserver(path: Paths.gitExecutable, callback: {
       Log.debug("Path \(Paths.gitExecutable) changed, notifying...")
       DispatchQueue.main.async {
         NotificationCenter.default.post(name:.dependenciesChanged, object: nil, userInfo: nil)
